@@ -181,3 +181,15 @@ Route::middleware(['auth','role:admin'])->group(function() {
     Route::get('/users/{id}/edit', [AdminController::class, 'editUser'])->name('admin.users.edit');
 
 });
+
+use Illuminate\Support\Facades\Artisan;
+
+Route::get('/run-migrations', function () {
+    // Run migrations
+    Artisan::call('migrate', ['--force' => true]);
+    
+    // clear cache just in case
+    Artisan::call('config:clear');
+
+    return 'Migrations run successfully! <br>' . nl2br(Artisan::output());
+});
