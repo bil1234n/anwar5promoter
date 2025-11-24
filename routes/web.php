@@ -2,7 +2,6 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Artisan;
 
 // --- Auth Controller Imports ---
 use App\Http\Controllers\Auth\RegisterController;
@@ -181,10 +180,4 @@ Route::middleware(['auth','role:admin'])->group(function() {
     Route::put('/admin/users/{id}', [AdminController::class, 'updateUser'])->name('admin.users.update');
     Route::get('/users/{id}/edit', [AdminController::class, 'editUser'])->name('admin.users.edit');
 
-});
-
-// Make sure this is OUTSIDE the previous Route
-Route::get('/run-migrations', function () {
-    Artisan::call('migrate', ['--force' => true]);
-    return 'Migrations run successfully!';
 });
