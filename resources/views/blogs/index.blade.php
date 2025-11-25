@@ -108,7 +108,8 @@
                                                 <div class="blog-wrap">
                                                     <a href="#" class="blog-link w-inline-block">
                                                         @if($blog->image)
-                                                            <img alt="Blog Image" loading="lazy" src="{{ asset('blog_images/'.$blog->image) }}" sizes="(max-width: 479px) 83vw, (max-width: 767px) 87vw, (max-width: 991px) 41vw, (max-width: 1279px) 38vw, 478px" class="blog-image">
+                                                        
+                                                            <img alt="Blog Image" loading="lazy" src="{{ \Illuminate\Support\Facades\Storage::url($blog->image) }}" sizes="(max-width: 479px) 83vw, (max-width: 767px) 87vw, (max-width: 991px) 41vw, (max-width: 1279px) 38vw, 478px" class="blog-image">
                                                         @endif
                                                     </a>
                                                     <div class="category-and-date">
