@@ -34,7 +34,7 @@ class GoogleController extends Controller
             [
                 'username' => $googleUser->getName(),
                 'password' => bcrypt(uniqid()),
-                'profile_p' => 'default.png',
+                'profile_p' => 'users.png',
                 'role' => 'user',
                 'status' => 'approve'
             ]
