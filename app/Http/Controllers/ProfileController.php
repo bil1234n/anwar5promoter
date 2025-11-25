@@ -67,9 +67,9 @@ class ProfileController extends Controller
         if ($request->hasFile('profile_p')) {
             // Delete old profile picture if it's not the default
             if ($user->profile_p && $user->profile_p !== 'default.png') {
-                Storage::disk('public')->delete($user->profile_p);
+                \Illuminate\Support\Facades\Storage::disk('cloudinary')->delete($user->profile_p);
             }
-            $user->profile_p = $request->file('profile_p')->store('profiles', 'public');
+            $user->profile_p = $request->file('profile_p')->store('profiles');
         }
 
         $user->save();

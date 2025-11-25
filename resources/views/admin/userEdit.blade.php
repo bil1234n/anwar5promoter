@@ -37,7 +37,7 @@
                             {{-- Profile Picture Display --}}
                             <div class="flex items-center space-x-4">
                                 <img class="h-20 w-20 rounded-full object-cover border" 
-                                     src="{{ asset('storage/' . $user->profile_p) }}" 
+                                     src="{{ \Illuminate\Support\Facades\Storage::url( $user->profile_p) }}" 
                                      onerror="this.src='https://ui-avatars.com/api/?name={{urlencode($user->username)}}'"
                                      alt="Profile">
                                 <div>
@@ -106,14 +106,14 @@
                                 <ul class="text-sm text-blue-600 space-y-1">
                                     <li>
                                         @if($user->id_card)
-                                            <a href="{{ asset('storage/'.$user->id_card) }}" target="_blank" class="hover:underline">📄 View ID Card</a>
+                                            <a href="{{ \Illuminate\Support\Facades\Storage::url($user->id_card) }}" target="_blank" class="hover:underline">📄 View ID Card</a>
                                         @else
                                             <span class="text-gray-400">No ID Card uploaded</span>
                                         @endif
                                     </li>
                                     <li>
                                         @if($user->passport)
-                                            <a href="{{ asset('storage/'.$user->passport) }}" target="_blank" class="hover:underline">📄 View Passport</a>
+                                            <a href="{{ \Illuminate\Support\Facades\Storage::url($user->passport) }}" target="_blank" class="hover:underline">📄 View Passport</a>
                                         @else
                                             <span class="text-gray-400">No Passport uploaded</span>
                                         @endif

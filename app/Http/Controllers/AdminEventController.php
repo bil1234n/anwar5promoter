@@ -28,7 +28,7 @@ class AdminEventController extends Controller
         $data = $request->all();
 
         if ($request->hasFile('image')) {
-            $data['image'] = $request->file('image')->store('events', 'public');
+            $data['image'] = $request->file('image')->store('events');
         }
 
         $event = Event::create($data);
@@ -49,7 +49,7 @@ class AdminEventController extends Controller
     public function destroy(Event $event)
     {
         if ($event->image) {
-            Storage::disk('public')->delete($event->image);
+            \Illuminate\Support\Facades\Storage::disk('cloudinary')->delete($event->image);
         }
         $event->delete();
         return back()->with('success', 'Event deleted.');
@@ -72,9 +72,9 @@ class AdminEventController extends Controller
 
         if ($request->hasFile('image')) {
             if ($event->image) {
-                Storage::disk('public')->delete($event->image);
+                \Illuminate\Support\Facades\Storage::disk('cloudinary')->delete($event->image);
             }
-            $data['image'] = $request->file('image')->store('events', 'public');
+            $data['image'] = $request->file('image')->store('events');
         }
 
         $event->update($data);

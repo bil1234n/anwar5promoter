@@ -83,7 +83,7 @@
                     </div>
                 @endif
                 <div class="title-image-wrap purple">
-                    <img src="{{ asset('storage/' . $user->profile_p) }}"
+                    <img src="{{ \Illuminate\Support\Facades\Storage::url( $user->profile_p) }}"
                         loading="lazy" alt="Title Image" 
                         style="border: 2px solid #00000069; border-radius: 20px 0;">
                     </div>
@@ -153,10 +153,10 @@
                                     <h3 class="section-content-title contact-card-title">My ID</h3>
                                     <p class="contact-address-content">
                                         @if($user->id_card)
-                                            <p><strong>ID Card:</strong> <a href="{{ asset('storage/' . $user->id_card) }}" target="_blank" class="secondary-button hover-color">View Document</a></p>
+                                            <p><strong>ID Card:</strong> <a href="{{ \Illuminate\Support\Facades\Storage::url( $user->id_card) }}" target="_blank" class="secondary-button hover-color">View Document</a></p>
                                         @endif
                                         @if($user->passport)
-                                            <p><strong>Passport:</strong> <a href="{{ asset('storage/' . $user->passport) }}" target="_blank" class="secondary-button hover-color">View Document</a></p>
+                                            <p><strong>Passport:</strong> <a href="{{ \Illuminate\Support\Facades\Storage::url( $user->passport) }}" target="_blank" class="secondary-button hover-color">View Document</a></p>
                                         @endif
                                     </p>
                                 </div>

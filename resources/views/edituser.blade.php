@@ -81,7 +81,7 @@
                     <div class="alert alert-success">{{ session('success') }}</div>
                 @endif
                 <div class="title-image-wrap purple">
-                    <img src="{{ asset('storage/' . $user->profile_p) }}"
+                    <img src="{{ \Illuminate\Support\Facades\Storage::url( $user->profile_p) }}"
                         loading="lazy" alt="Title Image" 
                         style="border: 2px solid #00000069; border-radius: 20px 0;">
                     </div>

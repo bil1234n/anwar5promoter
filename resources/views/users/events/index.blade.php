@@ -232,7 +232,7 @@
                             <!-- Image Section -->
                             <div class="card-image-wrapper">
                                 @if($event->image)
-                                    <img src="{{ asset('storage/' . $event->image) }}" alt="{{ $event->title }}">
+                                    <img src="{{ \Illuminate\Support\Facades\Storage::url( $event->image) }}" alt="{{ $event->title }}">
                                 @else
                                     <div class="no-image">
                                         <span>No Image Available</span>

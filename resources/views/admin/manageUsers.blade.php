@@ -369,7 +369,7 @@
                             <!-- Profile -->
                             <td>
                                 <div class="d-flex align-items-center">
-                                    <img src="{{ asset('storage/' . $user->profile_p) }}" 
+                                    <img src="{{ \Illuminate\Support\Facades\Storage::url( $user->profile_p) }}" 
                                          onerror="this.src='https://ui-avatars.com/api/?name={{urlencode($user->username)}}&background=random'" 
                                          class="avatar-img me-3" alt="avatar">
                                     <div>
@@ -402,12 +402,12 @@
                                 @if($user->id_card || $user->passport)
                                     <div class="d-flex gap-2">
                                         @if($user->id_card)
-                                        <a href="{{ asset('storage/'.$user->id_card) }}" target="_blank" class="btn btn-sm btn-light text-primary" data-bs-toggle="tooltip" title="View ID">
+                                        <a href="{{ \Illuminate\Support\Facades\Storage::url($user->id_card) }}" target="_blank" class="btn btn-sm btn-light text-primary" data-bs-toggle="tooltip" title="View ID">
                                             <i class="fa-regular fa-id-card"></i>
                                         </a>
                                         @endif
                                         @if($user->passport)
-                                        <a href="{{ asset('storage/'.$user->passport) }}" target="_blank" class="btn btn-sm btn-light text-primary" data-bs-toggle="tooltip" title="View Passport">
+                                        <a href="{{ \Illuminate\Support\Facades\Storage::url($user->passport) }}" target="_blank" class="btn btn-sm btn-light text-primary" data-bs-toggle="tooltip" title="View Passport">
                                             <i class="fa-solid fa-passport"></i>
                                         </a>
                                         @endif

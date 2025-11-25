@@ -136,7 +136,7 @@
                         <tr>
                             <td>
                                 @if($event->image)
-                                    <img src="{{ asset('storage/' . $event->image) }}" class="event-img shadow-sm">
+                                    <img src="{{ \Illuminate\Support\Facades\Storage::url( $event->image) }}" class="event-img shadow-sm">
                                 @else
                                     <div class="event-img bg-light d-flex align-items-center justify-content-center text-muted border">
                                         <i class="fa-regular fa-image"></i>
@@ -216,7 +216,7 @@
                                                     <label class="form-label text-muted small fw-bold">Current Image</label>
                                                     <div class="d-flex align-items-center gap-3 mb-2">
                                                         @if($event->image)
-                                                            <img src="{{ asset('storage/' . $event->image) }}" class="rounded border" width="80">
+                                                            <img src="{{ \Illuminate\Support\Facades\Storage::url( $event->image) }}" class="rounded border" width="80">
                                                             <small class="text-success"><i class="fa-solid fa-check"></i> Image loaded</small>
                                                         @else
                                                             <span class="text-muted small">No image uploaded</span>

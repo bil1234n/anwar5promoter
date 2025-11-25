@@ -38,9 +38,9 @@ class RegisterController extends Controller
         ]);
 
         // Handle file uploads
-        $profilePath = $request->file('profile_p') ? $request->file('profile_p')->store('profiles','public') : 'default.png';
-        $idCardPath  = $request->file('id_card') ? $request->file('id_card')->store('documents','public') : null;
-        $passportPath = $request->file('passport') ? $request->file('passport')->store('documents','public') : null;
+        $profilePath = $request->file('profile_p') ? $request->file('profile_p')->store('profiles') : 'default.png';
+        $idCardPath  = $request->file('id_card') ? $request->file('id_card')->store('documents') : null;
+        $passportPath = $request->file('passport') ? $request->file('passport')->store('documents') : null;
 
         $user = User::create([
             'username' => $request->username,

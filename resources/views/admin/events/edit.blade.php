@@ -33,7 +33,7 @@
                     <div class="mb-3">
                         <label>Current Image</label><br>
                         @if($event->image)
-                            <img src="{{ asset('storage/' . $event->image) }}" width="100" class="mb-2">
+                            <img src="{{ \Illuminate\Support\Facades\Storage::url( $event->image) }}" width="100" class="mb-2">
                         @else
                             <p class="text-muted">No image uploaded</p>
                         @endif

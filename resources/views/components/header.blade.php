@@ -10,7 +10,7 @@
 
     if ($isLoggedIn) {
         if (!empty($user->profile_p)) {
-            $profile_p = asset('storage/' . $user->profile_p); // correct one
+            $profile_p = \Illuminate\Support\Facades\Storage::url( $user->profile_p); // correct one
             // $profile_p = asset('assets/img/danob_l.png');
         }
         if (!empty($user->username)) {
