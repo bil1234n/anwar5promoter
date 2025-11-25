@@ -28,13 +28,11 @@ class AdminEventController extends Controller
         $data = $request->all();
 
         if ($request->hasFile('image')) {
-            // FIX: Explicitly tell it to use 'cloudinary'
-            $data['image'] = $request->file('image')->store('events', 'cloudinary');
+            $data['image'] = $request->file('image')->store('events');
         }
 
         $event = Event::create($data);
 
-        // Notify users
         $users = User::all();
         foreach ($users as $user) {
             Notification::create([
@@ -51,8 +49,7 @@ class AdminEventController extends Controller
     public function destroy(Event $event)
     {
         if ($event->image) {
-            // FIX: Use Facade correctly to delete from Cloudinary
-            Storage::disk('cloudinary')->delete($event->image);
+            \Illuminate\Support\Facades\Storage::disk('cloudinary')->delete($event->image);
         }
         $event->delete();
         return back()->with('success', 'Event deleted.');
@@ -74,12 +71,10 @@ class AdminEventController extends Controller
         $data = $request->all();
 
         if ($request->hasFile('image')) {
-            // Delete old image
             if ($event->image) {
-                Storage::disk('cloudinary')->delete($event->image);
+                \Illuminate\Support\Facades\Storage::disk('cloudinary')->delete($event->image);
             }
-            // Upload new image to Cloudinary
-            $data['image'] = $request->file('image')->store('events', 'cloudinary');
+            $data['image'] = $request->file('image')->store('events');
         }
 
         $event->update($data);
@@ -87,10 +82,11 @@ class AdminEventController extends Controller
         return redirect()->route('admin.events.index')->with('success', 'Event updated successfully!');
     }
 
-    // --- REGISTRATION MANAGEMENT (No changes needed here) ---
+    // --- REGISTRATION MANAGEMENT ---
 
     public function showRegistrants(Event $event)
     {
+        // Load registrations with the associated user info
         $registrations = $event->registrations()->with('user')->latest()->get();
         return view('admin.events.registrants', compact('event', 'registrations'));
     }
@@ -104,6 +100,7 @@ class AdminEventController extends Controller
     public function updateRegistration(Request $request, $id)
     {
         $registration = Registration::findOrFail($id);
+
         $request->validate([
             'name'  => 'required|string',
             'email' => 'required|email',
@@ -121,15 +118,29 @@ class AdminEventController extends Controller
     public function updateStatus(Request $request, $id)
     {
         $registration = Registration::findOrFail($id);
-        $request->validate(['status' => 'required|in:pending,approved,denied']);
+        
+        $request->validate([
+            'status' => 'required|in:pending,approved,denied',
+        ]);
+
         $registration->update(['status' => $request->status]);
+
+        // Optional: Send Notification to user here
+
         return back()->with('success', "Status updated to {$request->status}");
     }
 
     public function bulkUpdateStatus(Request $request, Event $event)
     {
-        $request->validate(['status' => 'required|in:pending,approved,denied']);
-        $event->registrations()->update(['status' => $request->status]);
-        return back()->with('success', "All registrations marked as " . ucfirst($request->status) . ".");
+        $request->validate([
+            'status' => 'required|in:pending,approved,denied',
+        ]);
+
+        // Mass update all registrations belonging to this event
+        $event->registrations()->update([
+            'status' => $request->status
+        ]);
+
+        return back()->with('success', "All registrations have been marked as " . ucfirst($request->status) . ".");
     }
 }
