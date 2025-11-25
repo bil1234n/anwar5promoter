@@ -53,15 +53,7 @@ class RegisterController extends Controller
         Auth::login($user);
 
     
-        // Redirect based on user's role
-        $role = Auth::user()->role;
-        switch ($role) {
-            case 'admin':
-                return redirect()->intended('/admin/dashboard');
-            case 'user':
-                return redirect()->intended('/user/home');
-            default:
-                return redirect()->intended('/');
-        }
+        // Redirect 
+        return redirect('/');
     }
 }
