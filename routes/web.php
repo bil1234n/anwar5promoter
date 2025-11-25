@@ -181,3 +181,15 @@ Route::middleware(['auth','role:admin'])->group(function() {
     Route::get('/users/{id}/edit', [AdminController::class, 'editUser'])->name('admin.users.edit');
 
 });
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Route;
+
+Route::get('/clear-cache', function () {
+    // Clear all caches
+    Artisan::call('config:clear');
+    Artisan::call('cache:clear');
+    Artisan::call('route:clear');
+    Artisan::call('view:clear');
+    
+    return 'Cache Cleared! Try refreshing your site now.';
+});
