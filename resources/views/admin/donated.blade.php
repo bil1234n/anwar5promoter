@@ -16,8 +16,8 @@
         :root { --sidebar-width: 260px; --primary-color: #435ebe; --bg-color: #f2f7ff; --text-color: #607080; }
         body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-color); overflow-x: hidden; }
         
-        /* Sidebar Styling (Same as other pages) */
-        .sidebar { width: var(--sidebar-width); height: 100vh; position: fixed; top: 0; left: 0; background: #fff; box-shadow: 0 0 15px rgba(0,0,0,0.05); z-index: 1000; transition: all 0.3s; }
+        /* Sidebar Styling */
+        .sidebar { width: var(--sidebar-width); height: 100vh; position: fixed; top: 0; left: 0; background: #fff; box-shadow: 0 0 15px rgba(0,0,0,0.05); z-index: 1000; transition: transform 0.3s ease-in-out; }
         .sidebar-header { padding: 2rem 2rem 1rem; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid #f0f0f0; }
         .sidebar-menu { padding: 1.5rem; }
         .menu-link { display: flex; align-items: center; padding: 12px 15px; color: #555; text-decoration: none; border-radius: 8px; margin-bottom: 5px; transition: all 0.3s; font-weight: 500; }
@@ -25,7 +25,10 @@
         .menu-link i { margin-right: 15px; width: 20px; text-align: center; }
 
         /* Main Content */
-        .main-content { margin-left: var(--sidebar-width); padding: 2rem; }
+        .main-content { margin-left: var(--sidebar-width); padding: 2rem; transition: margin-left 0.3s; }
+        
+        /* Mobile Overlay */
+        .sidebar-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 999; }
         
         /* Cards */
         .stat-card { background: #fff; border-radius: 12px; padding: 1.5rem; border: none; box-shadow: 0 5px 15px rgba(0,0,0,0.02); height: 100%; transition: transform 0.2s; }
@@ -40,72 +43,35 @@
         .table th { font-size: 0.85rem; text-transform: uppercase; color: #8898aa; font-weight: 600; padding: 1rem; }
         .table td { padding: 1rem; vertical-align: middle; color: #525f7f; }
 
-        @media (max-width: 768px) { .sidebar { transform: translateX(-100%); } .main-content { margin-left: 0; } }
+        /* Responsive */
+        @media (max-width: 768px) { 
+            .sidebar { transform: translateX(-100%); } 
+            .sidebar.show { transform: translateX(0); }
+            .sidebar-overlay.show { display: block; }
+            .main-content { margin-left: 0; padding: 1.5rem; } 
+        }
     </style>
 </head>
 <body>
 
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <div class="sidebar-header">
-            <h4 class="mb-0 fw-bold" style="color: var(--primary-color);">
-                <img src="{{ asset('assets/img/logo/logo_a_3.png') }}" loading="lazy" alt="Anwar5Promoter" style="width: 200px;">
-            </h4>
-        </div>
-        <div class="sidebar-menu">
-            
-            <!-- Dashboard -->
-            <a href="{{ route('admin.dashboard') }}" 
-            class="menu-link {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">
-                <i class="fa-solid fa-house"></i> Dashboard
-            </a>
-
-            <!-- Users (Uses * to keep active even when editing a user) -->
-            <a href="{{ route('admin.users.index') }}" 
-            class="menu-link {{ request()->routeIs('admin.users.*') ? 'active' : '' }}">
-                <i class="fa-solid fa-users"></i> Users
-            </a>
-
-            <!-- Events -->
-            <a href="{{ route('admin.events.index') }}" 
-            class="menu-link {{ request()->routeIs('admin.events.*') ? 'active' : '' }}">
-                <i class="fa-solid fa-calendar-check"></i> Events
-            </a>
-
-            <!-- Blogs -->
-            <a href="{{ route('admin.blogs.index') }}" 
-            class="menu-link {{ request()->routeIs('admin.blogs.*') || request()->routeIs('blogs.*') ? 'active' : '' }}">
-                <i class="fa-solid fa-newspaper"></i> Blogs
-            </a>
-
-            <!-- Donations -->
-            <a href="{{ route('admin.donations') }}" 
-            class="menu-link {{ request()->routeIs('admin.donations') ? 'active' : '' }}">
-                <i class="fa-solid fa-hand-holding-dollar"></i> Donations
-            </a>
-
-            <!-- Messages -->
-            <a href="{{ route('admin.messages') }}" 
-            class="menu-link {{ request()->routeIs('admin.messages') ? 'active' : '' }}">
-                <i class="fa-solid fa-envelope"></i> Messages
-            </a>
-            
-            <div class="mt-5 border-top pt-4">
-                <form action="{{ route('logout') }}" method="POST">
-                    @csrf
-                    <button class="btn btn-danger w-100"><i class="fa-solid fa-power-off me-2"></i> Logout</button>
-                </form>
-            </div>
-        </div>
-    </div>
+    <!-- Include Sidebar Component -->
+    @include('components.admin_header')
 
     <!-- Main Content -->
     <div class="main-content">
         
+        <!-- Mobile Header / Toggle -->
+        <div class="d-flex align-items-center mb-4 d-md-none">
+            <button class="btn btn-primary me-3" onclick="toggleSidebar()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <h4 class="fw-bold mb-0">Donations</h4>
+        </div>
+
         <div class="d-flex justify-content-between align-items-center mb-4">
             <div>
-                <h3 class="fw-bold text-dark">Donations Overview</h3>
-                <p class="text-muted mb-0">Track incoming funds and donor activity</p>
+                <h3 class="fw-bold text-dark d-none d-md-block">Donations Overview</h3>
+                <p class="text-muted mb-0 d-none d-md-block">Track incoming funds and donor activity</p>
             </div>
         </div>
 
@@ -153,7 +119,6 @@
                     <div class="card-header border-0 pb-0 px-0 pt-0 mb-3">
                         <h5 class="fw-bold">By Purpose</h5>
                     </div>
-                    <!-- FIX: Added wrapper with specific height -->
                     <div style="height: 300px; position: relative;">
                         <canvas id="purposeChart"></canvas>
                     </div>
@@ -166,7 +131,6 @@
                     <div class="card-header border-0 pb-0 px-0 pt-0 mb-3">
                         <h5 class="fw-bold">Donation Trends (30 Days)</h5>
                     </div>
-                    <!-- FIX: Added wrapper with specific height -->
                     <div style="height: 300px; position: relative;">
                         <canvas id="trendChart"></canvas>
                     </div>
@@ -245,6 +209,14 @@
     <!-- Charts Script -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
+        // Toggle Sidebar Function
+        function toggleSidebar() {
+            const sidebar = document.getElementById('adminSidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            sidebar.classList.toggle('show');
+            overlay.classList.toggle('show');
+        }
+
         // Purpose Chart
         const ctxPurpose = document.getElementById('purposeChart').getContext('2d');
         const purposeData = @json($chartPurpose);
@@ -262,7 +234,7 @@
             },
             options: {
                 responsive: true,
-                maintainAspectRatio: false, // <--- IMPORTANT: Keeps it inside the 300px div
+                maintainAspectRatio: false,
                 plugins: {
                     legend: { position: 'right', labels: { boxWidth: 10, usePointStyle: true } }
                 }
@@ -291,7 +263,7 @@
             },
             options: {
                 responsive: true,
-                maintainAspectRatio: false, // <--- IMPORTANT: Keeps it inside the 300px div
+                maintainAspectRatio: false,
                 scales: {
                     y: { beginAtZero: true, grid: { borderDash: [5, 5] } },
                     x: { grid: { display: false } }
