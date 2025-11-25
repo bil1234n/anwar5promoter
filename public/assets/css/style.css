@@ -7775,6 +7775,10 @@ iframe.goog-te-banner-frame {
     width: 360px;
     right: -145px;
   }
+  .dropdown-menu {
+     min-width: 375px;
+     right: -300%;
+  }
 
   .menu-button {
     background-color: var(--secondary);
