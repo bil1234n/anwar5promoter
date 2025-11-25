@@ -19,31 +19,53 @@ class AdminEventController extends Controller
 
     public function store(Request $request)
     {
+        // 1. Validation
         $request->validate([
             'title'       => 'required|string|max:255',
             'event_date'  => 'required|date',
             'image'       => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
-        $data = $request->all();
+        try {
+            $data = $request->all();
 
-        if ($request->hasFile('image')) {
-            $data['image'] = $request->file('image')->store('events');
-        }
+            // 2. Fix Date Format (Remove the 'T')
+            // This converts "2024-11-25T14:30" -> "2024-11-25 14:30:00"
+            if ($request->has('event_date')) {
+                $data['event_date'] = date('Y-m-d H:i:s', strtotime($request->event_date));
+            }
 
-        $event = Event::create($data);
+            // 3. Handle Image
+            if ($request->hasFile('image')) {
+                // We force 'cloudinary' disk to be safe
+                $data['image'] = $request->file('image')->store('events', 'cloudinary');
+            }
 
-        $users = User::all();
-        foreach ($users as $user) {
-            Notification::create([
-                'user_id' => $user->id,
-                'type'    => 'events', 
-                'message' => "New event posted: {$event->title}",
-                'is_read' => false,
+            // 4. Create Event
+            $event = Event::create($data);
+
+            // 5. Send Notifications
+            $users = User::all();
+            foreach ($users as $user) {
+                Notification::create([
+                    'user_id' => $user->id,
+                    'type'    => 'events', 
+                    'message' => "New event posted: {$event->title}",
+                    'is_read' => false,
+                ]);
+            }
+
+            return redirect()->back()->with('success', 'Event created successfully!');
+
+        } catch (\Exception $e) {
+            // STOP THE CODE AND SHOW THE REAL ERROR
+            dd([
+                'ERROR MESSAGE' => $e->getMessage(),
+                'FILE' => $e->getFile(),
+                'LINE' => $e->getLine(),
+                'DATA TRYING TO SAVE' => $data ?? 'No data'
             ]);
         }
-
-        return redirect()->back()->with('success', 'Event created and notifications sent!');
     }
 
     public function destroy(Event $event)
