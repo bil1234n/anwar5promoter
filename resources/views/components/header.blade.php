@@ -7,7 +7,7 @@
 
     // 1. ALWAYS start with your local default image
     // This ensures if anything fails, or if the user has no photo, this one shows.
-    $profile_p = asset('assets/img/default.png'); 
+    $profile_p = asset('assets/img/users.png'); 
     $username = 'Guest';
 
     if ($isLoggedIn) {
