@@ -16,15 +16,20 @@
         :root { --sidebar-width: 260px; --primary-color: #435ebe; --bg-color: #f2f7ff; --text-color: #607080; }
         body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-color); overflow-x: hidden; }
         
-        .sidebar { width: var(--sidebar-width); height: 100vh; position: fixed; top: 0; left: 0; background: #fff; box-shadow: 0 0 15px rgba(0,0,0,0.05); z-index: 1000; transition: all 0.3s; }
+        /* Sidebar Styling */
+        .sidebar { width: var(--sidebar-width); height: 100vh; position: fixed; top: 0; left: 0; background: #fff; box-shadow: 0 0 15px rgba(0,0,0,0.05); z-index: 1000; transition: transform 0.3s ease-in-out; }
         .sidebar-header { padding: 2rem 2rem 1rem; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid #f0f0f0; }
         .sidebar-menu { padding: 1.5rem; }
         .menu-link { display: flex; align-items: center; padding: 12px 15px; color: #555; text-decoration: none; border-radius: 8px; margin-bottom: 5px; transition: all 0.3s; font-weight: 500; }
         .menu-link:hover, .menu-link.active { background-color: var(--primary-color); color: #fff; box-shadow: 0 4px 10px rgba(67, 94, 190, 0.3); }
         .menu-link i { margin-right: 15px; width: 20px; text-align: center; }
 
-        .main-content { margin-left: var(--sidebar-width); padding: 2rem; }
+        /* Main Content */
+        .main-content { margin-left: var(--sidebar-width); padding: 2rem; transition: margin-left 0.3s; }
         
+        /* Mobile Overlay */
+        .sidebar-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 999; }
+
         /* Blog Specific */
         .blog-card { background: #fff; border-radius: 12px; border: none; box-shadow: 0 5px 15px rgba(0,0,0,0.02); overflow: hidden; height: 100%; transition: transform 0.2s; }
         .blog-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
@@ -32,39 +37,31 @@
         .blog-body { padding: 1.5rem; }
         .custom-card { background: #fff; border-radius: 12px; border: none; box-shadow: 0 5px 15px rgba(0,0,0,0.02); padding: 1.5rem; margin-bottom: 2rem; }
 
-        @media (max-width: 768px) { .sidebar { transform: translateX(-100%); } .main-content { margin-left: 0; } }
+        /* Responsive */
+        @media (max-width: 768px) { 
+            .sidebar { transform: translateX(-100%); } 
+            .sidebar.show { transform: translateX(0); }
+            .sidebar-overlay.show { display: block; }
+            .main-content { margin-left: 0; padding: 1.5rem; } 
+        }
     </style>
 </head>
 <body>
 
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <div class="sidebar-header">
-            <h4 class="mb-0 fw-bold" style="color: var(--primary-color);">
-                <img src="{{ asset('assets/img/logo/logo_a_3.png') }}" loading="lazy" alt="Anwar5Promoter" style="width: 200px;">
-            </h4>
-        </div>
-        <div class="sidebar-menu">
-            <a href="{{ route('admin.dashboard') }}" class="menu-link"><i class="fa-solid fa-house"></i> Dashboard</a>
-            <a href="{{ route('admin.users.index') }}" class="menu-link"><i class="fa-solid fa-users"></i> Users</a>
-            <a href="{{ route('admin.events.index') }}" class="menu-link"><i class="fa-solid fa-calendar-check"></i> Events</a>
-            <!-- Active State on Blogs -->
-            <a href="{{ route('admin.blogs.index') }}" class="menu-link active"><i class="fa-solid fa-newspaper"></i> Blogs</a>
-            <a href="{{ route('admin.donations') }}" class="menu-link"><i class="fa-solid fa-hand-holding-dollar"></i> Donations</a>
-            <a href="{{ route('admin.messages') }}" class="menu-link"><i class="fa-solid fa-envelope"></i> Messages</a>
-            
-            <div class="mt-5 border-top pt-4">
-                <form action="{{ route('logout') }}" method="POST">
-                    @csrf
-                    <button class="btn btn-danger w-100"><i class="fa-solid fa-power-off me-2"></i> Logout</button>
-                </form>
-            </div>
-        </div>
-    </div>
+    <!-- Include Sidebar Component -->
+    @include('components.admin_header')
 
     <!-- Main Content -->
     <div class="main-content">
         
+        <!-- Mobile Header / Toggle -->
+        <div class="d-flex align-items-center mb-4 d-md-none">
+            <button class="btn btn-primary me-3" onclick="toggleSidebar()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <h4 class="fw-bold mb-0">Blog Posts</h4>
+        </div>
+
         @if(session('success'))
             <div class="alert alert-success border-0 shadow-sm mb-4"><i class="fa-solid fa-check-circle me-2"></i> {{ session('success') }}</div>
         @endif
@@ -81,11 +78,11 @@
 
         <div class="d-flex justify-content-between align-items-center mb-4">
             <div>
-                <h3 class="fw-bold text-dark">Blog Posts</h3>
-                <p class="text-muted mb-0">Manage community articles and updates</p>
+                <h3 class="fw-bold text-dark d-none d-md-block">Blog Posts</h3>
+                <p class="text-muted mb-0 d-none d-md-block">Manage community articles and updates</p>
             </div>
             
-            <div class="d-flex gap-2">
+            <div class="d-flex gap-2 ms-auto ms-md-0">
                 <!-- Category Filter -->
                 <form action="{{ route('admin.blogs.index') }}" method="GET" class="d-flex gap-2">
                     <select class="form-select w-auto shadow-sm border-0" name="category" onchange="this.form.submit()">
@@ -98,7 +95,7 @@
                     </select>
                 </form>
                 
-                <!-- Create Button (Triggers Modal) -->
+                <!-- Create Button (Triggers Collapse) -->
                 <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#createBlogCard">
                     <i class="fa-solid fa-plus me-2"></i> New Post
                 </button>
@@ -150,7 +147,7 @@
                     <div class="blog-card">
                         <div class="position-relative">
                             @if($blog->image)
-                                <img src="{{ \Illuminate\Support\Facades\Storage::url($blog->image) }}" class="blog-img">
+                                <img src="{{ asset('blog_images/'.$blog->image) }}" class="blog-img">
                             @else
                                 <div class="blog-img bg-light d-flex align-items-center justify-content-center text-muted">
                                     <i class="fa-regular fa-image fa-2x"></i>
@@ -215,7 +212,7 @@
                                             <label class="form-label text-muted small fw-bold">Current Image</label>
                                             <div class="d-flex align-items-center gap-3 mb-2">
                                                 @if($blog->image)
-                                                    <img src="{{\Illuminate\Support\Facades\Storage::url($blog->image) }}" class="rounded border" width="80">
+                                                    <img src="{{ asset('blog_images/'.$blog->image) }}" class="rounded border" width="80">
                                                     <small class="text-success"><i class="fa-solid fa-check"></i> Loaded</small>
                                                 @else
                                                     <span class="text-muted small">No image</span>
@@ -246,9 +243,16 @@
                 </div>
             @endforelse
         </div>
-        
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('adminSidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            sidebar.classList.toggle('show');
+            overlay.classList.toggle('show');
+        }
+    </script>
 </body>
 </html>
