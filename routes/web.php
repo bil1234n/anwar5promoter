@@ -2,6 +2,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Artisan;
 
 // --- Auth Controller Imports ---
 use App\Http\Controllers\Auth\RegisterController;
@@ -181,15 +182,9 @@ Route::middleware(['auth','role:admin'])->group(function() {
     Route::get('/users/{id}/edit', [AdminController::class, 'editUser'])->name('admin.users.edit');
 
 });
-use Illuminate\Support\Facades\Artisan;
-use Illuminate\Support\Facades\Route;
 
 Route::get('/clear-cache', function () {
-    // Clear all caches
+    Artisan::call('view:clear'); // Clear compiled views
     Artisan::call('config:clear');
-    Artisan::call('cache:clear');
-    Artisan::call('route:clear');
-    Artisan::call('view:clear');
-    
-    return 'Cache Cleared! Try refreshing your site now.';
+    return 'View Cache Cleared';
 });
