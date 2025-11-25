@@ -34,7 +34,7 @@ class RegisterController extends Controller
         ]);
 
         // Handle file uploads
-        $profilePath = $request->file('profile_p') ? $request->file('profile_p')->store('profiles') : 'default.png';
+        $profilePath = $request->file('profile_p') ? $request->file('profile_p')->store('profiles') : 'users.png';
         $idCardPath  = $request->file('id_card') ? $request->file('id_card')->store('documents') : null;
         $passportPath = $request->file('passport') ? $request->file('passport')->store('documents') : null;
 
