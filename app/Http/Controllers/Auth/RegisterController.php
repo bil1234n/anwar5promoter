@@ -52,11 +52,16 @@ class RegisterController extends Controller
         // Log the user in immediately after registration
         Auth::login($user);
 
-        // Note: The 'event(new Registered($user));' line has been removed.
-        // This stops the email from sending and stops the delay.
-
-        // Direct the user to the dashboard/ directly.
-        // Change '/' to whatever your main page URL is.
-        return redirect('/');
+    
+        // Redirect based on user's role
+        $role = Auth::user()->role;
+        switch ($role) {
+            case 'admin':
+                return redirect()->intended('/admin/dashboard');
+            case 'user':
+                return redirect()->intended('/user/home');
+            default:
+                return redirect()->intended('/');
+        }
     }
 }
