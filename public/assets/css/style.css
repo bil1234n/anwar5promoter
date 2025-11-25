@@ -2289,6 +2289,8 @@ blockquote {
   padding: 10px 0 18px;
   position: absolute;
   left: -24px;
+  width: 580px; 
+  max-width: 90vw;
 }
 
 .nav-dropdown-menu-link {
@@ -2297,6 +2299,10 @@ blockquote {
   font-size: 18px;
   font-weight: 600;
   transition: color .2s;
+  white-space: normal;       
+  display: block;           
+  height: auto;             
+  overflow-wrap: break-word;
 }
 
 .nav-dropdown-menu-link:hover, .nav-dropdown-menu-link.w--current {
@@ -7761,6 +7767,13 @@ iframe.goog-te-banner-frame {
 
   .nav-link.dropdown-nav {
     width: 25%;
+  }
+  .nav-link.dropdown-nav:hover {
+    width: 100%;
+  }
+  .notif-dropdown {
+    width: 360px;
+    right: -145px;
   }
 
   .menu-button {
