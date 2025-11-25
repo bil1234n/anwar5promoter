@@ -19,53 +19,31 @@ class AdminEventController extends Controller
 
     public function store(Request $request)
     {
-        // 1. Validation
         $request->validate([
             'title'       => 'required|string|max:255',
             'event_date'  => 'required|date',
             'image'       => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
-        try {
-            $data = $request->all();
+        $data = $request->all();
 
-            // 2. Fix Date Format (Remove the 'T')
-            // This converts "2024-11-25T14:30" -> "2024-11-25 14:30:00"
-            if ($request->has('event_date')) {
-                $data['event_date'] = date('Y-m-d H:i:s', strtotime($request->event_date));
-            }
+        if ($request->hasFile('image')) {
+            $data['image'] = $request->file('image')->store('events');
+        }
 
-            // 3. Handle Image
-            if ($request->hasFile('image')) {
-                // We force 'cloudinary' disk to be safe
-                $data['image'] = $request->file('image')->store('events', 'cloudinary');
-            }
+        $event = Event::create($data);
 
-            // 4. Create Event
-            $event = Event::create($data);
-
-            // 5. Send Notifications
-            $users = User::all();
-            foreach ($users as $user) {
-                Notification::create([
-                    'user_id' => $user->id,
-                    'type'    => 'events', 
-                    'message' => "New event posted: {$event->title}",
-                    'is_read' => false,
-                ]);
-            }
-
-            return redirect()->back()->with('success', 'Event created successfully!');
-
-        } catch (\Exception $e) {
-            // STOP THE CODE AND SHOW THE REAL ERROR
-            dd([
-                'ERROR MESSAGE' => $e->getMessage(),
-                'FILE' => $e->getFile(),
-                'LINE' => $e->getLine(),
-                'DATA TRYING TO SAVE' => $data ?? 'No data'
+        $users = User::all();
+        foreach ($users as $user) {
+            Notification::create([
+                'user_id' => $user->id,
+                'type'    => 'events', 
+                'message' => "New event posted: {$event->title}",
+                'is_read' => false,
             ]);
         }
+
+        return redirect()->back()->with('success', 'Event created and notifications sent!');
     }
 
     public function destroy(Event $event)
