@@ -130,7 +130,7 @@
                         <div class="contact-inner-card">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d361.93145484445324!2d38.692166584713824!3d9.003649962490133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b870109e6fc95%3A0xbe202258eb95e901!2s2M3R%2BFWJ%2C%20Addis%20Ababa!5e0!3m2!1sen!2set!4v1763582595185!5m2!1sen!2set"
-                                width="550" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
                                 referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
