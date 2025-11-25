@@ -14,7 +14,7 @@
         // 2. Only use Cloudinary if:
         //    a) The user has a profile_p value in the DB
         //    b) AND that value is NOT the text 'default.png'
-        if (!empty($user->profile_p) && $user->profile_p !== 'default.png') {
+        if (!empty($user->profile_p) && $user->profile_p !== 'users.png') {
             $profile_p = Storage::url($user->profile_p);
         }
 
