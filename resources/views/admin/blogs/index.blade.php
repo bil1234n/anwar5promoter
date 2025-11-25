@@ -150,7 +150,7 @@
                     <div class="blog-card">
                         <div class="position-relative">
                             @if($blog->image)
-                                <img src="{{ asset('blog_images/'.$blog->image) }}" class="blog-img">
+                                <img src="{{ \Illuminate\Support\Facades\Storage::url($blog->image) }}" class="blog-img">
                             @else
                                 <div class="blog-img bg-light d-flex align-items-center justify-content-center text-muted">
                                     <i class="fa-regular fa-image fa-2x"></i>
@@ -215,7 +215,7 @@
                                             <label class="form-label text-muted small fw-bold">Current Image</label>
                                             <div class="d-flex align-items-center gap-3 mb-2">
                                                 @if($blog->image)
-                                                    <img src="{{ asset('blog_images/'.$blog->image) }}" class="rounded border" width="80">
+                                                    <img src="{{\Illuminate\Support\Facades\Storage::url($blog->image) }}" class="rounded border" width="80">
                                                     <small class="text-success"><i class="fa-solid fa-check"></i> Loaded</small>
                                                 @else
                                                     <span class="text-muted small">No image</span>
