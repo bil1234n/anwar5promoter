@@ -55,8 +55,8 @@ class RegisterController extends Controller
         // Note: The 'event(new Registered($user));' line has been removed.
         // This stops the email from sending and stops the delay.
 
-        // Direct the user to the dashboard/home directly.
-        // Change '/home' to whatever your main page URL is.
-        return redirect('/home');
+        // Direct the user to the dashboard/ directly.
+        // Change '/' to whatever your main page URL is.
+        return redirect('/');
     }
 }
