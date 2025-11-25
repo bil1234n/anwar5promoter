@@ -10,7 +10,3 @@ php artisan route:cache
 
 echo "Running migrations..."
 php artisan migrate --force
-
-# ADD THIS LINE:
-echo "Linking storage..."
-php artisan storage:link
