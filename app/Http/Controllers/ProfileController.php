@@ -64,25 +64,14 @@ class ProfileController extends Controller
         }
 
         // Handle profile picture update
-        // Handle profile picture update
         if ($request->hasFile('profile_p')) {
-            
-            // 1. Get the old image name
-            $oldImage = $user->profile_p;
-    
-            // 2. Check if we should delete the old image
-            // We do NOT want to delete 'default.png' or 'users.png' because other users need it.
-            if ($oldImage && $oldImage !== 'default.png' && $oldImage !== 'users.png') {
-                
-                // Delete the old image from the 'public' disk
-                \Illuminate\Support\Facades\Storage::disk('public')->delete($oldImage);
+            // Delete old profile picture if it's not the default
+            if ($user->profile_p && $user->profile_p !== 'users.png') {
+                \Illuminate\Support\Facades\Storage::disk('cloudinary')->delete($user->profile_p);
             }
-    
-            // 3. Upload the new image to the 'public' folder
-            // This overwrites the database entry with the new filename
-            $user->profile_p = $request->file('profile_p')->store('profiles', 'public');
-            
+            $user->profile_p = $request->file('profile_p')->store('profiles');
         }
+
         $user->save();
 
         return redirect()->route('profile')->with('status', 'Profile updated successfully!');
