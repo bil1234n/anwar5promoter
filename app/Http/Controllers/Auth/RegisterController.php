@@ -6,16 +6,12 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Auth;
 
 class RegisterController extends Controller
 {
     /**
      * Show the application registration form.
-     * This method is now named to match the default Laravel convention.
-     *
-     * @return \Illuminate\View\View
      */
     public function showRegistrationForm()
     {
@@ -38,9 +34,9 @@ class RegisterController extends Controller
         ]);
 
         // Handle file uploads
-        $profilePath = $request->file('profile_p') ? $request->file('profile_p')->store('profiles') : 'default.png';
-        $idCardPath  = $request->file('id_card') ? $request->file('id_card')->store('documents') : null;
-        $passportPath = $request->file('passport') ? $request->file('passport')->store('documents') : null;
+        $profilePath = $request->file('profile_p') ? $request->file('profile_p')->store('profiles','public') : 'default.png';
+        $idCardPath  = $request->file('id_card') ? $request->file('id_card')->store('documents','public') : null;
+        $passportPath = $request->file('passport') ? $request->file('passport')->store('documents','public') : null;
 
         $user = User::create([
             'username' => $request->username,
@@ -50,15 +46,17 @@ class RegisterController extends Controller
             'profile_p' => $profilePath,
             'id_card' => $idCardPath,
             'passport' => $passportPath,
+            // email_verified_at will naturally be NULL in the database
         ]);
 
         // Log the user in immediately after registration
         Auth::login($user);
 
-        // Dispatch the email verification event
-        event(new Registered($user));
+        // Note: The 'event(new Registered($user));' line has been removed.
+        // This stops the email from sending and stops the delay.
 
-        // Direct the user to the email verification notice page.
-        return redirect()->route('verification.notice');
+        // Direct the user to the dashboard/home directly.
+        // Change '/home' to whatever your main page URL is.
+        return redirect('/home');
     }
 }
