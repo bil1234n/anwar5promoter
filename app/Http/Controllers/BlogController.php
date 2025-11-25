@@ -5,50 +5,34 @@ namespace App\Http\Controllers;
 use App\Models\Blog;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage; // Import Storage
 use App\Models\User;
 
 class BlogController extends Controller
 {
-    // ==========================================
-    // 1. PUBLIC VIEW (For normal users)
-    // ==========================================
+    // ... index and adminIndex remain the same ...
     public function index(Request $request)
     {
         $categories = Blog::select('category')->distinct()->pluck('category');
-        
         $query = Blog::query();
         if ($request->filled('category')) {
             $query->where('category', $request->category);
         }
         $blogs = $query->latest()->get();
-
-        // Returns the PUBLIC view: resources/views/blogs/index.blade.php
         return view('blogs.index', compact('blogs', 'categories'));
     }
 
-    // ==========================================
-    // 2. ADMIN VIEW (For Dashboard)
-    // ==========================================
     public function adminIndex(Request $request)
     {
         $categories = Blog::select('category')->distinct()->pluck('category');
-
         $query = Blog::query();
         if ($request->filled('category')) {
             $query->where('category', $request->category);
         }
-        
-        // You might want to see specific stats here too, or just the list
         $blogs = $query->latest()->get();
-
-        // Returns the ADMIN view: resources/views/admin/blogs/index.blade.php
         return view('admin.blogs.index', compact('blogs', 'categories'));
     }
 
-    // ==========================================
-    // 3. CRUD OPERATIONS
-    // ==========================================
-    
     public function create()
     {
         return view('blogs.create');
@@ -63,10 +47,10 @@ class BlogController extends Controller
             'image' => 'nullable|image|mimes:jpg,png,jpeg|max:2048',
         ]);
 
-        $imageName = null;
-        if ($request->image) {
-            $imageName = time() . '.' . $request->image->extension();
-            $request->image->move(public_path('blog_images'), $imageName);
+        $imagePath = null;
+        if ($request->hasFile('image')) {
+            // FIX: Use Cloudinary instead of local 'move'
+            $imagePath = $request->file('image')->store('blog_images', 'cloudinary');
         }
 
         Blog::create([
@@ -74,20 +58,9 @@ class BlogController extends Controller
             'title' => $request->title,
             'category' => $request->category,
             'content' => $request->content,
-            'image' => $imageName
+            'image' => $imagePath // This saves the Cloudinary path
         ]);
 
-        // Send Notifications logic...
-        /* 
-        $users = User::all();
-        foreach ($users as $user) {
-             if (function_exists('sendNotification')) {
-                 sendNotification($user->id, 'blog', "New blog: {$request->title}");
-             }
-        }
-        */
-
-        // Redirect based on who created it
         if(Auth::user()->role === 'admin') {
             return redirect()->route('admin.blogs.index')->with('success', 'Blog created successfully!');
         }
@@ -106,22 +79,25 @@ class BlogController extends Controller
             'title' => 'required',
             'category' => 'required',
             'content' => 'required',
-            'image' => 'nullable|image|mimes:jpg,png,jpeg|max:2048', // Added nullable logic
+            'image' => 'nullable|image|mimes:jpg,png,jpeg|max:2048',
         ]);
 
-        $imageName = $blog->image;
+        $imagePath = $blog->image;
 
-        // Only upload if a new file is present
         if ($request->hasFile('image')) {
-            $imageName = time() . '.' . $request->image->extension();
-            $request->image->move(public_path('blog_images'), $imageName);
+             // Delete old image from Cloudinary
+             if ($blog->image) {
+                Storage::disk('cloudinary')->delete($blog->image);
+            }
+            // Upload new
+            $imagePath = $request->file('image')->store('blog_images', 'cloudinary');
         }
 
         $blog->update([
             'title' => $request->title,
             'category' => $request->category,
             'content' => $request->content,
-            'image' => $imageName
+            'image' => $imagePath
         ]);
 
         if(Auth::user()->role === 'admin') {
@@ -130,11 +106,15 @@ class BlogController extends Controller
 
         return redirect()->route('blogs.index')->with('success', 'Blog updated!');
     }
+
     public function destroy(Blog $blog)
     {
+        // Delete image from Cloudinary
+        if ($blog->image) {
+            Storage::disk('cloudinary')->delete($blog->image);
+        }
         $blog->delete();
         
-        // "Back" will return them to whichever page they clicked delete on (Admin or Public)
         return back()->with('success', 'Blog deleted!');
     }
 }
