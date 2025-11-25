@@ -66,7 +66,7 @@ class ProfileController extends Controller
         // Handle profile picture update
         if ($request->hasFile('profile_p')) {
             // Delete old profile picture if it's not the default
-            if ($user->profile_p && $user->profile_p !== 'default.png') {
+            if ($user->profile_p && $user->profile_p !== 'users.png') {
                 \Illuminate\Support\Facades\Storage::disk('cloudinary')->delete($user->profile_p);
             }
             $user->profile_p = $request->file('profile_p')->store('profiles');
