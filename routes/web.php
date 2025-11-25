@@ -181,15 +181,3 @@ Route::middleware(['auth','role:admin'])->group(function() {
     Route::get('/users/{id}/edit', [AdminController::class, 'editUser'])->name('admin.users.edit');
 
 });
-Route::get('/link-storage', function () {
-    $target = storage_path('app/public');
-    $link = public_path('storage');
-
-    if (file_exists($link)) {
-        return 'The "public/storage" link already exists.';
-    }
-
-    app('files')->link($target, $link);
-    
-    return 'The [public/storage] link has been connected!';
-});
