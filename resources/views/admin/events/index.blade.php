@@ -16,53 +16,50 @@
         :root { --sidebar-width: 260px; --primary-color: #435ebe; --bg-color: #f2f7ff; --text-color: #607080; }
         body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-color); overflow-x: hidden; }
         
-        .sidebar { width: var(--sidebar-width); height: 100vh; position: fixed; top: 0; left: 0; background: #fff; box-shadow: 0 0 15px rgba(0,0,0,0.05); z-index: 1000; transition: all 0.3s; }
+        /* Sidebar Styling */
+        .sidebar { width: var(--sidebar-width); height: 100vh; position: fixed; top: 0; left: 0; background: #fff; box-shadow: 0 0 15px rgba(0,0,0,0.05); z-index: 1000; transition: transform 0.3s ease-in-out; }
         .sidebar-header { padding: 2rem 2rem 1rem; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid #f0f0f0; }
         .sidebar-menu { padding: 1.5rem; }
         .menu-link { display: flex; align-items: center; padding: 12px 15px; color: #555; text-decoration: none; border-radius: 8px; margin-bottom: 5px; transition: all 0.3s; font-weight: 500; }
         .menu-link:hover, .menu-link.active { background-color: var(--primary-color); color: #fff; box-shadow: 0 4px 10px rgba(67, 94, 190, 0.3); }
         .menu-link i { margin-right: 15px; width: 20px; text-align: center; }
 
-        .main-content { margin-left: var(--sidebar-width); padding: 2rem; }
+        /* Main Content */
+        .main-content { margin-left: var(--sidebar-width); padding: 2rem; transition: margin-left 0.3s; }
         .custom-card { background: #fff; border-radius: 12px; border: none; box-shadow: 0 5px 15px rgba(0,0,0,0.02); padding: 1.5rem; margin-bottom: 2rem; }
         
         .table thead th { font-size: 0.85rem; text-transform: uppercase; font-weight: 600; color: #8898aa; border-bottom: 1px solid #e9ecef; padding: 1rem; }
         .table tbody td { vertical-align: middle; padding: 1rem; color: #525f7f; }
         .event-img { width: 80px; height: 50px; object-fit: cover; border-radius: 6px; }
 
-        @media (max-width: 768px) { .sidebar { transform: translateX(-100%); } .main-content { margin-left: 0; } }
+        /* Mobile Overlay */
+        .sidebar-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 999; }
+
+        /* Responsive */
+        @media (max-width: 768px) { 
+            .sidebar { transform: translateX(-100%); } 
+            .sidebar.show { transform: translateX(0); }
+            .sidebar-overlay.show { display: block; }
+            .main-content { margin-left: 0; padding: 1.5rem; } 
+        }
     </style>
 </head>
 <body>
 
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <div class="sidebar-header">
-            <h4 class="mb-0 fw-bold" style="color: var(--primary-color);">
-                <img src="{{ asset('assets/img/logo/logo_a_3.png') }}" loading="lazy" alt="Anwar5Promoter" style="width: 200px;">
-            </h4>
-        </div>
-        <div class="sidebar-menu">
-            <a href="{{ route('admin.dashboard') }}" class="menu-link"><i class="fa-solid fa-house"></i> Dashboard</a>
-            <a href="{{ route('admin.users.index') }}" class="menu-link"><i class="fa-solid fa-users"></i> Users</a>
-            <!-- Active Events Link -->
-            <a href="{{ route('admin.events.index') }}" class="menu-link active"><i class="fa-solid fa-calendar-check"></i> Events</a>
-            <a href="{{ route('admin.blogs.index') }}" class="menu-link"><i class="fa-solid fa-newspaper"></i> Blogs</a>
-            <a href="{{ route('admin.donations') }}" class="menu-link"><i class="fa-solid fa-hand-holding-dollar"></i> Donations</a>
-            <a href="{{ route('admin.messages') }}" class="menu-link"><i class="fa-solid fa-envelope"></i> Messages</a>
-            
-            <div class="mt-5 border-top pt-4">
-                <form action="{{ route('logout') }}" method="POST">
-                    @csrf
-                    <button class="btn btn-danger w-100"><i class="fa-solid fa-power-off me-2"></i> Logout</button>
-                </form>
-            </div>
-        </div>
-    </div>
+    <!-- Include Sidebar Component -->
+    @include('components.admin_header')
 
     <!-- Main Content -->
     <div class="main-content">
         
+        <!-- Mobile Header / Toggle -->
+        <div class="d-flex align-items-center mb-4 d-md-none">
+            <button class="btn btn-primary me-3" onclick="toggleSidebar()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <h4 class="fw-bold mb-0">Events</h4>
+        </div>
+
         @if(session('success'))
             <div class="alert alert-success border-0 shadow-sm mb-4"><i class="fa-solid fa-check-circle me-2"></i> {{ session('success') }}</div>
         @endif
@@ -78,9 +75,9 @@
         @endif
 
         <div class="d-flex justify-content-between align-items-center mb-4">
-            <h3 class="fw-bold text-dark">Events Management</h3>
+            <h3 class="fw-bold text-dark d-none d-md-block">Events Management</h3>
             <!-- Toggle Create Form -->
-            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#createEventCard">
+            <button class="btn btn-primary ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#createEventCard">
                 <i class="fa-solid fa-plus me-2"></i> New Event
             </button>
         </div>
@@ -89,7 +86,6 @@
         <div class="collapse mb-4" id="createEventCard">
             <div class="custom-card border-start border-4 border-primary">
                 <h5 class="fw-bold mb-3">Create New Event</h5>
-                <!-- Uses your Controller's store method -->
                 <form action="{{ route('admin.events.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="row g-3">
@@ -126,7 +122,7 @@
                         <tr>
                             <th style="width: 120px;">Preview</th>
                             <th>Event Details</th>
-                            <th>Schedule</th>
+                            <th class="d-none d-md-table-cell">Schedule</th>
                             <th>Stats</th>
                             <th class="text-end">Actions</th>
                         </tr>
@@ -145,9 +141,13 @@
                             </td>
                             <td>
                                 <div class="fw-bold text-dark">{{ $event->title }}</div>
-                                <small class="text-muted">{{ Str::limit($event->description ?? '', 50) }}</small>
+                                <!-- Mobile only date -->
+                                <small class="text-muted d-md-none d-block">
+                                    {{ \Carbon\Carbon::parse($event->event_date)->format('M d, Y') }}
+                                </small>
+                                <small class="text-muted d-none d-md-block">{{ Str::limit($event->description ?? '', 50) }}</small>
                             </td>
-                            <td>
+                            <td class="d-none d-md-table-cell">
                                 <div class="text-primary fw-medium">
                                     <i class="fa-regular fa-calendar me-1"></i> {{ \Carbon\Carbon::parse($event->event_date)->format('M d, Y') }}
                                 </div>
@@ -157,7 +157,7 @@
                             </td>
                             <td>
                                 <span class="badge bg-info bg-opacity-10 text-info border border-info rounded-pill px-3">
-                                    {{ $event->registrations_count ?? 0 }} Registrants
+                                    {{ $event->registrations_count ?? 0 }} <span class="d-none d-md-inline">Registrants</span>
                                 </span>
                             </td>
                             <td class="text-end">
@@ -189,12 +189,9 @@
                                         <h5 class="modal-title fw-bold">Edit Event: {{ $event->title }}</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                     </div>
-                                    
-                                    <!-- Points to your existing controller update method -->
                                     <form action="{{ route('admin.events.update', $event->id) }}" method="POST" enctype="multipart/form-data">
                                         @csrf
                                         @method('PUT')
-                                        
                                         <div class="modal-body p-4">
                                             <div class="row g-3">
                                                 <div class="col-md-6">
@@ -203,7 +200,6 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label class="form-label text-muted small fw-bold">Date & Time</label>
-                                                    <!-- Formatting date for datetime-local input -->
                                                     <input type="datetime-local" name="event_date" class="form-control" 
                                                            value="{{ date('Y-m-d\TH:i', strtotime($event->event_date)) }}" required>
                                                 </div>
@@ -236,7 +232,6 @@
                             </div>
                         </div>
                         <!-- End Modal -->
-
                         @empty
                         <tr>
                             <td colspan="5" class="text-center py-5 text-muted">
@@ -252,5 +247,13 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('adminSidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            sidebar.classList.toggle('show');
+            overlay.classList.toggle('show');
+        }
+    </script>
 </body>
 </html>
