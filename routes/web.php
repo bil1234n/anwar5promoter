@@ -182,15 +182,20 @@ Route::middleware(['auth','role:admin'])->group(function() {
     Route::get('/users/{id}/edit', [AdminController::class, 'editUser'])->name('admin.users.edit');
 
 });
-Route::get('/link-storage', function () {
-    $target = storage_path('app/public');
-    $link = public_path('storage');
 
-    if (file_exists($link)) {
-        return 'The "public/storage" link already exists.';
-    }
 
-    app('files')->link($target, $link);
+Route::get('/clear-cache', function () {
+    // Clear the config cache (Important for Cloudinary/DB changes)
+    Artisan::call('config:clear');
     
-    return 'The [public/storage] link has been connected!';
+    // Clear the view cache (Important for Blade errors)
+    Artisan::call('view:clear');
+    
+    // Clear the route cache (Important for 404 errors)
+    Artisan::call('route:clear');
+    
+    // Clear general cache
+    Artisan::call('cache:clear');
+
+    return '✅ Success! Config, Views, Routes, and Cache have been cleared. <br> <a href="/">Go back to Home</a>';
 });
