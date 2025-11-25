@@ -99,7 +99,7 @@
                         </div>
                         <div class="col-md-6">
                             <label class="form-label text-muted small fw-bold">Date & Time</label>
-                            <input type="datetime-local" name="event_date" class="form-control">
+                            <input type="datetime-local" name="event_date" class="form-control" required>
                         </div>
                         <div class="col-md-12">
                             <label class="form-label text-muted small fw-bold">Description (Optional)</label>
