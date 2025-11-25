@@ -48,6 +48,16 @@ class GoogleController extends Controller
         // Log the user in
         Auth::login($user, true);
 
-        return redirect('/');
+        
+        // Redirect based on user's role
+        $role = Auth::user()->role;
+        switch ($role) {
+            case 'admin':
+                return redirect()->intended('/admin/dashboard');
+            case 'user':
+                return redirect()->intended('/user/home');
+            default:
+                return redirect()->intended('/');
+        }
     }
 }
