@@ -11,15 +11,15 @@
         }
     </style>
     <meta charset="utf-8">
-    <title>Contact Us - Promote - Webflow HTML website template</title>
+    <title>Edit Profile</title>
     <meta
         content="Whether you have a question about digital services, cost value, or other information please contact us using the form and the other information on this page."
         name="description">
-    <meta content="Contact Us - Promote - Webflow HTML website template" property="og:title">
+    <meta content="Edit Profile" property="og:title">
     <meta
         content="Whether you have a question about digital services, cost value, or other information please contact us using the form and the other information on this page."
         property="og:description">
-    <meta content="Contact Us - Promote - Webflow HTML website template" property="twitter:title">
+    <meta content="Edit Profile" property="twitter:title">
     <meta
         content="Whether you have a question about digital services, cost value, or other information please contact us using the form and the other information on this page."
         property="twitter:description">
