@@ -43,7 +43,8 @@
                 <a href="{{ url('/admin/users') }}" class="nav-link w-nav-link">Users</a>
             @else
                 <a href="{{ url('/about') }}" class="nav-link w-nav-link w--current">About</a>
-                <div data-hover="true" data-delay="0" class="nav-link dropdown-nav w-dropdown">
+                <!-- 1. The Dropdown (Visible on Desktop/Tablet, Hidden on Phone) -->
+                <div data-hover="true" data-delay="0" class="nav-link dropdown-nav w-dropdown desktop-only-dropdown">
                     <div class="nav-dropdown-toggle w-dropdown-toggle" id="w-dropdown-toggle-0"
                         aria-controls="w-dropdown-list-0" aria-haspopup="menu" aria-expanded="false" role="button"
                         tabindex="0">
@@ -70,6 +71,9 @@
                             tabindex="0">Anwar 5 Tour & Galleries</a>
                     </nav>
                 </div>
+
+                <!-- 2. The Single Link (Hidden on Desktop, Visible on Phone) -->
+                <a href="{{ url('/services') }}" class="nav-link w-nav-link mobile-only-link">Services</a>
                 <a href="{{ url('/blog') }}" class="nav-link w-nav-link">Blog</a>
                 <a href="{{ url('/event') }}" class="nav-link w-nav-link">Event</a>
             @endif
