@@ -480,7 +480,7 @@
                         <div class="testimonial-flex">
                             <div class="testimonial-content-wrap">
                                 <div class="testimonial-company-wrap">
-                                    <img src="{{ asset('assets/img/compnay/Papyrus_printing&Garment.png') }}" width="115"
+                                    <img src="https://i.imgur.com/ruDqFMZ.jpeg" width="115"
                                         loading="lazy" alt="Company Image For Testimonial Slider">
                                 </div>
                             </div>
