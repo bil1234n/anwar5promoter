@@ -331,7 +331,7 @@
                             </div>
                             <div class="team-content-wrap">
                                 <h3 class="section-content-title team">Mr Hatib Hussen</h3>
-                                <p>Executive Camiraman & Editor</p>
+                                <p>Executive Camaraman & Editor</p>
                             </div>
                             <div class="team-social-wrap"><a href="https://www.facebook.com" target="_blank"
                                     class="w-inline-block"><img
@@ -446,7 +446,6 @@
                             <div class="team-image-wrap"><img
                                     src="{{ https://imgur.com/a/zKNNAaA }}"
                                     loading="lazy" sizes="100vw"
-                                    srcset="{{ https://imgur.com/a/zKNNAaA }} 661w"
                                     alt="Team Member Image" class="team-image"></div>
                             <div id="w-node-_57b42622-3138-4237-1dfb-76140ac1a21e-cc478d30" class="team-line-break">
                             </div>
