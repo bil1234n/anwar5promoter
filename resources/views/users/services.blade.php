@@ -11,15 +11,15 @@
         }
     </style>
     <meta charset="utf-8">
-    <title>Services - Promote - Webflow HTML website template</title>
+    <title>Services</title>
     <meta
         content="The list of digital marketing services provided by the marketing agency is listed with a simple intro and the services are listed based on the main category."
         name="description">
-    <meta content="Services - Promote - Webflow HTML website template" property="og:title">
+    <meta content="Services" property="og:title">
     <meta
         content="The list of digital marketing services provided by the marketing agency is listed with a simple intro and the services are listed based on the main category."
         property="og:description">
-    <meta content="Services - Promote - Webflow HTML website template" property="twitter:title">
+    <meta content="Services" property="twitter:title">
     <meta
         content="The list of digital marketing services provided by the marketing agency is listed with a simple intro and the services are listed based on the main category."
         property="twitter:description">
