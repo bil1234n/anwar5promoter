@@ -9739,3 +9739,27 @@ iframe.goog-te-banner-frame {
     justify-self: center;
   }
 }
+
+
+/* --- Mobile Styles (Phone View) --- */
+/* Max-width 991px is standard for mobile landscape and below */
+@media screen and (max-width: 991px) {
+    
+    /* Hide the complex dropdown */
+    .desktop-only-dropdown {
+        display: none !important;
+    }
+
+    /* Show the simple link */
+    .mobile-only-link {
+        display: block !important; 
+        /* You might need 'inline-block' depending on your navbar layout */
+    }
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .grid { grid-template-columns: 1fr; }
+  .left { order: 2; }
+  .right { order: 1; }
+}
