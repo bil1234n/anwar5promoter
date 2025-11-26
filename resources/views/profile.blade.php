@@ -11,17 +11,17 @@
         }
     </style>
     <meta charset="utf-8">
-    <title>Contact Us</title>
+    <title>Profile</title>
     <meta
-        content="Whether you have a question about digital services, cost value, or other information please contact us using the form and the other information on this page."
+        content="Whether you have a question about digital services, cost value, or other information please Profile using the form and the other information on this page."
         name="description">
-    <meta content="Contact Us" property="og:title">
+    <meta content="Profile" property="og:title">
     <meta
-        content="Whether you have a question about digital services, cost value, or other information please contact us using the form and the other information on this page."
+        content="Whether you have a question about digital services, cost value, or other information please Profile using the form and the other information on this page."
         property="og:description">
-    <meta content="Contact Us" property="twitter:title">
+    <meta content="Profile" property="twitter:title">
     <meta
-        content="Whether you have a question about digital services, cost value, or other information please contact us using the form and the other information on this page."
+        content="Whether you have a question about digital services, cost value, or other information please Profile using the form and the other information on this page."
         property="twitter:description">
     <meta property="og:type" content="website">
     <meta content="summary_large_image" name="twitter:card">
@@ -104,7 +104,7 @@
                                     <div>Name</div>
                                 </div>
                             </div>
-                            <div class="contact-card-content-wrap"><img src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/634cf2236b88229f5e4d8398_location.svg" loading="lazy" alt="Location Mark icon For Contact Us Page" class="contact-card-image">
+                            <div class="contact-card-content-wrap"><img src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/634cf2236b88229f5e4d8398_location.svg" loading="lazy" alt="Location Mark icon For Profile Page" class="contact-card-image">
                                 <div>
                                     <h3 class="section-content-title contact-card-title">Username</h3>
                                     <p class="contact-address-content">{{ $user->username }}</p>
@@ -119,7 +119,7 @@
                                     <div>PhoneNo</div>
                                 </div>
                             </div>
-                            <div class="contact-card-content-wrap"><img src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/634cf0f4af899d6e98f8ca3e_phone.svg" loading="lazy" alt="Phone Icon For Contact Us Page" class="contact-card-image">
+                            <div class="contact-card-content-wrap"><img src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/634cf0f4af899d6e98f8ca3e_phone.svg" loading="lazy" alt="Phone Icon For Profile Page" class="contact-card-image">
                                 <div>
                                     <h3 class="section-content-title contact-card-title">Phone Number</h3>
                                     <a href="tel:{{ $user->phoneNo }}" class="contact-card-link">{{ $user->phoneNo }}</a><br>
@@ -134,7 +134,7 @@
                                     <div>Contact</div>
                                 </div>
                             </div>
-                            <div class="contact-card-content-wrap"><img src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/634cf0f490db01b793685f37_mail.svg" loading="lazy" alt="Mail Icon For Contact Us Page" class="contact-card-image">
+                            <div class="contact-card-content-wrap"><img src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/634cf0f490db01b793685f37_mail.svg" loading="lazy" alt="Mail Icon For Profile Page" class="contact-card-image">
                                 <div>
                                     <h3 class="section-content-title contact-card-title">Email</h3><a href="mailto:{{ $user->email }}" class="contact-card-link">{{ $user->email }}</a>
                                 </div>
@@ -148,7 +148,7 @@
                                     <div>Documents</div>
                                 </div>
                             </div>
-                            <div class="contact-card-content-wrap"><img src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/634cf0f490db01b793685f37_mail.svg" loading="lazy" alt="Mail Icon For Contact Us Page" class="contact-card-image">
+                            <div class="contact-card-content-wrap"><img src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/634cf0f490db01b793685f37_mail.svg" loading="lazy" alt="Mail Icon For Profile Page" class="contact-card-image">
                                 <div>
                                     <h3 class="section-content-title contact-card-title">My ID</h3>
                                     <p class="contact-address-content">
