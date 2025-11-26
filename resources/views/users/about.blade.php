@@ -11,15 +11,15 @@
         }
     </style>
     <meta charset="utf-8">
-    <title>About Us - Promote - Webflow HTML website template</title>
+    <title>About Us</title>
     <meta
         content="The details about the marketing agency like the intro, digital values, marketing team, and the locations with a contact section for contacting the team are available."
         name="description">
-    <meta content="About Us - Promote - Webflow HTML website template" property="og:title">
+    <meta content="About Us" property="og:title">
     <meta
         content="The details about the marketing agency like the intro, digital values, marketing team, and the locations with a contact section for contacting the team are available."
         property="og:description">
-    <meta content="About Us - Promote - Webflow HTML website template" property="twitter:title">
+    <meta content="About Us" property="twitter:title">
     <meta
         content="The details about the marketing agency like the intro, digital values, marketing team, and the locations with a contact section for contacting the team are available."
         property="twitter:description">
