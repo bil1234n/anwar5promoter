@@ -253,7 +253,7 @@
                     <div class="section-sub-title center-align">
                         <p class="sub-title-content"><span class="sub-title-slash purple">//</span> 03 . OUR TEAM</p>
                     </div>
-                    <h2 class="section-title">Our team of expert marketers</h2>
+                    <h2 class="section-title">Our team of expert</h2>
                 </div>
             </div>
             <div class="team-wrap">
