@@ -11,15 +11,15 @@
         }
     </style>
     <meta charset="utf-8">
-    <title>Service Single - Promote - Webflow HTML website template</title>
+    <title>My Event</title>
     <meta
         content="A brief explanation about the particular digital marketing service with the images and the growth points are listed with readable quality."
         name="description">
-    <meta content="Service Single - Promote - Webflow HTML website template" property="og:title">
+    <meta content="My Event" property="og:title">
     <meta
         content="A brief explanation about the particular digital marketing service with the images and the growth points are listed with readable quality."
         property="og:description">
-    <meta content="Service Single - Promote - Webflow HTML website template" property="twitter:title">
+    <meta content="My Event" property="twitter:title">
     <meta
         content="A brief explanation about the particular digital marketing service with the images and the growth points are listed with readable quality."
         property="twitter:description">
