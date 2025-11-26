@@ -444,9 +444,9 @@
                         data-w-id="3974115e-6369-e284-4198-44903e4e3a52" style="opacity: 0;" class="team-item">
                         <div class="about-team">
                             <div class="team-image-wrap"><img
-                                    src="{{ asset('assets/img/team/Mr_Ridwan_Nuru.jpg') }}"
+                                    src="{{ asset('assets/img/team/Mr_Ridwan_Nuru_2.jpg') }}"
                                     loading="lazy" sizes="100vw"
-                                    srcset="{{ asset('assets/img/team/Mr_Ridwan_Nuru.jpg') }} 661w"
+                                    srcset="{{ asset('assets/img/team/Mr_Ridwan_Nuru_2.jpg') }} 661w"
                                     alt="Team Member Image" class="team-image"></div>
                             <div id="w-node-_57b42622-3138-4237-1dfb-76140ac1a21e-cc478d30" class="team-line-break">
                             </div>
