@@ -3045,7 +3045,7 @@ blockquote {
   background-color: #292930;
   padding-top: 100px;
   padding-bottom: 100px;
-  margin-bottom: 50px;
+  margin-bottom: 0;
 }
 
 .service-section.service-page {
