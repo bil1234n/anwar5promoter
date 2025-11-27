@@ -90,48 +90,6 @@
             </div>
             <div class="service-card-wrap">
                 <div class="w-layout-grid service-grid">
-                    <div id="w-node-a12d2fd6-7583-d887-bf84-3a054e05e57d-68652b7b"
-                        data-w-id="a12d2fd6-7583-d887-bf84-3a054e05e57d" style="opacity: 0;" class="service-card">
-                        <div class="card-image-wrap"><img
-                                src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/63413f4ac245b8ccf6bf86e9_card-05.png"
-                                loading="lazy" alt="Home Page Card Image For Title" width="76"></div>
-                        <div class="service-card-content-wrap">
-                            <h3 class="section-content-title white">Information and Referral Services</h3>
-                            <p class="white-content">
-                                The foundation acts as a central "Information Center," gathering and maintaining data on available resources, support systems, and institutions (like orphanages, nursing homes, government aid, and NGOs) that serve both orphaned children and vulnerable elderly individuals. They refer individuals or families to the most appropriate services they need.
-                            </p>
-                        </div>
-                        <div><a href="#" class="card-button w-inline-block"
-                                style="color: rgb(171, 171, 172); background-color: rgba(0, 0, 0, 0); border-color: rgb(83, 83, 85);">
-                                <div>Read More</div><img
-                                    src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/6341460cda79c99ce8b02382_button-01.svg"
-                                    loading="lazy" alt="Arrow Image For Button " class="arrow-dark"><img
-                                    src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/63401de9fdbdb451cfbec4db_button.svg"
-                                    loading="lazy" alt="Blur Arrow Image For Button" class="arrow-blue"
-                                    style="display: none;">
-                            </a></div>
-                    </div>
-                    <div id="w-node-a12d2fd6-7583-d887-bf84-3a054e05e58b-68652b7b"
-                        data-w-id="a12d2fd6-7583-d887-bf84-3a054e05e58b" style="opacity: 0;" class="service-card">
-                        <div class="card-image-wrap"><img
-                                src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/63413f4ac245b8ccf6bf86e9_card-05.png"
-                                loading="lazy" width="76" alt="Home Page Card Image For Title"></div>
-                        <div class="service-card-content-wrap">
-                            <h3 class="section-content-title white">Social Welfare Support and Case Management</h3>
-                            <p class="white-content">
-                                This involves direct intervention to assess the needs of both the elderly and orphaned children. The foundation works to document, track, and manage individual cases, ensuring that the basic needs for shelter, food, clothing, and medical care are met, often through direct aid or connecting them with local donors.
-                            </p>
-                        </div>
-                        <div><a href="#" class="card-button w-inline-block"
-                                style="color: rgb(171, 171, 172); background-color: rgba(0, 0, 0, 0); border-color: rgb(83, 83, 85);">
-                                <div>Read More</div><img
-                                    src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/6341460cda79c99ce8b02382_button-01.svg"
-                                    loading="lazy" alt="Arrow Image For Button " class="arrow-dark"><img
-                                    src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/63401de9fdbdb451cfbec4db_button.svg"
-                                    loading="lazy" alt="Blur Arrow Image For Button" class="arrow-blue"
-                                    style="display: none;">
-                            </a></div>
-                    </div>
                     <div id="w-node-a12d2fd6-7583-d887-bf84-3a054e05e599-68652b7b"
                         data-w-id="a12d2fd6-7583-d887-bf84-3a054e05e599" style="opacity: 0;" class="service-card">
                         <div class="card-image-wrap"><img
