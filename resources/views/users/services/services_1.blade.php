@@ -111,27 +111,6 @@
                                     style="display: none;">
                             </a></div>
                     </div>
-                    <div id="w-node-a12d2fd6-7583-d887-bf84-3a054e05e58b-68652b7b"
-                        data-w-id="a12d2fd6-7583-d887-bf84-3a054e05e58b" style="opacity: 0;" class="service-card">
-                        <div class="card-image-wrap"><img
-                                src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/63413f4ae3265ca110340f4a_card-02.png"
-                                loading="lazy" width="76" alt="Home Page Card Image For Title"></div>
-                        <div class="service-card-content-wrap">
-                            <h3 class="section-content-title white">Halal E-commerce Platform Listing & Management</h3>
-                            <p class="white-content">
-                                This involves listing and selling Halal products on specialized online marketplaces or managing a company's own e-commerce site focused on the Halal consumer segment. Services often include optimizing product descriptions with Halal keywords (like "Zabihah," "Tayyib," "Shari'ah-compliant"), handling secure payment gateways, and managing specialized Halal-focused logistics and delivery to ensure product integrity remains intact until it reaches the consumer.
-                            </p>
-                        </div>
-                        <div><a href="#" class="card-button w-inline-block"
-                                style="color: rgb(171, 171, 172); background-color: rgba(0, 0, 0, 0); border-color: rgb(83, 83, 85);">
-                                <div>Read More</div><img
-                                    src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/6341460cda79c99ce8b02382_button-01.svg"
-                                    loading="lazy" alt="Arrow Image For Button " class="arrow-dark"><img
-                                    src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/63401de9fdbdb451cfbec4db_button.svg"
-                                    loading="lazy" alt="Blur Arrow Image For Button" class="arrow-blue"
-                                    style="display: none;">
-                            </a></div>
-                    </div>
                     <div id="w-node-a12d2fd6-7583-d887-bf84-3a054e05e599-68652b7b"
                         data-w-id="a12d2fd6-7583-d887-bf84-3a054e05e599" style="opacity: 0;" class="service-card">
                         <div class="card-image-wrap"><img
@@ -141,27 +120,6 @@
                             <h3 class="section-content-title white">Halal-Focused Digital Marketing and Content Creation</h3>
                             <p class="white-content">
                                 This service develops and executes marketing strategies specifically tailored to resonate with Muslim consumers' cultural and religious values. It includes creating ethically compliant content (e.g., avoiding inappropriate imagery or music), utilizing social media for community engagement, running targeted online advertising campaigns, and collaborating with Halal influencers and scholars to build brand credibility and responsible promotion.
-                            </p>
-                        </div>
-                        <div><a href="#" class="card-button w-inline-block"
-                                style="color: rgb(171, 171, 172); background-color: rgba(0, 0, 0, 0); border-color: rgb(83, 83, 85);">
-                                <div>Read More</div><img
-                                    src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/6341460cda79c99ce8b02382_button-01.svg"
-                                    loading="lazy" alt="Arrow Image For Button " class="arrow-dark"><img
-                                    src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/63401de9fdbdb451cfbec4db_button.svg"
-                                    loading="lazy" alt="Blur Arrow Image For Button" class="arrow-blue"
-                                    style="display: none;">
-                            </a></div>
-                    </div>
-                    <div id="w-node-a12d2fd6-7583-d887-bf84-3a054e05e5a7-68652b7b"
-                        data-w-id="a12d2fd6-7583-d887-bf84-3a054e05e5a7" style="opacity: 0;" class="service-card">
-                        <div class="card-image-wrap"><img
-                                src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/63413f4ae3265ca110340f4a_card-02.png"
-                                loading="lazy" alt="Home Page Card Image For Title" width="65"></div>
-                        <div class="service-card-content-wrap">
-                            <h3 class="section-content-title white">Halal Trade Show Participation and B2B Matchmaking</h3>
-                            <p class="white-content">
-                                This focuses on expanding a Halal business's reach by facilitating participation in international Halal expos, trade fairs, and specialized conferences (like the World Halal Summit or MIHAS). The service includes securing exhibition space, designing culturally appropriate booths, and arranging Business-to-Business (B2B) matchmaking sessions to connect the business with international buyers, distributors, and potential partners in key Halal markets.
                             </p>
                         </div>
                         <div><a href="#" class="card-button w-inline-block"
