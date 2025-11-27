@@ -111,27 +111,6 @@
                                     style="display: none;">
                             </a></div>
                     </div>
-                    <div id="w-node-a12d2fd6-7583-d887-bf84-3a054e05e58b-68652b7b"
-                        data-w-id="a12d2fd6-7583-d887-bf84-3a054e05e58b" style="opacity: 0;" class="service-card">
-                        <div class="card-image-wrap"><img
-                                src="{{ asset('assets/img/quran_2.png') }}"
-                                loading="lazy" width="76" alt="Home Page Card Image For Title"></div>
-                        <div class="service-card-content-wrap">
-                            <h3 class="section-content-title white">Religious and Cultural Exchange Platform</h3>
-                            <p class="white-content">
-                                The event serves as a gathering point for contestants, religious leaders (Ulema), and attendees from different regions. It provides a formal setting for fostering religious knowledge, unity, and understanding within the Muslim community, often featuring speeches, lectures, and exhibitions highlighting Islamic culture and heritage in Tigray and Ethiopia.
-                            </p>
-                        </div>
-                        <div><a href="#" class="card-button w-inline-block"
-                                style="color: rgb(171, 171, 172); background-color: rgba(0, 0, 0, 0); border-color: rgb(83, 83, 85);">
-                                <div>Read More</div><img
-                                    src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/6341460cda79c99ce8b02382_button-01.svg"
-                                    loading="lazy" alt="Arrow Image For Button " class="arrow-dark"><img
-                                    src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/63401de9fdbdb451cfbec4db_button.svg"
-                                    loading="lazy" alt="Blur Arrow Image For Button" class="arrow-blue"
-                                    style="display: none;">
-                            </a></div>
-                    </div>
                     <div id="w-node-a12d2fd6-7583-d887-bf84-3a054e05e599-68652b7b"
                         data-w-id="a12d2fd6-7583-d887-bf84-3a054e05e599" style="opacity: 0;" class="service-card">
                         <div class="card-image-wrap"><img
@@ -153,58 +132,6 @@
                                     style="display: none;">
                             </a></div>
                     </div>
-                    <div id="w-node-a12d2fd6-7583-d887-bf84-3a054e05e5a7-68652b7b"
-                        data-w-id="a12d2fd6-7583-d887-bf84-3a054e05e5a7" style="opacity: 0;" class="service-card">
-                        <div class="card-image-wrap"><img
-                                src="{{ asset('assets/img/quran_2.png') }}"
-                                loading="lazy" alt="Home Page Card Image For Title" width="65"></div>
-                        <div class="service-card-content-wrap">
-                            <h3 class="section-content-title white">Logistics and Hospitality</h3>
-                            <p class="white-content">
-                                This covers all the practical support needed for participants and guests, especially those traveling from other parts of the country or regions. It includes services like accommodation, transportation, and meal provision during the event days, ensuring a smooth and welcoming experience for all attendees.
-                            </p>
-                        </div>
-                        <div><a href="#" class="card-button w-inline-block"
-                                style="color: rgb(171, 171, 172); background-color: rgba(0, 0, 0, 0); border-color: rgb(83, 83, 85);">
-                                <div>Read More</div><img
-                                    src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/6341460cda79c99ce8b02382_button-01.svg"
-                                    loading="lazy" alt="Arrow Image For Button " class="arrow-dark"><img
-                                    src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/63401de9fdbdb451cfbec4db_button.svg"
-                                    loading="lazy" alt="Blur Arrow Image For Button" class="arrow-blue"
-                                    style="display: none;">
-                            </a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="cta-section">
-        <div class="container w-container">
-            <div class="cta-wrap">
-                <div data-w-id="14472158-0ea9-e0ee-8bf5-7f4c8d37fc7b" style="opacity: 0;" class="cta-title-wrap">
-                    <h2 class="cta-title">Get in touch and <span class="section-sub-text purple">start growing</span>
-                        with us today</h2>
-                    <div class="button-flex cta"><a href="{{ url('/contact') }}" class="primary-button w-button">Get in
-                            touch</a><a href="{{ url('/services_3') }}" class="secondary-button transparent w-button">Get Started</a>
-                    </div>
-                </div>
-                <div class="cta-overlay">
-                    <div class="cta-circle">
-                        <div data-w-id="44abf8dd-44be-b06e-237a-a87beecbeddf" style="opacity: 0;" class="cta-circle-bg">
-                        </div>
-                    </div><img class="cta-overlay-image rocket"
-                        src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/6348fff220e8b14e724bea61_Overlay-01.png"
-                        width="258" alt="" style="opacity: 0;"
-                        sizes="(max-width: 479px) 100vw, (max-width: 767px) 100px, (max-width: 991px) 26vw, (max-width: 1279px) 27vw, 415.5px"
-                        data-w-id="fe0e2135-83c5-9750-bd73-82ccbb4ad244" loading="lazy"
-                        srcset="https://assets-global.website-files.com/633fc9cf3a4f100f9060830b/6348fff220e8b14e724bea61_Overlay-01-p-500.png 500w, https://assets-global.website-files.com/633fc9cf3a4f100f9060830b/6348fff220e8b14e724bea61_Overlay-01-p-800.png 800w, https://assets-global.website-files.com/633fc9cf3a4f100f9060830b/6348fff220e8b14e724bea61_Overlay-01.png 831w"><img
-                        src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/6348fff1cc9422bf593c6115_overlay-ploygon.svg"
-                        loading="lazy" alt="" class="cta-overlay-image ploygon"><img
-                        src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/6348fff100fd6fe171b421a9_overlay-star.svg"
-                        loading="lazy" alt="" class="cta-overlay-image star"><img
-                        src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/6348fff133828c57256e8f83_overlay-02.png"
-                        loading="lazy" style="opacity: 0;" width="64" alt="Service Icon For Service Single Heading"
-                        data-w-id="893da5e7-3fff-cb57-1420-0dea78e60fec" class="cta-overlay-image shot">
                 </div>
             </div>
         </div>
