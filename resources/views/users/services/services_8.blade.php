@@ -360,7 +360,7 @@
             <h2>Explore by Category</h2>
             <div class="cat-links">
                 <a href="#" class="cat-link-item" onclick="filterGallery('Quran_competition'); scrollToTop()">
-                    <span>🌿</span>
+                    <span>🕌</span>
                     Quran_competition
                 </a>
                 <a href="#" class="cat-link-item" onclick="filterGallery('urban'); scrollToTop()">
