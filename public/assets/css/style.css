@@ -9741,6 +9741,9 @@ iframe.goog-te-banner-frame {
 }
 
 
+.mobile-only-link {
+    display: none !important; 
+}
 /* --- Mobile Styles (Phone View) --- */
 /* Max-width 991px is standard for mobile landscape and below */
 @media screen and (max-width: 991px) {
