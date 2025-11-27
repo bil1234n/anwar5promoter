@@ -45,6 +45,185 @@
         href="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/63635535788bd0e2523debe5_next-level-webclip.webp"
         rel="apple-touch-icon">
     <script src="blob:https://promote-template.webflow.io/b1005f55-8632-4b35-80b9-ae90e87239d0"></script>
+    
+    <style>
+        /* --- 1. GENERAL STYLES --- */
+        :root {
+            --bg-color: #292930;
+            --card-bg: #292930;
+            --text-main: #ffffff;
+            --text-secondary: #b0b0b0;
+            --accent: #ff4757;
+        }
+
+
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            padding-bottom: 50px;
+        }
+
+        .h1_gal {
+            text-align: center;
+            color: #fff;
+            margin: -100px 0 20px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* --- 2. TOP FILTER SECTION --- */
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 40px;
+            padding: 0 20px;
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: 2px solid var(--text-secondary);
+            color: var(--text-secondary);
+            padding: 10px 25px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background-color: var(--accent);
+            border-color: var(--accent);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
+        }
+
+        /* --- 3. GALLERY GRID --- */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px 5%;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 350px; /* Fixed height for uniform look */
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: transform 0.4s ease, opacity 0.4s ease;
+        }
+
+        /* Image Styling */
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        /* Hover Overlay */
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item:hover .overlay {
+            transform: translateY(0);
+        }
+
+        .overlay h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .overlay p {
+            font-size: 0.9rem;
+            color: #ddd;
+        }
+
+        /* Animation classes for filtering */
+        .gallery-item.hide {
+            display: none;
+        }
+        
+        .gallery-item.show {
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        /* --- 4. BOTTOM CATEGORY SECTION --- */
+        .category-footer {
+            margin-top: 80px;
+            border-top: 1px solid #333;
+            padding: 40px 20px;
+            background-color: #1a1a1a91;
+        }
+
+        .cat-footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .cat-footer-content h2 {
+            margin-bottom: 30px;
+            font-size: 1.5rem;
+            color: #fff;
+        }
+
+        .cat-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .cat-link-item {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: color 0.3s;
+        }
+
+        .cat-link-item span {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .cat-link-item:hover {
+            color: var(--accent);
+        }
+        .gallery-item h3{
+            color: #fff;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -111,48 +290,6 @@
                                     style="display: none;">
                             </a></div>
                     </div>
-                    <div id="w-node-a12d2fd6-7583-d887-bf84-3a054e05e58b-68652b7b"
-                        data-w-id="a12d2fd6-7583-d887-bf84-3a054e05e58b" style="opacity: 0;" class="service-card">
-                        <div class="card-image-wrap"><img
-                                src="{{ asset('assets/img/gallery.png') }}"
-                                loading="lazy" width="76" alt="Home Page Card Image For Title"></div>
-                        <div class="service-card-content-wrap">
-                            <h3 class="section-content-title white">Art and Souvenir Sales/Exhibitions (The Gallery)</h3>
-                            <p class="white-content">
-                                The "Galleries" component indicates a service focused on the curation, exhibition, and sale of art, artifacts, or high-quality local handicrafts and souvenirs. This service provides a retail outlet for tourists to purchase items that reflect the country's culture and supports local artisans.
-                            </p>
-                        </div>
-                        <div><a href="#~" class="card-button w-inline-block"
-                                style="color: rgb(171, 171, 172); background-color: rgba(0, 0, 0, 0); border-color: rgb(83, 83, 85);">
-                                <div>Read More</div><img
-                                    src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/6341460cda79c99ce8b02382_button-01.svg"
-                                    loading="lazy" alt="Arrow Image For Button " class="arrow-dark"><img
-                                    src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/63401de9fdbdb451cfbec4db_button.svg"
-                                    loading="lazy" alt="Blur Arrow Image For Button" class="arrow-blue"
-                                    style="display: none;">
-                            </a></div>
-                    </div>
-                    <div id="w-node-a12d2fd6-7583-d887-bf84-3a054e05e599-68652b7b"
-                        data-w-id="a12d2fd6-7583-d887-bf84-3a054e05e599" style="opacity: 0;" class="service-card">
-                        <div class="card-image-wrap"><img
-                                src="{{ asset('assets/img/gallery.png') }}"
-                                loading="lazy" width="76" alt="Home Page Card Image For Title"></div>
-                        <div class="service-card-content-wrap">
-                            <h3 class="section-content-title white">Travel Logistics and Booking Services</h3>
-                            <p class="white-content">
-                                This function covers the practical aspects of travel, including booking domestic and international flights, arranging hotel and lodge accommodations, and providing transportation (e.g., airport transfers, car rentals). It acts as a full-service travel agent to facilitate the tourist's entire itinerary.
-                            </p>
-                        </div>
-                        <div><a href="#~" class="card-button w-inline-block"
-                                style="color: rgb(171, 171, 172); background-color: rgba(0, 0, 0, 0); border-color: rgb(83, 83, 85);">
-                                <div>Read More</div><img
-                                    src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/6341460cda79c99ce8b02382_button-01.svg"
-                                    loading="lazy" alt="Arrow Image For Button " class="arrow-dark"><img
-                                    src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/63401de9fdbdb451cfbec4db_button.svg"
-                                    loading="lazy" alt="Blur Arrow Image For Button" class="arrow-blue"
-                                    style="display: none;">
-                            </a></div>
-                    </div>
                     <div id="w-node-a12d2fd6-7583-d887-bf84-3a054e05e5a7-68652b7b"
                         data-w-id="a12d2fd6-7583-d887-bf84-3a054e05e5a7" style="opacity: 0;" class="service-card">
                         <div class="card-image-wrap"><img
@@ -178,37 +315,112 @@
             </div>
         </div>
     </div>
-    <div class="cta-section">
-        <div class="container w-container">
-            <div class="cta-wrap">
-                <div data-w-id="14472158-0ea9-e0ee-8bf5-7f4c8d37fc7b" style="opacity: 0;" class="cta-title-wrap">
-                    <h2 class="cta-title">Get in touch and <span class="section-sub-text purple">start growing</span>
-                        with us today</h2>
-                    <div class="button-flex cta"><a href="{{ url('/contact') }}" class="primary-button w-button">Get in
-                            touch</a><a href="{{ url('/services_3') }}" class="secondary-button transparent w-button">Get Started</a>
-                    </div>
-                </div>
-                <div class="cta-overlay">
-                    <div class="cta-circle">
-                        <div data-w-id="44abf8dd-44be-b06e-237a-a87beecbeddf" style="opacity: 0;" class="cta-circle-bg">
-                        </div>
-                    </div><img class="cta-overlay-image rocket"
-                        src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/6348fff220e8b14e724bea61_Overlay-01.png"
-                        width="258" alt="" style="opacity: 0;"
-                        sizes="(max-width: 479px) 100vw, (max-width: 767px) 100px, (max-width: 991px) 26vw, (max-width: 1279px) 27vw, 415.5px"
-                        data-w-id="fe0e2135-83c5-9750-bd73-82ccbb4ad244" loading="lazy"
-                        srcset="https://assets-global.website-files.com/633fc9cf3a4f100f9060830b/6348fff220e8b14e724bea61_Overlay-01-p-500.png 500w, https://assets-global.website-files.com/633fc9cf3a4f100f9060830b/6348fff220e8b14e724bea61_Overlay-01-p-800.png 800w, https://assets-global.website-files.com/633fc9cf3a4f100f9060830b/6348fff220e8b14e724bea61_Overlay-01.png 831w"><img
-                        src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/6348fff1cc9422bf593c6115_overlay-ploygon.svg"
-                        loading="lazy" alt="" class="cta-overlay-image ploygon"><img
-                        src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/6348fff100fd6fe171b421a9_overlay-star.svg"
-                        loading="lazy" alt="" class="cta-overlay-image star"><img
-                        src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/6348fff133828c57256e8f83_overlay-02.png"
-                        loading="lazy" style="opacity: 0;" width="64" alt="Service Icon For Service Single Heading"
-                        data-w-id="893da5e7-3fff-cb57-1420-0dea78e60fec" class="cta-overlay-image shot">
-                </div>
+
+    <!-- HEADER & TITLE -->
+    <h1 class="h1_gal">Gallery</h1>
+
+    <!-- 1. TOP FILTER BUTTONS -->
+    <div class="filter-container">
+        <button class="filter-btn active" onclick="filterGallery('all')">Show All</button>
+        <button class="filter-btn" onclick="filterGallery('Quran_competition')">Quran Competition</button>
+        <button class="filter-btn" onclick="filterGallery('urban')">Urban</button>
+        <button class="filter-btn" onclick="filterGallery('portrait')">Portrait</button>
+        <button class="filter-btn" onclick="filterGallery('travel')">Travel</button>
+    </div>
+
+    <!-- 2. GALLERY GRID -->
+    <!-- 
+       INSTRUCTIONS: 
+       1. Replace 'src' with your actual image paths (e.g., images/photo1.jpg).
+       2. Ensure the class name (e.g., 'Quran_competition', 'urban') matches your categories.
+    -->
+    <div class="gallery-grid">
+        
+        <div class="gallery-item Quran_competition">
+            <img src="https://i.imgur.com/iKhgGyx.jpeg" alt="Quran_competition">
+            <div class="overlay">
+                <h3>Islamic</h3>
+                <p>Quran_competition Category</p>
             </div>
         </div>
+
+        <div class="gallery-item Quran_competition">
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=600&q=80" alt="Quran_competition">
+            <div class="overlay">
+                <h3>Islamic</h3>
+                <p>Quran_competition Category</p>
+            </div>
+        </div>
+
     </div>
+
+    <!-- 3. BOTTOM CATEGORY SECTION -->
+    <footer class="category-footer">
+        <div class="cat-footer-content">
+            <h2>Explore by Category</h2>
+            <div class="cat-links">
+                <a href="#" class="cat-link-item" onclick="filterGallery('Quran_competition'); scrollToTop()">
+                    <span>🌿</span>
+                    Quran_competition
+                </a>
+                <a href="#" class="cat-link-item" onclick="filterGallery('urban'); scrollToTop()">
+                    <span>🏢</span>
+                    Urban
+                </a>
+                <a href="#" class="cat-link-item" onclick="filterGallery('portrait'); scrollToTop()">
+                    <span>👤</span>
+                    Portrait
+                </a>
+                <a href="#" class="cat-link-item" onclick="filterGallery('travel'); scrollToTop()">
+                    <span>✈️</span>
+                    Travel
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        function filterGallery(category) {
+            let items = document.getElementsByClassName('gallery-item');
+            
+            // 1. Manage Buttons Active State
+            // Only update buttons if called from the top filter bar logic (optional check)
+            let buttons = document.getElementsByClassName('filter-btn');
+            for (let btn of buttons) {
+                // Remove active class from all
+                btn.classList.remove('active');
+                // Add active class if the button text matches category (simple check)
+                if (btn.innerText.toLowerCase().includes(category) || (category === 'all' && btn.innerText === 'Show All')) {
+                    btn.classList.add('active');
+                }
+            }
+
+            // 2. Filter Images
+            for (let i = 0; i < items.length; i++) {
+                // Remove existing animation classes to reset
+                items[i].classList.remove('show');
+                
+                if (category === 'all') {
+                    items[i].classList.remove('hide');
+                    items[i].classList.add('show');
+                } else {
+                    if (items[i].classList.contains(category)) {
+                        items[i].classList.remove('hide');
+                        items[i].classList.add('show');
+                    } else {
+                        items[i].classList.add('hide');
+                    }
+                }
+            }
+        }
+
+        // Helper to scroll up when clicking bottom footer links
+        function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+
     @include('components.footer')
     <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=633fc9cf3a4f100f9060830b"
         type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
