@@ -323,7 +323,7 @@
                             </div>
                             <div class="team-content-wrap">
                                 <h3 class="section-content-title team">Bilal Nesru Jemal</h3>
-                                <p>IT Engineer</p>
+                                <p>Software Engineer</p>
                             </div>
                             <div class="team-social-wrap"><a href="https://web.facebook.com/profile.php?id=100089197555372&_rdc=1&_rdr#" target="_blank"
                                     class="w-inline-block"><img
