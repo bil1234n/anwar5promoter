@@ -136,37 +136,6 @@
             </div>
         </div>
     </div>
-    <div class="cta-section">
-        <div class="container w-container">
-            <div class="cta-wrap">
-                <div data-w-id="14472158-0ea9-e0ee-8bf5-7f4c8d37fc7b" style="opacity: 0;" class="cta-title-wrap">
-                    <h2 class="cta-title">Get in touch and <span class="section-sub-text purple">start growing</span>
-                        with us today</h2>
-                    <div class="button-flex cta"><a href="{{ url('/contact') }}" class="primary-button w-button">Get in
-                            touch</a><a href="{{ url('/services_3') }}" class="secondary-button transparent w-button">Get Started</a>
-                    </div>
-                </div>
-                <div class="cta-overlay">
-                    <div class="cta-circle">
-                        <div data-w-id="44abf8dd-44be-b06e-237a-a87beecbeddf" style="opacity: 0;" class="cta-circle-bg">
-                        </div>
-                    </div><img class="cta-overlay-image rocket"
-                        src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/6348fff220e8b14e724bea61_Overlay-01.png"
-                        width="258" alt="" style="opacity: 0;"
-                        sizes="(max-width: 479px) 100vw, (max-width: 767px) 100px, (max-width: 991px) 26vw, (max-width: 1279px) 27vw, 415.5px"
-                        data-w-id="fe0e2135-83c5-9750-bd73-82ccbb4ad244" loading="lazy"
-                        srcset="https://assets-global.website-files.com/633fc9cf3a4f100f9060830b/6348fff220e8b14e724bea61_Overlay-01-p-500.png 500w, https://assets-global.website-files.com/633fc9cf3a4f100f9060830b/6348fff220e8b14e724bea61_Overlay-01-p-800.png 800w, https://assets-global.website-files.com/633fc9cf3a4f100f9060830b/6348fff220e8b14e724bea61_Overlay-01.png 831w"><img
-                        src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/6348fff1cc9422bf593c6115_overlay-ploygon.svg"
-                        loading="lazy" alt="" class="cta-overlay-image ploygon"><img
-                        src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/6348fff100fd6fe171b421a9_overlay-star.svg"
-                        loading="lazy" alt="" class="cta-overlay-image star"><img
-                        src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/6348fff133828c57256e8f83_overlay-02.png"
-                        loading="lazy" style="opacity: 0;" width="64" alt="Service Icon For Service Single Heading"
-                        data-w-id="893da5e7-3fff-cb57-1420-0dea78e60fec" class="cta-overlay-image shot">
-                </div>
-            </div>
-        </div>
-    </div>
     @include('components.footer')
     <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=633fc9cf3a4f100f9060830b"
         type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
