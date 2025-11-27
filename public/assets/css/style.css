@@ -6096,6 +6096,10 @@ iframe.goog-te-banner-frame {
     background-color: #f1f1f1;
 }
 
+/* Initially hide the mobile link */
+.mobile-only-link {
+    display: none;
+}
 /* Responsive */
 @media (max-width: 960px) {
   .grid { grid-template-columns: 1fr; }
@@ -9740,10 +9744,6 @@ iframe.goog-te-banner-frame {
   }
 }
 
-
-.mobile-only-link {
-    display: none !important; 
-}
 /* --- Mobile Styles (Phone View) --- */
 /* Max-width 991px is standard for mobile landscape and below */
 @media screen and (max-width: 991px) {
