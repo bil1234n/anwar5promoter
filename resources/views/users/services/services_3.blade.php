@@ -126,48 +126,6 @@
                                         style="display: none;">
                                 </a></div>
                         </div>
-                        <div id="w-node-a12d2fd6-7583-d887-bf84-3a054e05e599-68652b7b"
-                            data-w-id="a12d2fd6-7583-d887-bf84-3a054e05e599" style="opacity: 0;" class="service-card">
-                            <div class="card-image-wrap">
-                                <img src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/63413f4a22ea7111f927914b_card-03.png" loading="lazy" width="76" alt="Home Page Card Image For Title">
-                            </div>
-                            <div class="service-card-content-wrap">
-                                <h3 class="section-content-title white">Custom System Integration & API Development</h3>
-                                <p class="white-content">
-                                    This service focuses on connecting different, disparate software systems so they can exchange data and function as a unified whole. This often involves building Application Programming Interfaces (APIs)—the communication channels—that allow a new website, app, or custom system to talk to existing tools like payment processors, inventory management software, accounting systems (like QuickBooks), or third-party databases.
-                                </p>
-                            </div>
-                            <div><a href="#" class="card-button w-inline-block"
-                                    style="color: rgb(171, 171, 172); background-color: rgba(0, 0, 0, 0); border-color: rgb(83, 83, 85);">
-                                    <div>Read More</div><img
-                                        src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/6341460cda79c99ce8b02382_button-01.svg"
-                                        loading="lazy" alt="Arrow Image For Button " class="arrow-dark"><img
-                                        src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/63401de9fdbdb451cfbec4db_button.svg"
-                                        loading="lazy" alt="Blur Arrow Image For Button" class="arrow-blue"
-                                        style="display: none;">
-                                </a></div>
-                        </div>
-                        <div id="w-node-a12d2fd6-7583-d887-bf84-3a054e05e5a7-68652b7b"
-                            data-w-id="a12d2fd6-7583-d887-bf84-3a054e05e5a7" style="opacity: 0;" class="service-card">
-                            <div class="card-image-wrap"><img
-                                    src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/63413f4ae3265cde67340f49_card-04.png"
-                                    loading="lazy" alt="Home Page Card Image For Title" width="65"></div>
-                            <div class="service-card-content-wrap">
-                                <h3 class="section-content-title white">Minimum Viable Product (MVP) Prototyping</h3>
-                                <p class="white-content">
-                                    This specialized service is crucial for startups and new product ideas. It involves rapidly designing and building the most basic, essential version of a system or app that still provides core value to early users. The goal is to minimize development costs and time, allowing the business to validate the concept with real users and gather feedback before committing to a full-scale development effort.
-                                </p>
-                            </div>
-                            <div><a href="#" class="card-button w-inline-block"
-                                    style="color: rgb(171, 171, 172); background-color: rgba(0, 0, 0, 0); border-color: rgb(83, 83, 85);">
-                                    <div>Read More</div><img
-                                        src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/6341460cda79c99ce8b02382_button-01.svg"
-                                        loading="lazy" alt="Arrow Image For Button " class="arrow-dark"><img
-                                        src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/63401de9fdbdb451cfbec4db_button.svg"
-                                        loading="lazy" alt="Blur Arrow Image For Button" class="arrow-blue"
-                                        style="display: none;">
-                                </a></div>
-                        </div>
                     </div>
                 </div>
             </div>
