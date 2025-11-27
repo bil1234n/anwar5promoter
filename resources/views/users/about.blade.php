@@ -204,44 +204,6 @@
                 </a></div>
         </div>
     </div>
-    <div class="about-client-section">
-        <div class="container w-container">
-            <div class="w-layout-grid client-project-grid">
-                <div id="w-node-d886c41d-2ae9-aec8-9e47-8f6d3edbaf6c-cc478d30"
-                    data-w-id="d886c41d-2ae9-aec8-9e47-8f6d3edbaf6c"
-                    style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
-                    class="client-flex">
-                    <h2 class="client-title">325<span class="client-sub-color">+</span></h2>
-                    <div>
-                        <p class="client-content">Clients Worldwide</p>
-                    </div>
-                </div>
-                <div id="w-node-d886c41d-2ae9-aec8-9e47-8f6d3edbaf74-cc478d30"
-                    data-w-id="d886c41d-2ae9-aec8-9e47-8f6d3edbaf74"
-                    style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
-                    class="client-flex">
-                    <h2 class="client-title">975<span class="client-sub-color red">+</span></h2>
-                    <div>
-                        <p class="client-content">Clients Worldwide</p>
-                    </div>
-                </div>
-                <div id="w-node-d886c41d-2ae9-aec8-9e47-8f6d3edbaf7c-cc478d30"
-                    data-w-id="d886c41d-2ae9-aec8-9e47-8f6d3edbaf7c" style="opacity: 0;" class="client-flex">
-                    <h2 class="client-title">70<span class="client-sub-color yellow">+</span></h2>
-                    <div>
-                        <p class="client-content">Clients Worldwide</p>
-                    </div>
-                </div>
-                <div id="w-node-d886c41d-2ae9-aec8-9e47-8f6d3edbaf84-cc478d30"
-                    data-w-id="d886c41d-2ae9-aec8-9e47-8f6d3edbaf84" style="opacity: 0;" class="client-flex">
-                    <h2 class="client-title">85m<span class="client-sub-color green">+</span></h2>
-                    <div>
-                        <p class="client-content">Clients Worldwide</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="team-section">
         <div class="container w-container">
             <div data-w-id="c9b238b6-688f-82f5-adcd-128124b82588" style="opacity: 0;"
