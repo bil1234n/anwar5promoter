@@ -85,7 +85,7 @@
             </a>
 
             {{-- donation --}}
-            <a href="{{ url('/payment') }}" class="profile_icon nav-link">
+            <a href="{{ route('donate.form') }}" class="profile_icon nav-link">
                 <i class="ri-hand-coin-line"></i>
             </a>
 
