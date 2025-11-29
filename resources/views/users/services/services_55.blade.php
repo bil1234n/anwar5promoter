@@ -235,7 +235,7 @@
             <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-0"></div>
         </div>
         <div class="sub-banner-content-flex service-banner" style="display: block; opacity: 1;">
-            <h1 class="banner-text">Services 4</h1>
+            <h1 class="banner-text">Services 5</h1>
             <h2>Quran & Azan competition in Tigray Ethiopia</h2>
         </div>
         <div class="banner-overlay">
