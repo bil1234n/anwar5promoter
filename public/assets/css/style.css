@@ -3508,7 +3508,7 @@ blockquote {
   height: 475px;
   background-image: linear-gradient(166deg, #fff8f8, #f5f7ff);
   border-radius: 7px;
-  margin-right: 20px;
+  margin-right: 0;
   padding: 30px;
 }
 
