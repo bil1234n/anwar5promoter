@@ -57,7 +57,7 @@
             <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-0"></div>
         </div>
         <div class="sub-banner-content-flex service-banner" style="display: block; opacity: 1;">
-            <h1 class="banner-text">Services 5</h1>
+            <h1 class="banner-text">Services 4</h1>
             <h2>House of Allah projects</h2>
         </div>
         <div class="banner-overlay">
@@ -83,7 +83,7 @@
                         loading="lazy" alt="Title Image"></div>
                 <div class="title-width service-page">
                     <div class="section-sub-title center-align">
-                        <p class="sub-title-content grey"><span class="sub-title-slash">//</span> 05 . Services</p>
+                        <p class="sub-title-content grey"><span class="sub-title-slash">//</span> 04 . Services</p>
                     </div>
                     <h2 class="section-title white">House of Allah projects</h2>
                 </div>
