@@ -163,7 +163,7 @@
                                 Organizing and hosting Islamic knowledge and culture in the Tigray region and soon in all regions.
                             </p>
                         </div>
-                        <div><a href="{{ url('/services_4') }}" class="card-button w-inline-block"
+                        <div><a href="{{ url('/services_5') }}" class="card-button w-inline-block"
                                 style="color: rgb(171, 171, 172); background-color: rgba(0, 0, 0, 0); border-color: rgb(83, 83, 85);">
                                 <div>Read More</div><img
                                     src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/6341460cda79c99ce8b02382_button-01.svg"
@@ -184,7 +184,7 @@
                                 Coordinating and managing projects related to the construction, renovation, or maintenance of mosques (Masjids).
                             </p>
                         </div>
-                        <div><a href="{{ url('/services_5') }}" class="card-button w-inline-block"
+                        <div><a href="{{ url('/services_4') }}" class="card-button w-inline-block"
                                 style="color: rgb(171, 171, 172); background-color: rgba(0, 0, 0, 0); border-color: rgb(83, 83, 85);">
                                 <div>Read More</div><img
                                     src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/6341460cda79c99ce8b02382_button-01.svg"
