@@ -60,9 +60,9 @@
                         <a href="{{ url('/services_3') }}" class="nav-dropdown-menu-link w-dropdown-link"
                             tabindex="0">Website, App & System Development</a>
                         <a href="{{ url('/services_4') }}" class="nav-dropdown-menu-link w-dropdown-link"
-                            tabindex="0">Quran & Azan competition in Tigray Ethiopia</a>
-                        <a href="{{ url('/services_5') }}" class="nav-dropdown-menu-link w-dropdown-link"
                             tabindex="0">House of Allah projects</a>
+                        <a href="{{ url('/services_5') }}" class="nav-dropdown-menu-link w-dropdown-link"
+                            tabindex="0">Quran & Azan competition in Tigray Ethiopia</a>
                         <a href="{{ url('/services_6') }}" class="nav-dropdown-menu-link w-dropdown-link"
                             tabindex="0">Anwar5 Foundation (ወላጅ አልባ ህፃናት ና አረጋዊያን የመረጃ ማእከል)</a>
                         <a href="{{ url('/services_7') }}" class="nav-dropdown-menu-link w-dropdown-link"
