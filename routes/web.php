@@ -102,14 +102,14 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/my-messages', [ContactController::class, 'checkMessages'])->name('contact.history');
 
     // payment with chapa
-    Route::get('/payment', function () { return view('payment'); })->name('donate.form');
-    // Route::post('/process-payment', [ChapaController::class, 'processPayment'])->name('donate.pay');
-    // Route::get('/payment-callback', [ChapaController::class, 'paymentCallback'])->name('donate.callback');
+    Route::get('/donate', [ChapaController::class, 'showDonationForm'])->name('donate.form');
+    Route::post('/donate/process', [ChapaController::class, 'processPayment'])->name('donate.process');
+    Route::get('/donate/callback/{tx_ref?}', [ChapaController::class, 'paymentCallback'])->name('donate.callback');
 
     // payment with stripe
-    Route::post('/donate/pay', [StripeController::class, 'processPayment'])->name('donate.pay');
-    Route::get('/donate/success', [StripeController::class, 'paymentSuccess'])->name('stripe.success');
-    Route::get('/donate/cancel', [StripeController::class, 'paymentCancel'])->name('stripe.cancel');
+    // Route::post('/donate/pay', [StripeController::class, 'processPayment'])->name('donate.pay');
+    // Route::get('/donate/success', [StripeController::class, 'paymentSuccess'])->name('stripe.success');
+    // Route::get('/donate/cancel', [StripeController::class, 'paymentCancel'])->name('stripe.cancel');
 
     // Fetch unread notifications (AJAX)
     Route::get('/notifications/fetch', function () { return \App\Models\Notification::where('user_id', Auth::id())->where('is_read', false) ->latest() ->get();});
