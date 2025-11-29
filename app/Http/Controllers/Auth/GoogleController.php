@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Laravel\Socialite\Facades\Socialite;
+use App\Models\Notification;
 
 class GoogleController extends Controller
 {
@@ -45,6 +46,24 @@ class GoogleController extends Controller
         $user->email_verified_at = now();
         $user->save();
 
+        if ($user->wasRecentlyCreated) {
+            // New User Registration Message
+            Notification::create([
+                'user_id' => $user->id,
+                'type'    => 'welcome',
+                'message' => 'Welcome to anwar5promoter ' . $user->username,
+                'is_read' => false,
+            ]);
+        } else {
+            // Existing User Login Message
+            Notification::create([
+                'user_id' => $user->id,
+                'type'    => 'welcome',
+                'message' => 'Welcome back ' . $user->username . ' to anwar5promoter',
+                'is_read' => false,
+            ]);
+        }
+        
         // Log the user in
         Auth::login($user, true);
 
