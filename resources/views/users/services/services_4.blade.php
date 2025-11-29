@@ -259,7 +259,7 @@
     <!-- 1. TOP FILTER BUTTONS -->
     <div class="filter-container">
         <button class="filter-btn active" onclick="filterGallery('all')">Show All</button>
-        <button class="filter-btn" onclick="filterGallery('Quran_competition')">Quran Competition</button>
+        <button class="filter-btn" onclick="filterGallery('1st_Quran_competition')">1st Round Quran Competition</button>
         <!-- <button class="filter-btn" onclick="filterGallery('urban')">Urban</button>
         <button class="filter-btn" onclick="filterGallery('portrait')">Portrait</button>
         <button class="filter-btn" onclick="filterGallery('travel')">Travel</button> -->
@@ -269,311 +269,311 @@
     <!-- 
        INSTRUCTIONS: 
        1. Replace 'src' with your actual image paths (e.g., images/photo1.jpg).
-       2. Ensure the class name (e.g., 'Quran_competition', 'urban') matches your categories.
+       2. Ensure the class name (e.g., '1st_Quran_competition', 'urban') matches your categories.
     -->
     <div class="gallery-grid">
         
-        <div class="gallery-item Quran_competition">
-            <img src="https://i.imgur.com/iKhgGyx.jpeg" alt="Quran_competition">
+        <div class="gallery-item 1st_Quran_competition">
+            <img src="https://i.imgur.com/iKhgGyx.jpeg" alt="1st_Quran_competition">
             <div class="overlay">
                 <h3>Islamic</h3>
-                <p>Quran_competition Category</p>
+                <p>1st_Quran_competition Category</p>
             </div>
         </div>
 
-        <div class="gallery-item Quran_competition">
-            <img src="https://i.imgur.com/NLghWTI.jpeg" alt="Quran_competition">
+        <div class="gallery-item 1st_Quran_competition">
+            <img src="https://i.imgur.com/NLghWTI.jpeg" alt="1st_Quran_competition">
             <div class="overlay">
                 <h3>Islamic</h3>
-                <p>Quran_competition Category</p>
+                <p>1st_Quran_competition Category</p>
             </div>
         </div>
 
-        <div class="gallery-item Quran_competition">
-            <img src="https://i.imgur.com/ef6Tav6.jpeg" alt="Quran_competition">
+        <div class="gallery-item 1st_Quran_competition">
+            <img src="https://i.imgur.com/ef6Tav6.jpeg" alt="1st_Quran_competition">
             <div class="overlay">
                 <h3>Islamic</h3>
-                <p>Quran_competition Category</p>
+                <p>1st_Quran_competition Category</p>
             </div>
         </div>
 
-        <div class="gallery-item Quran_competition">
-            <img src="https://i.imgur.com/qAw3ThI.jpeg" alt="Quran_competition">
+        <div class="gallery-item 1st_Quran_competition">
+            <img src="https://i.imgur.com/qAw3ThI.jpeg" alt="1st_Quran_competition">
             <div class="overlay">
                 <h3>Islamic</h3>
-                <p>Quran_competition Category</p>
+                <p>1st_Quran_competition Category</p>
             </div>
         </div>
 
-        <div class="gallery-item Quran_competition">
-            <img src="https://i.imgur.com/Jjymcru.jpeg" alt="Quran_competition">
+        <div class="gallery-item 1st_Quran_competition">
+            <img src="https://i.imgur.com/Jjymcru.jpeg" alt="1st_Quran_competition">
             <div class="overlay">
                 <h3>Islamic</h3>
-                <p>Quran_competition Category</p>
+                <p>1st_Quran_competition Category</p>
             </div>
         </div>
 
-        <div class="gallery-item Quran_competition">
-            <img src="https://i.imgur.com/8FTy0je.jpeg" alt="Quran_competition">
+        <div class="gallery-item 1st_Quran_competition">
+            <img src="https://i.imgur.com/8FTy0je.jpeg" alt="1st_Quran_competition">
             <div class="overlay">
                 <h3>Islamic</h3>
-                <p>Quran_competition Category</p>
+                <p>1st_Quran_competition Category</p>
             </div>
         </div>
 
-        <div class="gallery-item Quran_competition">
-            <img src="https://i.imgur.com/2fwuIcS.jpeg" alt="Quran_competition">
+        <div class="gallery-item 1st_Quran_competition">
+            <img src="https://i.imgur.com/2fwuIcS.jpeg" alt="1st_Quran_competition">
             <div class="overlay">
                 <h3>Islamic</h3>
-                <p>Quran_competition Category</p>
+                <p>1st_Quran_competition Category</p>
             </div>
         </div>
 
-        <div class="gallery-item Quran_competition">
-            <img src="https://i.imgur.com/yNc4syU.jpeg" alt="Quran_competition">
+        <div class="gallery-item 1st_Quran_competition">
+            <img src="https://i.imgur.com/yNc4syU.jpeg" alt="1st_Quran_competition">
             <div class="overlay">
                 <h3>Islamic</h3>
-                <p>Quran_competition Category</p>
+                <p>1st_Quran_competition Category</p>
             </div>
         </div>
 
-        <div class="gallery-item Quran_competition">
-            <img src="https://i.imgur.com/KD15vUt.jpeg" alt="Quran_competition">
+        <div class="gallery-item 1st_Quran_competition">
+            <img src="https://i.imgur.com/KD15vUt.jpeg" alt="1st_Quran_competition">
             <div class="overlay">
                 <h3>Islamic</h3>
-                <p>Quran_competition Category</p>
+                <p>1st_Quran_competition Category</p>
             </div>
         </div>
 
-        <div class="gallery-item Quran_competition">
-            <img src="https://i.imgur.com/4mT7S8F.jpeg" alt="Quran_competition">
+        <div class="gallery-item 1st_Quran_competition">
+            <img src="https://i.imgur.com/4mT7S8F.jpeg" alt="1st_Quran_competition">
             <div class="overlay">
                 <h3>Islamic</h3>
-                <p>Quran_competition Category</p>
+                <p>1st_Quran_competition Category</p>
             </div>
         </div>
 
-        <div class="gallery-item Quran_competition">
-            <img src="https://i.imgur.com/yjatgZy.jpeg" alt="Quran_competition">
+        <div class="gallery-item 1st_Quran_competition">
+            <img src="https://i.imgur.com/yjatgZy.jpeg" alt="1st_Quran_competition">
             <div class="overlay">
                 <h3>Islamic</h3>
-                <p>Quran_competition Category</p>
+                <p>1st_Quran_competition Category</p>
             </div>
         </div>
 
-        <div class="gallery-item Quran_competition">
-            <img src="https://i.imgur.com/FECZd6N.jpeg" alt="Quran_competition">
+        <div class="gallery-item 1st_Quran_competition">
+            <img src="https://i.imgur.com/FECZd6N.jpeg" alt="1st_Quran_competition">
             <div class="overlay">
                 <h3>Islamic</h3>
-                <p>Quran_competition Category</p>
+                <p>1st_Quran_competition Category</p>
             </div>
         </div>
 
-        <div class="gallery-item Quran_competition">
-            <img src="https://i.imgur.com/gWFqdNm.jpeg" alt="Quran_competition">
+        <div class="gallery-item 1st_Quran_competition">
+            <img src="https://i.imgur.com/gWFqdNm.jpeg" alt="1st_Quran_competition">
             <div class="overlay">
                 <h3>Islamic</h3>
-                <p>Quran_competition Category</p>
+                <p>1st_Quran_competition Category</p>
             </div>
         </div>
 
-        <div class="gallery-item Quran_competition">
-            <img src="https://i.imgur.com/lZEEI4m.jpeg" alt="Quran_competition">
+        <div class="gallery-item 1st_Quran_competition">
+            <img src="https://i.imgur.com/lZEEI4m.jpeg" alt="1st_Quran_competition">
             <div class="overlay">
                 <h3>Islamic</h3>
-                <p>Quran_competition Category</p>
+                <p>1st_Quran_competition Category</p>
             </div>
         </div>
 
-        <div class="gallery-item Quran_competition">
-            <img src="https://i.imgur.com/WfVOlwS.jpeg" alt="Quran_competition">
+        <div class="gallery-item 1st_Quran_competition">
+            <img src="https://i.imgur.com/WfVOlwS.jpeg" alt="1st_Quran_competition">
             <div class="overlay">
                 <h3>Islamic</h3>
-                <p>Quran_competition Category</p>
+                <p>1st_Quran_competition Category</p>
             </div>
         </div>
 
-        <div class="gallery-item Quran_competition">
-            <img src="https://i.imgur.com/19OQe6P.jpeg" alt="Quran_competition">
+        <div class="gallery-item 1st_Quran_competition">
+            <img src="https://i.imgur.com/19OQe6P.jpeg" alt="1st_Quran_competition">
             <div class="overlay">
                 <h3>Islamic</h3>
-                <p>Quran_competition Category</p>
+                <p>1st_Quran_competition Category</p>
             </div>
         </div>
 
-        <div class="gallery-item Quran_competition">
-            <img src="https://i.imgur.com/m1voSgN.jpeg" alt="Quran_competition">
+        <div class="gallery-item 1st_Quran_competition">
+            <img src="https://i.imgur.com/m1voSgN.jpeg" alt="1st_Quran_competition">
             <div class="overlay">
                 <h3>Islamic</h3>
-                <p>Quran_competition Category</p>
+                <p>1st_Quran_competition Category</p>
             </div>
         </div>
 
-        <div class="gallery-item Quran_competition">
-            <img src="https://i.imgur.com/3u13Be0.jpeg" alt="Quran_competition">
+        <div class="gallery-item 1st_Quran_competition">
+            <img src="https://i.imgur.com/3u13Be0.jpeg" alt="1st_Quran_competition">
             <div class="overlay">
                 <h3>Islamic</h3>
-                <p>Quran_competition Category</p>
+                <p>1st_Quran_competition Category</p>
             </div>
         </div>
 
-        <div class="gallery-item Quran_competition">
-            <img src="https://i.imgur.com/HUrb8FX.jpeg" alt="Quran_competition">
+        <div class="gallery-item 1st_Quran_competition">
+            <img src="https://i.imgur.com/HUrb8FX.jpeg" alt="1st_Quran_competition">
             <div class="overlay">
                 <h3>Islamic</h3>
-                <p>Quran_competition Category</p>
+                <p>1st_Quran_competition Category</p>
             </div>
         </div>
 
-        <div class="gallery-item Quran_competition">
-            <img src="https://i.imgur.com/9Z4OPC2.jpeg" alt="Quran_competition">
+        <div class="gallery-item 1st_Quran_competition">
+            <img src="https://i.imgur.com/9Z4OPC2.jpeg" alt="1st_Quran_competition">
             <div class="overlay">
                 <h3>Islamic</h3>
-                <p>Quran_competition Category</p>
+                <p>1st_Quran_competition Category</p>
             </div>
         </div>
 
-        <div class="gallery-item Quran_competition">
-            <img src="https://i.imgur.com/gGk523p.jpeg" alt="Quran_competition">
+        <div class="gallery-item 1st_Quran_competition">
+            <img src="https://i.imgur.com/gGk523p.jpeg" alt="1st_Quran_competition">
             <div class="overlay">
                 <h3>Islamic</h3>
-                <p>Quran_competition Category</p>
+                <p>1st_Quran_competition Category</p>
             </div>
         </div>
 
-        <div class="gallery-item Quran_competition">
-            <img src="https://i.imgur.com/fYHwv39.jpeg" alt="Quran_competition">
+        <div class="gallery-item 1st_Quran_competition">
+            <img src="https://i.imgur.com/fYHwv39.jpeg" alt="1st_Quran_competition">
             <div class="overlay">
                 <h3>Islamic</h3>
-                <p>Quran_competition Category</p>
+                <p>1st_Quran_competition Category</p>
             </div>
         </div>
 
-        <div class="gallery-item Quran_competition">
-            <img src="https://i.imgur.com/37yk6w2.jpeg" alt="Quran_competition">
+        <div class="gallery-item 1st_Quran_competition">
+            <img src="https://i.imgur.com/37yk6w2.jpeg" alt="1st_Quran_competition">
             <div class="overlay">
                 <h3>Islamic</h3>
-                <p>Quran_competition Category</p>
+                <p>1st_Quran_competition Category</p>
             </div>
         </div>
 
-        <div class="gallery-item Quran_competition">
-            <img src="https://i.imgur.com/QoPzskT.jpeg" alt="Quran_competition">
+        <div class="gallery-item 1st_Quran_competition">
+            <img src="https://i.imgur.com/QoPzskT.jpeg" alt="1st_Quran_competition">
             <div class="overlay">
                 <h3>Islamic</h3>
-                <p>Quran_competition Category</p>
+                <p>1st_Quran_competition Category</p>
             </div>
         </div>
 
-        <div class="gallery-item Quran_competition">
-            <img src="https://i.imgur.com/e4QDADI.jpeg" alt="Quran_competition">
+        <div class="gallery-item 1st_Quran_competition">
+            <img src="https://i.imgur.com/e4QDADI.jpeg" alt="1st_Quran_competition">
             <div class="overlay">
                 <h3>Islamic</h3>
-                <p>Quran_competition Category</p>
+                <p>1st_Quran_competition Category</p>
             </div>
         </div>
 
-        <div class="gallery-item Quran_competition">
-            <img src="https://i.imgur.com/kLYTS79.jpeg" alt="Quran_competition">
+        <div class="gallery-item 1st_Quran_competition">
+            <img src="https://i.imgur.com/kLYTS79.jpeg" alt="1st_Quran_competition">
             <div class="overlay">
                 <h3>Islamic</h3>
-                <p>Quran_competition Category</p>
+                <p>1st_Quran_competition Category</p>
             </div>
         </div>
 
-        <div class="gallery-item Quran_competition">
-            <img src="https://i.imgur.com/V6wKr3z.jpeg" alt="Quran_competition">
+        <div class="gallery-item 1st_Quran_competition">
+            <img src="https://i.imgur.com/V6wKr3z.jpeg" alt="1st_Quran_competition">
             <div class="overlay">
                 <h3>Islamic</h3>
-                <p>Quran_competition Category</p>
+                <p>1st_Quran_competition Category</p>
             </div>
         </div>
 
-        <div class="gallery-item Quran_competition">
-            <img src="https://i.imgur.com/GK3MEDP.jpeg" alt="Quran_competition">
+        <div class="gallery-item 1st_Quran_competition">
+            <img src="https://i.imgur.com/GK3MEDP.jpeg" alt="1st_Quran_competition">
             <div class="overlay">
                 <h3>Islamic</h3>
-                <p>Quran_competition Category</p>
+                <p>1st_Quran_competition Category</p>
             </div>
         </div>
 
-        <div class="gallery-item Quran_competition">
-            <img src="https://i.imgur.com/DCdn6Yu.jpeg" alt="Quran_competition">
+        <div class="gallery-item 1st_Quran_competition">
+            <img src="https://i.imgur.com/DCdn6Yu.jpeg" alt="1st_Quran_competition">
             <div class="overlay">
                 <h3>Islamic</h3>
-                <p>Quran_competition Category</p>
+                <p>1st_Quran_competition Category</p>
             </div>
         </div>
 
-        <div class="gallery-item Quran_competition">
-            <img src="https://i.imgur.com/DklHkd8.jpeg" alt="Quran_competition">
+        <div class="gallery-item 1st_Quran_competition">
+            <img src="https://i.imgur.com/DklHkd8.jpeg" alt="1st_Quran_competition">
             <div class="overlay">
                 <h3>Islamic</h3>
-                <p>Quran_competition Category</p>
+                <p>1st_Quran_competition Category</p>
             </div>
         </div>
 
-        <div class="gallery-item Quran_competition">
-            <img src="https://i.imgur.com/YgaiJ8b.jpeg" alt="Quran_competition">
+        <div class="gallery-item 1st_Quran_competition">
+            <img src="https://i.imgur.com/YgaiJ8b.jpeg" alt="1st_Quran_competition">
             <div class="overlay">
                 <h3>Islamic</h3>
-                <p>Quran_competition Category</p>
+                <p>1st_Quran_competition Category</p>
             </div>
         </div>
 
-        <div class="gallery-item Quran_competition">
-            <img src="https://i.imgur.com/8LqR9MQ.jpeg" alt="Quran_competition">
+        <div class="gallery-item 1st_Quran_competition">
+            <img src="https://i.imgur.com/8LqR9MQ.jpeg" alt="1st_Quran_competition">
             <div class="overlay">
                 <h3>Islamic</h3>
-                <p>Quran_competition Category</p>
+                <p>1st_Quran_competition Category</p>
             </div>
         </div>
 
-        <div class="gallery-item Quran_competition">
-            <img src="https://i.imgur.com/V64eoMg.jpeg" alt="Quran_competition">
+        <div class="gallery-item 1st_Quran_competition">
+            <img src="https://i.imgur.com/V64eoMg.jpeg" alt="1st_Quran_competition">
             <div class="overlay">
                 <h3>Islamic</h3>
-                <p>Quran_competition Category</p>
+                <p>1st_Quran_competition Category</p>
             </div>
         </div>
 
-        <div class="gallery-item Quran_competition">
-            <img src="https://i.imgur.com/FsKdwLx.jpeg" alt="Quran_competition">
+        <div class="gallery-item 1st_Quran_competition">
+            <img src="https://i.imgur.com/FsKdwLx.jpeg" alt="1st_Quran_competition">
             <div class="overlay">
                 <h3>Islamic</h3>
-                <p>Quran_competition Category</p>
+                <p>1st_Quran_competition Category</p>
             </div>
         </div>
 
-        <div class="gallery-item Quran_competition">
-            <img src="https://i.imgur.com/z1RK3XS.jpeg" alt="Quran_competition">
+        <div class="gallery-item 1st_Quran_competition">
+            <img src="https://i.imgur.com/z1RK3XS.jpeg" alt="1st_Quran_competition">
             <div class="overlay">
                 <h3>Islamic</h3>
-                <p>Quran_competition Category</p>
+                <p>1st_Quran_competition Category</p>
             </div>
         </div>
 
-        <div class="gallery-item Quran_competition">
-            <img src="https://i.imgur.com/SrR0tN4.jpeg" alt="Quran_competition">
+        <div class="gallery-item 1st_Quran_competition">
+            <img src="https://i.imgur.com/SrR0tN4.jpeg" alt="1st_Quran_competition">
             <div class="overlay">
                 <h3>Islamic</h3>
-                <p>Quran_competition Category</p>
+                <p>1st_Quran_competition Category</p>
             </div>
         </div>
 
-        <div class="gallery-item Quran_competition">
-            <img src="https://i.imgur.com/ZmYArWD.jpeg" alt="Quran_competition">
+        <div class="gallery-item 1st_Quran_competition">
+            <img src="https://i.imgur.com/ZmYArWD.jpeg" alt="1st_Quran_competition">
             <div class="overlay">
                 <h3>Islamic</h3>
-                <p>Quran_competition Category</p>
+                <p>1st_Quran_competition Category</p>
             </div>
         </div>
 
-        <div class="gallery-item Quran_competition">
-            <img src="https://i.imgur.com/RAHq7GF.jpeg" alt="Quran_competition">
+        <div class="gallery-item 1st_Quran_competition">
+            <img src="https://i.imgur.com/RAHq7GF.jpeg" alt="1st_Quran_competition">
             <div class="overlay">
                 <h3>Islamic</h3>
-                <p>Quran_competition Category</p>
+                <p>1st_Quran_competition Category</p>
             </div>
         </div>
 
@@ -584,9 +584,9 @@
         <div class="cat-footer-content">
             <h2>Explore by Category</h2>
             <div class="cat-links">
-                <a href="#" class="cat-link-item" onclick="filterGallery('Quran_competition'); scrollToTop()">
+                <a href="#" class="cat-link-item" onclick="filterGallery('1st_Quran_competition'); scrollToTop()">
                     <span>🕌</span>
-                    Quran_competition
+                    1st_Quran_competition
                 </a>
                 <!-- <a href="#" class="cat-link-item" onclick="filterGallery('urban'); scrollToTop()">
                     <span>🏢</span>
