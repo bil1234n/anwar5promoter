@@ -35,7 +35,7 @@ class LoginController extends Controller
             Notification::create([
                 'user_id' => Auth::id(),
                 'type'    => 'welcome', // You can define this type
-                'message' => 'Welcome back ' . Auth::user()->name . ' to anwar5promoter',
+                'message' => 'Welcome back ' . Auth::user()->username . ' to anwar5promoter',
                 'is_read' => false,
             ]);
             
