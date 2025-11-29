@@ -190,7 +190,7 @@
                         <div class="service-card-content-wrap">
                             <h3 class="section-content-title white">Quran & Azan competition in Tigray Ethiopia</h3>
                         </div>
-                        <div><a href="{{ url('/services_4') }}" class="card-button w-inline-block"
+                        <div><a href="{{ url('/services_5') }}" class="card-button w-inline-block"
                                 style="color: rgb(171, 171, 172); background-color: rgba(0, 0, 0, 0); border-color: rgb(83, 83, 85);">
                                 <div>View Service</div><img
                                     src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/6341460cda79c99ce8b02382_button-01.svg"
@@ -209,7 +209,7 @@
                         <div class="service-card-content-wrap">
                             <h3 class="section-content-title white">House of Allah projects</h3>
                         </div>
-                        <div><a href="{{ url('/services_5') }}" class="card-button w-inline-block"
+                        <div><a href="{{ url('/services_4') }}" class="card-button w-inline-block"
                                 style="color: rgb(171, 171, 172); background-color: rgba(0, 0, 0, 0); border-color: rgb(83, 83, 85);">
                                 <div>View Service</div><img
                                     src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/6341460cda79c99ce8b02382_button-01.svg"
