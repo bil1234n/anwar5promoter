@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Notification;
 
 class LoginController extends Controller
 {
@@ -31,6 +32,13 @@ class LoginController extends Controller
                 return back()->withErrors(['email' => 'Your account is not approved yet.']);
             }
 
+            Notification::create([
+                'user_id' => Auth::id(),
+                'type'    => 'welcome', // You can define this type
+                'message' => 'Welcome back ' . Auth::user()->name . ' to anwar5promoter',
+                'is_read' => false,
+            ]);
+            
             // Redirect based on user's role
             $role = Auth::user()->role;
             switch ($role) {
