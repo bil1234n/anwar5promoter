@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Notification;
 
 class RegisterController extends Controller
 {
@@ -47,6 +48,13 @@ class RegisterController extends Controller
             'id_card' => $idCardPath,
             'passport' => $passportPath,
             // email_verified_at will naturally be NULL in the database
+        ]);
+
+        Notification::create([
+            'user_id' => $user->id,
+            'type'    => 'welcome',
+            'message' => 'Welcome to anwar5promoter ' . $user->username,
+            'is_read' => false,
         ]);
 
         // Log the user in immediately after registration
