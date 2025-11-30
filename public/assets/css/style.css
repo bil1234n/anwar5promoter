@@ -6095,6 +6095,17 @@ iframe.goog-te-banner-frame {
 .lang-dropdown li a:hover {
     background-color: #f1f1f1;
 }
+.about_new .nav-logo{
+  width: 250px;
+  margin-bottom: 2rem;
+  background: #ffffff8f;
+  border: 2px solid #fff;
+  border-radius: 20px 0;
+  padding: 10px;
+}
+.about_new p{
+  color: #ffffffab;
+}
 
 /* Initially hide the mobile link */
 .mobile-only-link {
