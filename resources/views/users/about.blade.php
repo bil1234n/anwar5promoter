@@ -121,7 +121,7 @@
                         loading="lazy" alt="Title Image"></div>
                 <div class="title-width about-value">
                     <div class="section-sub-title center-align">
-                        <p class="sub-title-content grey"><span class="sub-title-slash purple">//</span> 01 . OUR VALUES
+                        <p class="sub-title-content grey"><span class="sub-title-slash purple">//</span> 02 . OUR VALUES
                         </p>
                     </div>
                     <h2 class="section-title white">The core values behind our work</h2>
