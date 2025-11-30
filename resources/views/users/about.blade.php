@@ -76,6 +76,46 @@
         <div class="container w-container">
             <div data-w-id="eaab0669-4d6e-3534-360b-aa38a25a8399" style="opacity: 0;"
                 class="section-title-wrap center-align">
+                <div class="about_new">
+                    <img src="{{ asset('assets/img/logo/logo_a_3.png') }}" loading="lazy" alt="" class="nav-logo">
+                    <p>
+                        Our company Anwar 5Global Business Promoter //Anwar5promoter// vision,value is understanding, explanation and direction of solutions are transmitted to topics about digital marketing , technology innovation , website and Application development ,humanity charity facilitate ,islamic events organizing , Quran &Azan competition Award organizing and  important to human development that should be paid attention to in the country and abroad/ global clients/. 
+                    </p>
+                    <p>
+                        Also our Anwar5promoter focus on services provided :
+
+                        *Halal business & products promoting & selling
+
+                        *Digital Marketing & Events organizing
+
+                        *Website, App & System Development
+
+                        *Quran & Azan competition in Tigray Ethiopia 
+
+                        *House of Allah projects
+
+                        *Anwar5 charity Foundation (ወላጅ አልባ ህፃናት ና አረጋዊያን የመረጃ ማእከል)
+
+                        *Legal Outreach works collaboration (ህጋዊ ጉዳዬች የማስፈፀም ሰራዎች)
+
+                        *Anwar 5 Tour & Galleries
+
+                        For more information 
+                        +251912164433&+251932163577 anwar5promoter@gmail.com
+                        www.anwar5promoter.com
+                        Youtube:https://www.youtube.com /@Anwar5promoter
+
+                        Head office:Ethiopia Addis Ababa Betel Around Teqewa Mesjed
+                        Branch office:Mekelle Ayeder subcity Around Rimna Hospital
+                    </p>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            
+            <div data-w-id="eaab0669-4d6e-3534-360b-aa38a25a8399" style="opacity: 0;"
+                class="section-title-wrap center-align">
                 <div class="title-image-wrap orange"><img
                         src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/6347f51778bb695829a393b3_title-09.svg"
                         loading="lazy" alt="Title Image"></div>
