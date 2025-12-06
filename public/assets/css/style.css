@@ -1134,7 +1134,7 @@ textarea.w-input, textarea.w-select {
 
 .w-slider-mask {
   z-index: 1;
-  height: 130%;
+  height: 50vh;
   white-space: nowrap;
   display: block;
   position: relative;
@@ -3505,7 +3505,7 @@ blockquote {
 
 .home-slide {
   width: 390px;
-  height: 475px;
+  height: 265px;
   background-image: linear-gradient(166deg, #fff8f8, #f5f7ff);
   border-radius: 7px;
   margin-right: 0;
