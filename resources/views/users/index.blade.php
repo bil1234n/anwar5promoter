@@ -397,7 +397,9 @@
                                 </div>
                             </div>
                         </div>
-                        <br>
+                    </div>
+                    <div class="home-slide w-slide" aria-label="1 of 4" role="group"
+                        style="transition: all; transform: translateX(0px); opacity: 1;">
                         <div class="testimonial-flex">
                             <div class="testimonial-content-wrap">
                                 <div class="testimonial-company-wrap">
@@ -417,7 +419,9 @@
                                 </div>
                             </div>
                         </div>
-                        <br>
+                    </div>
+                    <div class="home-slide w-slide" aria-label="1 of 4" role="group"
+                        style="transition: all; transform: translateX(0px); opacity: 1;">
                         <div class="testimonial-flex">
                             <div class="testimonial-content-wrap">
                                 <div class="testimonial-company-wrap">
@@ -437,7 +441,9 @@
                                 </div>
                             </div>
                         </div>
-                        <br>
+                    </div>
+                    <div class="home-slide w-slide" aria-label="1 of 4" role="group"
+                        style="transition: all; transform: translateX(0px); opacity: 1;">
                         <div class="testimonial-flex">
                             <div class="testimonial-content-wrap">
                                 <div class="testimonial-company-wrap">
@@ -457,7 +463,9 @@
                                 </div>
                             </div>
                         </div>
-                        <br>
+                    </div>
+                    <div class="home-slide w-slide" aria-label="1 of 4" role="group"
+                        style="transition: all; transform: translateX(0px); opacity: 1;">
                         <div class="testimonial-flex">
                             <div class="testimonial-content-wrap">
                                 <div class="testimonial-company-wrap">
@@ -477,7 +485,9 @@
                                 </div>
                             </div>
                         </div>
-                        <br>
+                    </div>
+                    <div class="home-slide w-slide" aria-label="1 of 4" role="group"
+                        style="transition: all; transform: translateX(0px); opacity: 1;">
                         <div class="testimonial-flex">
                             <div class="testimonial-content-wrap">
                                 <div class="testimonial-company-wrap">
@@ -497,7 +507,9 @@
                                 </div>
                             </div>
                         </div>
-                        <br>
+                    </div>
+                    <div class="home-slide w-slide" aria-label="1 of 4" role="group"
+                        style="transition: all; transform: translateX(0px); opacity: 1;">
                         <div class="testimonial-flex">
                             <div class="testimonial-content-wrap">
                                 <div class="testimonial-company-wrap">
@@ -517,7 +529,9 @@
                                 </div>
                             </div>
                         </div>
-                        <br>
+                    </div>
+                    <div class="home-slide w-slide" aria-label="1 of 4" role="group"
+                        style="transition: all; transform: translateX(0px); opacity: 1;">
                         <div class="testimonial-flex">
                             <div class="testimonial-content-wrap">
                                 <div class="testimonial-company-wrap">
@@ -537,7 +551,9 @@
                                 </div>
                             </div>
                         </div>
-                        <br>
+                    </div>
+                    <div class="home-slide w-slide" aria-label="1 of 4" role="group"
+                        style="transition: all; transform: translateX(0px); opacity: 1;">
                         <div class="testimonial-flex">
                             <div class="testimonial-content-wrap">
                                 <div class="testimonial-company-wrap">
@@ -557,7 +573,9 @@
                                 </div>
                             </div>
                         </div>
-                        <br>
+                    </div>
+                    <div class="home-slide w-slide" aria-label="1 of 4" role="group"
+                        style="transition: all; transform: translateX(0px); opacity: 1;">
                         <div class="testimonial-flex">
                             <div class="testimonial-content-wrap">
                                 <div class="testimonial-company-wrap">
