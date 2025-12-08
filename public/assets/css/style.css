@@ -9818,8 +9818,8 @@ iframe.goog-te-banner-frame {
     justify-self: auto;
   }
   .p_logo-grid {
-      grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
-      gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
   }
   
   .p_section-title {
@@ -9841,6 +9841,8 @@ iframe.goog-te-banner-frame {
     order: -9999;
     justify-self: center;
   }
+}
+@media screen and (max-width: 420px) {
   .p_logo-grid {
     grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
     gap: 2rem;
