@@ -382,228 +382,72 @@
                     <h2 class="section-title">We work with customers across all industries</h2>
                 </div>
             </div>
-            <div data-delay="4000" data-animation="slide" class="home-testimonial-slider w-slider" data-autoplay="false"
-                data-easing="ease" style="opacity: 0;" data-hide-arrows="false" data-disable-swipe="false"
-                data-w-id="42a429ad-87cf-9147-7a8a-4c9b4d5bf9e0" data-autoplay-limit="0" data-nav-spacing="3"
-                data-duration="500" data-infinite="true" role="region" aria-label="carousel">
-                <div class="home-testimonial-mask w-slider-mask" id="w-slider-mask-0">
-                    <div class="home-slide w-slide" aria-label="1 of 4" role="group"
-                        style="transition: all; transform: translateX(0px); opacity: 1;">
-                        <div class="testimonial-flex">
-                            <div class="testimonial-content-wrap">
-                                <div class="testimonial-company-wrap">
-                                    <img src="{{ asset('assets/img/compnay/lg.png') }}" width="115"
-                                        loading="lazy" alt="Company Image For Testimonial Slider">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="home-slide w-slide" aria-label="1 of 4" role="group"
-                        style="transition: all; transform: translateX(0px); opacity: 1;">
-                        <div class="testimonial-flex">
-                            <div class="testimonial-content-wrap">
-                                <div class="testimonial-company-wrap">
-                                    <img src="{{ asset('assets/img/compnay/Abbahawa_trading.png') }}" width="115"
-                                        loading="lazy" alt="Company Image For Testimonial Slider">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="home-slide w-slide" aria-label="1 of 4" role="group"
-                        style="transition: all; transform: translateX(0px); opacity: 1;">
-                        <div class="testimonial-flex">
-                            <div class="testimonial-content-wrap">
-                                <div class="testimonial-company-wrap">
-                                    <img src="{{ asset('assets/img/compnay/African_Union.jpg') }}" width="115"
-                                        loading="lazy" alt="Company Image For Testimonial Slider">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="home-slide w-slide" aria-label="1 of 4" role="group"
-                        style="transition: all; transform: translateX(0px); opacity: 1;">
-                        <div class="testimonial-flex">
-                            <div class="testimonial-content-wrap">
-                                <div class="testimonial-company-wrap">
-                                    <img src="{{ asset('assets/img/compnay/Damarios.png') }}" width="115"
-                                        loading="lazy" alt="Company Image For Testimonial Slider">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="home-slide w-slide" aria-label="1 of 4" role="group"
-                        style="transition: all; transform: translateX(0px); opacity: 1;">
-                        <div class="testimonial-flex">
-                            <div class="testimonial-content-wrap">
-                                <div class="testimonial-company-wrap">
-                                    <img src="{{ asset('assets/img/compnay/ethio_sadat.png') }}" width="115"
-                                        loading="lazy" alt="Company Image For Testimonial Slider">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="home-slide w-slide" aria-label="1 of 4" role="group"
-                        style="transition: all; transform: translateX(0px); opacity: 1;">
-                        <div class="testimonial-flex">
-                            <div class="testimonial-content-wrap">
-                                <div class="testimonial-company-wrap">
-                                    <img src="{{ asset('assets/img/compnay/Hijra_Bank.png') }}" width="115"
-                                        loading="lazy" alt="Company Image For Testimonial Slider">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="home-slide w-slide" aria-label="1 of 4" role="group"
-                        style="transition: all; transform: translateX(0px); opacity: 1;">
-                        <div class="testimonial-flex">
-                            <div class="testimonial-content-wrap">
-                                <div class="testimonial-company-wrap">
-                                    <img src="{{ asset('assets/img/compnay/HWPL.webp') }}" width="115"
-                                        loading="lazy" alt="Company Image For Testimonial Slider">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="home-slide w-slide" aria-label="1 of 4" role="group"
-                        style="transition: all; transform: translateX(0px); opacity: 1;">
-                        <div class="testimonial-flex">
-                            <div class="testimonial-content-wrap">
-                                <div class="testimonial-company-wrap">
-                                    <img src="{{ asset('assets/img/compnay/Agmas_Business_group.png') }}" width="115"
-                                        loading="lazy" alt="Company Image For Testimonial Slider">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="home-slide w-slide" aria-label="1 of 4" role="group"
-                        style="transition: all; transform: translateX(0px); opacity: 1;">
-                        <div class="testimonial-flex">
-                            <div class="testimonial-content-wrap">
-                                <div class="testimonial-company-wrap">
-                                    <img src="{{ asset('assets/img/compnay/Hektrading_PLC.png') }}" width="115"
-                                        loading="lazy" alt="Company Image For Testimonial Slider">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="home-slide w-slide" aria-label="1 of 4" role="group"
-                        style="transition: all; transform: translateX(0px); opacity: 1;">
-                        <div class="testimonial-flex">
-                            <div class="testimonial-content-wrap">
-                                <div class="testimonial-company-wrap">
-                                    <img src="https://i.imgur.com/ruDqFMZ.jpeg" width="115"
-                                        loading="lazy" alt="Company Image For Testimonial Slider">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="home-slide w-slide" aria-label="1 of 4" role="group"
-                        style="transition: all; transform: translateX(0px); opacity: 1;">
-                        <div class="testimonial-flex">
-                            <div class="testimonial-content-wrap">
-                                <div class="testimonial-company-wrap">
-                                    <img src="{{ asset('assets/img/compnay/TechnoAddis_Media.png') }}" width="115"
-                                        loading="lazy" alt="Company Image For Testimonial Slider">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="home-slide w-slide" aria-label="1 of 4" role="group"
-                        style="transition: all; transform: translateX(0px); opacity: 1;">
-                        <div class="testimonial-flex">
-                            <div class="testimonial-content-wrap">
-                                <div class="testimonial-company-wrap">
-                                    <img src="{{ asset('assets/img/compnay/ViewSat_satellite.png') }}" width="115"
-                                        loading="lazy" alt="Company Image For Testimonial Slider">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="home-slide w-slide" aria-label="1 of 4" role="group"
-                        style="transition: all; transform: translateX(0px); opacity: 1;">
-                        <div class="testimonial-flex">
-                            <div class="testimonial-content-wrap">
-                                <div class="testimonial-company-wrap">
-                                    <img src="{{ asset('assets/img/compnay/Wings_Sadies_LLC.jpg') }}" width="115"
-                                        loading="lazy" alt="Company Image For Testimonial Slider">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="home-slide w-slide" aria-label="1 of 4" role="group"
-                        style="transition: all; transform: translateX(0px); opacity: 1;">
-                        <div class="testimonial-flex">
-                            <div class="testimonial-content-wrap">
-                                <div class="testimonial-company-wrap">
-                                    <img src="{{ asset('assets/img/compnay/metro.png') }}" width="115"
-                                        loading="lazy" alt="Company Image For Testimonial Slider">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="home-slide w-slide" aria-label="1 of 4" role="group"
-                        style="transition: all; transform: translateX(0px); opacity: 1;">
-                        <div class="testimonial-flex">
-                            <div class="testimonial-content-wrap">
-                                <div class="testimonial-company-wrap">
-                                    <img src="{{ asset('assets/img/compnay/lg.png') }}" width="115"
-                                        loading="lazy" alt="Company Image For Testimonial Slider">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="home-slide w-slide" aria-label="1 of 4" role="group"
-                        style="transition: all; transform: translateX(0px); opacity: 1;">
-                        <div class="testimonial-flex">
-                            <div class="testimonial-content-wrap">
-                                <div class="testimonial-company-wrap">
-                                    <img src="{{ asset('assets/img/compnay/Abbahawa_trading.png') }}" width="115"
-                                        loading="lazy" alt="Company Image For Testimonial Slider">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="home-slide w-slide" aria-label="1 of 4" role="group"
-                        style="transition: all; transform: translateX(0px); opacity: 1;">
-                        <div class="testimonial-flex">
-                            <div class="testimonial-content-wrap">
-                                <div class="testimonial-company-wrap">
-                                    <img src="{{ asset('assets/img/compnay/African_Union.jpg') }}" width="115"
-                                        loading="lazy" alt="Company Image For Testimonial Slider">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="home-slide w-slide" aria-label="1 of 4" role="group"
-                        style="transition: all; transform: translateX(0px); opacity: 1;">
-                        <div class="testimonial-flex">
-                            <div class="testimonial-content-wrap">
-                                <div class="testimonial-company-wrap">
-                                    <img src="{{ asset('assets/img/compnay/Damarios.png') }}" width="115"
-                                        loading="lazy" alt="Company Image For Testimonial Slider">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div aria-live="off" aria-atomic="true" class="w-slider-aria-label" data-wf-ignore=""></div>
+        </div>
+    </div>
+    
+    <div class="partner_back">
+        <section class="partners-container">
+            <h2 class="p_section-title">Our partners</h2>
+            <div class="p_logo-grid">
+                <!-- Row 1 -->
+                <div class="p_logo-item">
+                    <img src="{{ asset('assets/img/compnay/lg.png') }}" alt="HWPL Logo">
                 </div>
-                <div class="testimonial-arrow left w-slider-arrow-left" role="button" tabindex="0"
-                    aria-controls="w-slider-mask-0" aria-label="previous slide">
-                    <div class="w-icon-slider-left"></div>
+                <div class="p_logo-item">
+                    <img src="{{ asset('assets/img/compnay/Abbahawa_trading.png') }}" alt="Map Icon">
                 </div>
-                <div class="testimonial-arrow right w-slider-arrow-right" role="button" tabindex="0"
-                    aria-controls="w-slider-mask-0" aria-label="next slide">
-                    <div class="w-icon-slider-right"></div>
+                <div class="p_logo-item">
+                    <img src="{{ asset('assets/img/compnay/African_Union.jpg') }}" alt="Metro PLC">
                 </div>
-                <div class="slide-nav w-slider-nav w-round">
-                    <div class="w-slider-dot w-active" data-wf-ignore="" aria-label="Show slide 1 of 2"
-                        aria-pressed="true" role="button" tabindex="0" style="margin-left: 3px; margin-right: 3px;">
-                    </div>
-                    <div class="w-slider-dot" data-wf-ignore="" aria-label="Show slide 2 of 2" aria-pressed="false"
-                        role="button" tabindex="-1" style="margin-left: 3px; margin-right: 3px;"></div>
+    
+                <!-- Row 2 -->
+                <div class="p_logo-item">
+                    <img src="{{ asset('assets/img/compnay/Damarios.png') }}" alt="One Water">
+                </div>
+                <div class="p_logo-item">
+                    <img src="{{ asset('assets/img/compnay/ethio_sadat.png') }}" alt="Crescent Logo">
+                </div>
+                <div class="p_logo-item">
+                    <img src="{{ asset('assets/img/compnay/Hijra_Bank.png') }}" alt="Liesak Resort">
+                </div>
+    
+                <!-- Row 3 -->
+                <div class="p_logo-item">
+                    <img src="{{ asset('assets/img/compnay/HWPL.webp') }}" alt="Papyrus">
+                </div>
+                <div class="p_logo-item">
+                    <img src="{{ asset('assets/img/compnay/Agmas_Business_group.png') }}" alt="Anwar TV Show">
+                </div>
+                <div class="p_logo-item">
+                    <img src="{{ asset('assets/img/compnay/Hektrading_PLC.png') }}" alt="Techno Addis Media">
+                </div>
+    
+                <!-- Row 4 -->
+                <div class="p_logo-item">
+                    <img src="https://i.imgur.com/ruDqFMZ.jpeg" alt="Papyrus">
+                </div>
+                <div class="p_logo-item">
+                    <img src="{{ asset('assets/img/compnay/TechnoAddis_Media.png') }}" alt="Anwar TV Show">
+                </div>
+                <div class="p_logo-item">
+                    <img src="{{ asset('assets/img/compnay/ViewSat_satellite.png') }}" alt="Techno Addis Media">
+                </div>
+    
+                <!-- Row 5 -->
+                <div class="p_logo-item">
+                    <img src="{{ asset('assets/img/compnay/Wings_Sadies_LLC.jpg') }}" alt="Papyrus">
+                </div>
+                <div class="p_logo-item">
+                    <img src="{{ asset('assets/img/compnay/metro.png') }}" alt="Anwar TV Show">
+                </div>
+                <div class="p_logo-item">
+                    <img src="{{ asset('assets/img/compnay/lg.png') }}" alt="Techno Addis Media">
                 </div>
             </div>
-        </div>
+            <div class="footer-url">
+                <a href="#">www.Anwar5Promoter.com</a>
+            </div>
+        </section>
     </div>
     @include('components.footer')
     <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=633fc9cf3a4f100f9060830b"
