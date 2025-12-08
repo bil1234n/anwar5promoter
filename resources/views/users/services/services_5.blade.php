@@ -14,15 +14,15 @@
     <meta charset="utf-8">
     <title>Services - Anwar5Promoter</title>
     <meta
-        content="Anwar5Promoter provided by the marketing agency is listed with a simple intro and the services are listed based on the main category."
+        content="At Anwar5Promoter, we specialize in digital marketing, legalization services, and Islamic-compliant competitive solutions. Our marketing agency presents a clear and concise introduction, followed by a structured list of services organized under their main categories."
         name="description">
     <meta content="Services - 5" property="og:title">
     <meta
-        content="Anwar5Promoter provided by the marketing agency is listed with a simple intro and the services are listed based on the main category."
+        content="At Anwar5Promoter, we specialize in digital marketing, legalization services, and Islamic-compliant competitive solutions. Our marketing agency presents a clear and concise introduction, followed by a structured list of services organized under their main categories."
         property="og:description">
     <meta content="Services - 5" property="twitter:title">
     <meta
-        content="Anwar5Promoter provided by the marketing agency is listed with a simple intro and the services are listed based on the main category."
+        content="At Anwar5Promoter, we specialize in digital marketing, legalization services, and Islamic-compliant competitive solutions. Our marketing agency presents a clear and concise introduction, followed by a structured list of services organized under their main categories."
         property="twitter:description">
     <meta property="og:type" content="website">
     <meta content="summary_large_image" name="twitter:card">
