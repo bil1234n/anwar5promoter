@@ -484,7 +484,7 @@
                             </div>
                             <div class="team-content-wrap">
                                 <h3 class="section-content-title team">Esmale Jemal Sulyman</h3>
-                                <p>Anajina Project Manager</p>
+                                <p>Project Manager</p>
                             </div>
                             <div class="team-social-wrap"><a href="https://www.facebook.com" target="_blank"
                                     class="w-inline-block"><img
