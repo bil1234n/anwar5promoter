@@ -441,7 +441,7 @@
                     <img src="{{ asset('assets/img/compnay/metro.png') }}" alt="Anwar TV Show">
                 </div>
                 <div class="p_logo-item">
-                    <img src="{{ asset('assets/img/compnay/lg.png') }}" alt="Techno Addis Media">
+                    <img src="https://i.imgur.com/Oe2x0n1.jpeg" alt="Techno Addis Media">
                 </div>
             </div>
             <div class="footer-url">
