@@ -9842,7 +9842,8 @@ iframe.goog-te-banner-frame {
     justify-self: center;
   }
   .p_logo-grid {
-      grid-template-columns: 1fr; /* 1 column on phones */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    gap: 2rem;
   }
 }
 
