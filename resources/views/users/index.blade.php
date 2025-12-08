@@ -13,7 +13,7 @@
     <meta charset="utf-8">
     <title>Anwar5Promote</title>
     <meta
-        content="Promote is a highly dedicated digital marketing agency Webflow template with creative layouts. The well-planned and innovative structure highly supports the rapid growth of your digital business."
+        content="Anwar5Promoter is a highly dedicated digital marketing agency with creative layouts. The well-planned and innovative structure highly supports the rapid growth of your digital business."
         name="description">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="Webflow" name="generator">
