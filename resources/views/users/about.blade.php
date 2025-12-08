@@ -13,15 +13,15 @@
     <meta charset="utf-8">
     <title>About Us</title>
     <meta
-        content="The details about the marketing agency like the intro, digital values, marketing team, and the locations with a contact section for contacting the team are available."
+        content="The details about anwar5promoter company, digital values, marketing team, and the locations with a contact section for contacting the team are available."
         name="description">
     <meta content="About Us" property="og:title">
     <meta
-        content="The details about the marketing agency like the intro, digital values, marketing team, and the locations with a contact section for contacting the team are available."
+        content="The details about anwar5promoter company, digital values, marketing team, and the locations with a contact section for contacting the team are available."
         property="og:description">
     <meta content="About Us" property="twitter:title">
     <meta
-        content="The details about the marketing agency like the intro, digital values, marketing team, and the locations with a contact section for contacting the team are available."
+        content="The details about anwar5promoter company, digital values, marketing team, and the locations with a contact section for contacting the team are available."
         property="twitter:description">
     <meta property="og:type" content="website">
     <meta content="summary_large_image" name="twitter:card">
