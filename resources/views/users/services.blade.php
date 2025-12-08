@@ -13,15 +13,15 @@
     <meta charset="utf-8">
     <title>Services</title>
     <meta
-        content="The list of digital marketing services provided by the marketing agency is listed with a simple intro and the services are listed based on the main category."
+        content="The list of digital marketing services provided by the anwar5promoter is listed with a simple intro and the services are listed based on the main category."
         name="description">
     <meta content="Services" property="og:title">
     <meta
-        content="The list of digital marketing services provided by the marketing agency is listed with a simple intro and the services are listed based on the main category."
+        content="The list of digital marketing services provided by the anwar5promoter is listed with a simple intro and the services are listed based on the main category."
         property="og:description">
     <meta content="Services" property="twitter:title">
     <meta
-        content="The list of digital marketing services provided by the marketing agency is listed with a simple intro and the services are listed based on the main category."
+        content="The list of digital marketing services provided by the anwar5promoter is listed with a simple intro and the services are listed based on the main category."
         property="twitter:description">
     <meta property="og:type" content="website">
     <meta content="summary_large_image" name="twitter:card">
