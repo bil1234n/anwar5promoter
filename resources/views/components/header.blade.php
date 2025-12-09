@@ -205,23 +205,29 @@
         });
     });
 
-
-    // notifcation   
+    
+    // NOTIFICATION SCRIPT
     document.addEventListener("DOMContentLoaded", function() {
 
+        // 1. Select DOM Elements
         const notifIcon = document.getElementById("notifIcon");
         const notifDropdown = document.getElementById("notifDropdown");
         const notifList = document.getElementById("notifList");
         const notifCount = document.getElementById("notifCount");
         const closeNotif = document.getElementById("closeNotif");
 
+        // 2. Define the Function to Fetch Data
         function loadNotifications() {
-            fetch("/notifications/fetch")
-                .then(res => res.json())
+            fetch("{{ url('/notifications/fetch') }}")
+                .then(res => {
+                    // Check if response is JSON, otherwise authentication might have failed
+                    if (!res.ok) throw new Error("Failed to fetch");
+                    return res.json();
+                })
                 .then(data => {
-
                     notifList.innerHTML = "";
 
+                    // Case: No Notifications
                     if (data.length === 0) {
                         notifList.innerHTML = `
                             <div style="padding: 10px; text-align:center; color: gray;">
@@ -232,78 +238,98 @@
                         return;
                     }
 
+                    // Case: Have Notifications -> Update Badge
                     notifCount.innerText = data.length;
                     notifCount.style.display = "inline-block";
 
+                    // Build the List HTML
                     data.forEach(notif => {
+                        // Format Date nicely
+                        const dateStr = new Date(notif.created_at).toLocaleString();
+                        
                         notifList.innerHTML += `
-                            <div class="notif-item notif-item-unread">
+                            <div class="notif-item">
                                 <p><strong>${notif.type.toUpperCase()}</strong></p>
                                 <p>${notif.message}</p>
 
-                                <!-- ADD 'markReadBtn' CLASS HERE -->
                                 <button class="blue_btn markReadBtn" data-id="${notif.id}">
                                     Mark as Read
                                 </button>
 
-                                <small>${new Date(notif.created_at).toLocaleString()}</small>
+                                <br>
+                                <small style="font-size:0.8rem; color:#888;">${dateStr}</small>
                             </div>
+                            <hr style="margin: 5px 0; opacity:0.3;">
                         `;
                     });
-                });
+                })
+                .catch(error => console.error("Notification Error:", error));
         }
 
-        // Show dropdown
-        notifIcon.addEventListener("click", (e) => {
-            // Optional: Prevent this click from triggering the document close event immediately
-            e.stopPropagation();
-            notifDropdown.style.display = "block";
-            loadNotifications();
-        });
+        // 3. Toggle Dropdown when Icon is clicked
+        if (notifIcon) {
+            notifIcon.addEventListener("click", (e) => {
+                e.stopPropagation(); // Stop click from reaching document
+                if (notifDropdown.style.display === "block") {
+                    notifDropdown.style.display = "none";
+                } else {
+                    notifDropdown.style.display = "block";
+                    // Optional: Refresh list when opening
+                    // loadNotifications(); 
+                }
+            });
+        }
 
-        // Close dropdown via 'Close' button
-        // Ensure closeNotif exists to avoid errors if the button is missing
+        // 4. Close Dropdown via 'X' button
         if (closeNotif) {
             closeNotif.addEventListener("click", () => {
                 notifDropdown.style.display = "none";
             });
         }
 
-        // NEW: Close dropdown when clicking outside
+        // 5. Close dropdown when clicking OUTSIDE
         document.addEventListener("click", function(event) {
-            // Check if the dropdown is currently visible
             if (notifDropdown.style.display === "block") {
-
-                // If the click is NOT inside the dropdown AND NOT on the icon
                 if (!notifDropdown.contains(event.target) && !notifIcon.contains(event.target)) {
                     notifDropdown.style.display = "none";
                 }
             }
         });
 
-        // Mark as read (AJAX)
+        // 6. Handle "Mark as Read" clicks
         document.addEventListener("click", function(e) {
             if (e.target.classList.contains("markReadBtn")) {
+                e.preventDefault(); // Prevent default button behavior
+                
                 let id = e.target.getAttribute("data-id");
-
-                // Optional: Prevent the dropdown from closing when clicking 'Mark as Read'
-                // e.stopPropagation(); 
-
-                fetch(`/notifications/read/${id}`, {
+                
+                // Call backend to mark as read
+                fetch("{{ url('/notifications/read') }}/" + id, {
                         method: "POST",
                         headers: {
-                            "X-CSRF-TOKEN": "{{ csrf_token() }}"
+                            "X-CSRF-TOKEN": "{{ csrf_token() }}",
+                            "Content-Type": "application/json"
                         }
                     })
                     .then(res => res.json())
                     .then(() => {
+                        // Reload the list to remove the item or update UI
                         loadNotifications();
-                    });
+                    })
+                    .catch(err => console.error("Error marking read:", err));
             }
         });
 
-        // Auto-load badge on every page
-        loadNotifications();
+        // ============================================================
+        // CRITICAL FIX: Only run fetch if user is logged in
+        // This prevents the "redirect to json" issue upon login
+        // ============================================================
+        @if(Auth::check())
+            loadNotifications();
+            
+            // Optional: Auto-refresh every 60 seconds
+            // setInterval(loadNotifications, 60000); 
+        @endif
     });
 </script>
 
