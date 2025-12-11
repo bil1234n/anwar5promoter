@@ -1,84 +1,129 @@
-<html data-wf-page="634ced2e990236397a942c15" data-wf-site="633fc9cf3a4f100f9060830b" lang="en"
-    class="w-mod-js wf-notosans-n4-active wf-notosans-n5-active wf-notosans-n6-active wf-notosans-n7-active wf-notosans-n8-active wf-nunito-n4-active wf-nunito-n5-active wf-nunito-n6-active wf-nunito-n7-active wf-nunito-n8-active wf-nunito-n9-active wf-active w-mod-ix"
-    webcrx="">
-<div id="in-page-channel-node-id" data-channel-name="in_page_channel_yVXdFL"></div>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Support History</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter for professional typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        .wf-force-outline-none[tabindex="-1"]:focus {
-            outline: none;
-        }
+        body { font-family: 'Inter', sans-serif; }
     </style>
-    <meta charset="utf-8">
-    <title>Contact Us</title>
-    <meta
-        content="Whether you have a question about digital services, cost value, or other information please contact us using the form and the other information on this page."
-        name="description">
-    <meta content="Contact Us" property="og:title">
-    <meta
-        content="Whether you have a question about digital services, cost value, or other information please contact us using the form and the other information on this page."
-        property="og:description">
-    <meta content="Contact Us" property="twitter:title">
-    <meta
-        content="Whether you have a question about digital services, cost value, or other information please contact us using the form and the other information on this page."
-        property="twitter:description">
-    <meta property="og:type" content="website">
-    <meta content="summary_large_image" name="twitter:card">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <meta content="Webflow" name="generator">
-    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Noto+Sans:regular,500,600,700,800%7CNunito:regular,500,600,700,800,900"
-        media="all">
-    <script type="text/javascript">
-        WebFont.load({
-            google: {
-                families: ["Noto Sans:regular,500,600,700,800", "Nunito:regular,500,600,700,800,900"]
-            }
-        });
-    </script>
-    <script type="text/javascript">
-        ! function(o, c) {
-            var n = c.documentElement,
-                t = " w-mod-";
-            n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n
-                .className += t + "touch")
-        }(window, document);
-    </script>
-    <link
-        href="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/63635531ac4fa2658711ffbc_next-level-faicon.png"
-        rel="shortcut icon" type="image/x-icon">
-    <link
-        href="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/63635535788bd0e2523debe5_next-level-webclip.webp"
-        rel="apple-touch-icon">
-    <script src="blob:https://promote-template.webflow.io/dcfac3c0-6c5c-41ec-bc05-5db5528229ed"></script>
 </head>
+<body class="bg-slate-50 min-h-screen text-slate-800">
 
-<body>
-    <div class="banner-title-area">
-        <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease"
-            role="banner" class="nav-bar w-nav">
-            <div class="container">
-                @include('components.header')
-            </div>
-            <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-0"></div>
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    
+    <!-- Page Header -->
+    <div class="md:flex md:items-center md:justify-between mb-8 border-b border-slate-200 pb-6">
+        <div>
+            <h1 class="text-3xl font-bold text-slate-900 tracking-tight">Message History</h1>
+            <p class="mt-1 text-sm text-slate-500">View your past inquiries and administrative responses.</p>
         </div>
-        <div class="sub-banner-content-flex" style="opacity: 1;">
-            <h1 class="banner-text">Let’s Talk</h1>
-        </div>
-        <div class="banner-overlay">
-            <div class="banner-center-circle"
-                style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-            </div>
-            <div class="sub-banner-bg-main-circle"></div>
-            <div class="sub-banner-bg-circle-left"></div>
-            <div class="sub-banner-bg-circle-right"></div><img
-                src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/633fe09a4a630c6e9fa82f11_banner-03.svg"
-                loading="lazy" alt="Banner Decorative Image" class="sub-banner-decorative"><img
-                src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/633fe09ad294ae620d862ef0_Banner-01.svg"
-                loading="lazy" alt="Banner Decorative Image" class="sub-banner-decorative-two">
+        <div class="mt-4 md:mt-0 flex items-center space-x-4">
+            <!-- Logout Button -->
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <button type="submit" class="text-sm font-medium text-slate-500 hover:text-red-600 transition-colors">
+                    Log Out
+                </button>
+            </form>
+            <!-- New Message Action -->
+            <a href="{{ route('contact.form') }}" class="inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                New Message
+            </a>
         </div>
     </div>
+
+    <!-- Content Area -->
+    @if($messages->isEmpty())
+        <!-- Empty State -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-12 text-center">
+            <div class="mx-auto h-12 w-12 text-slate-300 mb-4">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+            </div>
+            <h3 class="text-lg font-medium text-slate-900">No messages yet</h3>
+            <p class="mt-1 text-slate-500 max-w-sm mx-auto">You haven't contacted support yet. If you need help, feel free to send us a message.</p>
+            <div class="mt-6">
+                <a href="{{ route('contact.form') }}" class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
+                    Contact Support
+                </a>
+            </div>
+        </div>
+    @else
+        <!-- Message List -->
+        <div class="space-y-6">
+            @foreach($messages as $msg)
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden transition hover:shadow-md">
+                    
+                    <!-- Card Header -->
+                    <div class="p-6 border-b border-slate-100 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
+                        <div class="flex items-start gap-4">
+                            <!-- Status Icon/Badge -->
+                            <div class="flex-shrink-0 mt-1">
+                                @if($msg->admin_reply)
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 border border-green-200">
+                                        Replied
+                                    </span>
+                                @else
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 border border-yellow-200">
+                                        Pending
+                                    </span>
+                                @endif
+                            </div>
+                            <div>
+                                <h2 class="text-lg font-semibold text-slate-900">{{ $msg->subject }}</h2>
+                                <p class="text-xs text-slate-400 mt-1">Ticket ID: #{{ $msg->id }} &bull; Sent {{ $msg->created_at->diffForHumans() }}</p>
+                            </div>
+                        </div>
+                        <div class="text-sm text-slate-500 whitespace-nowrap">
+                            {{ $msg->created_at->format('M d, Y') }}
+                        </div>
+                    </div>
+
+                    <!-- Card Body -->
+                    <div class="p-6">
+                        <!-- User Message -->
+                        <div class="mb-6">
+                            <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Your Message</p>
+                            <p class="text-slate-700 leading-relaxed bg-slate-50 p-4 rounded-lg border border-slate-100">
+                                {{ $msg->message }}
+                            </p>
+                        </div>
+                        
+                        <!-- Admin Reply Section -->
+                        @if($msg->admin_reply)
+                            <div class="mt-6 flex gap-4">
+                                <div class="flex-shrink-0">
+                                    <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                                    </div>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <h4 class="font-bold text-slate-900">Support Team</h4>
+                                        <span class="text-xs text-slate-500">{{ $msg->replied_at ? $msg->replied_at->format('M d, h:i A') : '' }}</span>
+                                    </div>
+                                    <div class="text-slate-600 prose prose-sm max-w-none">
+                                        {{ $msg->admin_reply }}
+                                    </div>
+                                </div>
+                            </div>
+                        @else
+                            <div class="mt-4 flex items-center p-4 bg-yellow-50 rounded-lg border border-yellow-100 text-yellow-700 text-sm">
+                                <svg class="w-5 h-5 mr-3 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span>Our support team has received your message and will reply shortly.</span>
+                            </div>
+                        @endif
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    @endif
+</div>
+
+</body>
+</html>
