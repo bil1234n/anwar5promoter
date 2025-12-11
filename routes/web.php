@@ -77,6 +77,10 @@ Route::get('/contact', [ContactController::class, 'showForm'])->name('contact.fo
 Route::post('/contact', [ContactController::class, 'submitForm'])->name('contact.submit');
 Route::get('/blog', [BlogController::class, 'index'])->name('blogs.index');
 Route::get('/event', [PublicEventController::class, 'index'])->name('event.index');
+// payment with chapa
+Route::get('/donate', [ChapaController::class, 'showDonationForm'])->name('donate.form');
+Route::post('/donate/process', [ChapaController::class, 'processPayment'])->name('donate.process');
+Route::get('/donate/callback/{tx_ref?}', [ChapaController::class, 'paymentCallback'])->name('donate.callback');
 
 // ------------------ AUTHENTICATED USER ROUTES ------------------
 Route::middleware(['auth'])->group(function () {
@@ -100,11 +104,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/profile/edit', [ProfileController::class, 'editProfile'])->name('profile.edit');
     Route::post('/profile/update', [ProfileController::class, 'updateProfile'])->name('profile.update');
     Route::get('/my-messages', [ContactController::class, 'checkMessages'])->name('contact.history');
-
-    // payment with chapa
-    Route::get('/donate', [ChapaController::class, 'showDonationForm'])->name('donate.form');
-    Route::post('/donate/process', [ChapaController::class, 'processPayment'])->name('donate.process');
-    Route::get('/donate/callback/{tx_ref?}', [ChapaController::class, 'paymentCallback'])->name('donate.callback');
 
     // payment with stripe
     // Route::post('/donate/pay', [StripeController::class, 'processPayment'])->name('donate.pay');
