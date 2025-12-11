@@ -11,7 +11,7 @@
         }
     </style>
     <meta charset="utf-8">
-    <title>Service Single - Promote - Webflow HTML website template</title>
+    <title>Donation Anwar5Promoter</title>
     <meta
         content="A brief explanation about the particular digital marketing service with the images and the growth points are listed with readable quality."
         name="description">
@@ -269,15 +269,31 @@
             <div class="form-row">
                 <div class="form-col form-group">
                     <label>Name</label>
-                    <!-- Using $user->name passed from controller -->
-                    <input type="text" value="{{ Auth::user()->username }}" readonly style="background-color: #e9ecef; cursor: not-allowed;">
+                    
+                    @auth
+                        <!-- LOGGED IN: Show their name, make it read-only -->
+                        <!-- I added '?? Auth::user()->name' in case your DB uses 'name' instead of 'username' -->
+                        <input type="text" value="{{ Auth::user()->username ?? Auth::user()->name }}" readonly style="background-color: #e9ecef; cursor: not-allowed;">
+                    @else
+                        <!-- GUEST: Show empty box, require them to type name -->
+                        <input type="text" name="first_name" placeholder="Your Full Name" required style="background-color: #fff;">
+                    @endauth
+                    
                 </div>
             </div>
 
-            <!-- Email -->
+            <!-- Email Row -->
             <div class="form-group">
                 <label>Email Address</label>
-                <input type="email" value="{{ Auth::user()->email }}" readonly style="background-color: #e9ecef; cursor: not-allowed;">
+
+                @auth
+                    <!-- LOGGED IN: Show their email, read-only -->
+                    <input type="email" value="{{ Auth::user()->email }}" readonly style="background-color: #e9ecef; cursor: not-allowed;">
+                @else
+                    <!-- GUEST: Show empty box, require email -->
+                    <input type="email" name="email" placeholder="example@gmail.com" required style="background-color: #fff;">
+                @endauth
+
             </div>
 
             <!-- Amount -->
@@ -314,7 +330,6 @@
 
             <!-- Trust Badge -->
             <div class="secure-badge">
-                <!-- Simple SVG Lock Icon -->
                 <svg class="icon-lock" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
                 </svg>
