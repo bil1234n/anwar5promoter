@@ -185,6 +185,203 @@
     </div>
 </div>
 
+<!-- PROFESSIONAL WHATSAPP WIDGET START -->
+<style>
+    /* 1. The Floating Icon Button */
+    .wa-widget-toggle {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        background-color: #25D366;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        cursor: pointer;
+        z-index: 9999;
+        transition: transform 0.3s ease;
+    }
+    .wa-widget-toggle:hover {
+        transform: scale(1.1);
+    }
+    
+    /* 2. The Chat Box Container */
+    .wa-chat-box {
+        position: fixed;
+        bottom: 90px;
+        right: 20px;
+        width: 350px; /* Width of the chat box */
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+        overflow: hidden;
+        z-index: 9998;
+        display: none; /* Hidden by default */
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.3s ease;
+    }
+
+    /* Animation class when opened */
+    .wa-chat-box.active {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* 3. Header Section ("Get in touch") */
+    .wa-chat-header {
+        background-color: #075E54;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+    .wa-chat-header h3 {
+        color: #fff;
+        margin: 0;
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .wa-chat-header .close-btn {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        cursor: pointer;
+        font-size: 20px;
+        opacity: 0.8;
+    }
+
+    /* 4. Body Section (Promoter Name & Message) */
+    .wa-chat-body {
+        padding: 20px;
+        background-color: #e5ddd5; /* WhatsApp Chat Background Color */
+        background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png'); /* Optional WhatsApp Pattern */
+        background-blend-mode: overlay;
+    }
+
+    /* The Message Bubble */
+    .wa-msg-bubble {
+        background: white;
+        padding: 15px;
+        border-radius: 0px 10px 10px 10px;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        position: relative;
+        margin-bottom: 20px;
+    }
+    /* Small triangle on the left */
+    .wa-msg-bubble::before {
+        content: "";
+        position: absolute;
+        left: -10px;
+        top: 0;
+        width: 0;
+        height: 0;
+        border-top: 10px solid white;
+        border-left: 10px solid transparent;
+    }
+
+    .wa-promoter-name {
+        font-size: 14px;
+        font-weight: bold;
+        color: #e542a3; /* Or your brand color, or standard #075e54 */
+        margin-bottom: 5px;
+        display: block;
+    }
+    .wa-msg-text {
+        font-size: 15px;
+        color: #111;
+        line-height: 1.4;
+    }
+    .wa-time {
+        font-size: 11px;
+        color: #999;
+        text-align: right;
+        display: block;
+        margin-top: 5px;
+    }
+
+    /* 5. Footer Button ("Click to start chat") */
+    .wa-chat-footer {
+        padding: 15px;
+        background: white;
+        text-align: center;
+    }
+    .wa-btn-start {
+        display: block;
+        background-color: #25D366;
+        color: white;
+        text-decoration: none;
+        padding: 12px;
+        border-radius: 25px;
+        font-weight: bold;
+        font-size: 16px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        transition: background 0.3s;
+    }
+    .wa-btn-start:hover {
+        background-color: #128C7E;
+        color: white;
+        text-decoration: none;
+    }
+</style>
+
+<!-- HTML STRUCTURE -->
+<div id="wa-widget-container">
+    
+    <!-- 1. The Chat Popup Window -->
+    <div class="wa-chat-box" id="wa-box">
+        <!-- Header -->
+        <div class="wa-chat-header">
+            <h3><i class="ri-whatsapp-line"></i>&nbsp; Get in touch</h3>
+            <span class="close-btn" onclick="toggleWaChat()">×</span>
+        </div>
+
+        <!-- Body (The Message) -->
+        <div class="wa-chat-body">
+            <div class="wa-msg-bubble">
+                <span class="wa-promoter-name">Anwar5Promoter</span>
+                <div class="wa-msg-text">
+                    Hey, how can i help you today?
+                </div>
+                <span class="wa-time">Just now</span>
+            </div>
+        </div>
+
+        <!-- Footer (The Button) -->
+        <div class="wa-chat-footer">
+            <!-- REPLACE PHONE NUMBER BELOW (Format: No + or spaces, e.g., 251911000000) -->
+            <a href="https://wa.me/251912164433?text=Anwar5Promoter" target="_blank" class="wa-btn-start">
+                <i class="ri-whatsapp-line"></i> Click to start chat
+            </a>
+        </div>
+    </div>
+
+    <!-- 2. The Floating Button (Bottom Right) -->
+    <div class="wa-widget-toggle" onclick="toggleWaChat()">
+        <!-- WhatsApp SVG Icon -->
+        <i style="font-size: 34px" class="ri-whatsapp-line"></i>
+    </div>
+</div>
+
+<!-- JAVASCRIPT LOGIC -->
+<script>
+    function toggleWaChat() {
+        var chatBox = document.getElementById('wa-box');
+        if (chatBox.style.display === 'none' || chatBox.style.display === '') {
+            chatBox.style.display = 'block';
+            setTimeout(() => { chatBox.classList.add('active'); }, 10); // Trigger transition
+        } else {
+            chatBox.classList.remove('active');
+            setTimeout(() => { chatBox.style.display = 'none'; }, 300); // Wait for transition
+        }
+    }
+</script>
+<!-- PROFESSIONAL WHATSAPP WIDGET END -->
 
 <!--==================== SCRIPT ====================-->
 <script>
