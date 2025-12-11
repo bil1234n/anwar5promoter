@@ -11,15 +11,15 @@
         }
     </style>
     <meta charset="utf-8">
-    <title>Donation</title>
+    <title>Service Single - Promote - Webflow HTML website template</title>
     <meta
         content="A brief explanation about the particular digital marketing service with the images and the growth points are listed with readable quality."
         name="description">
-    <meta content="Donation" property="og:title">
+    <meta content="Service Single - Promote - Webflow HTML website template" property="og:title">
     <meta
         content="A brief explanation about the particular digital marketing service with the images and the growth points are listed with readable quality."
         property="og:description">
-    <meta content="Donation" property="twitter:title">
+    <meta content="Service Single - Promote - Webflow HTML website template" property="twitter:title">
     <meta
         content="A brief explanation about the particular digital marketing service with the images and the growth points are listed with readable quality."
         property="twitter:description">
@@ -45,153 +45,181 @@
         href="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/63635535788bd0e2523debe5_next-level-webclip.webp"
         rel="apple-touch-icon">
     <script src="blob:https://promote-template.webflow.io/8726d368-4c25-4be9-a475-a8161bc0bb7e"></script>
+    
     <style>
-        /* 1. Reset & Variables */
+        /* --- 1. CSS Variables & Reset --- */
         :root {
-            --primary-color: #009b72; /* Trustworthy Green */
-            --primary-hover: #007a5a;
-            --text-main: #333333;
-            --text-muted: #666666;
-            --border-color: #e0e0e0;
-            --bg-color: #f4f7f6;
-            --error-color: #d32f2f;
-            --error-bg: #ffebee;
+            --primary-color: #0d9488; /* Professional Teal */
+            --primary-hover: #0f766e;
+            --bg-color: #f3f4f6;
+            --card-bg: #ffffff;
+            --text-dark: #111827;
+            --text-gray: #6b7280;
+            --border-color: #d1d5db;
+            --error-bg: #fef2f2;
+            --error-text: #991b1b;
             --radius: 8px;
-            --shadow: 0 10px 25px rgba(0,0,0,0.05);
+            --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
         }
 
-
-        /* 3. Card Design */
-        .donation-card {
-            background: #ffffff;
+        /* --- 2. Card Container --- */
+        .donation-container {
+            background-color: var(--card-bg);
             width: 100%;
-            max-width: 450px;
-            padding: 40px;
-            border-radius: var(--radius);
+            max-width: 480px;
+            border-radius: 16px; /* Modern rounded corners */
             box-shadow: var(--shadow);
-            border-top: 5px solid var(--primary-color);
-            margin: 2rem auto 1rem;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.05);
+            margin: 2rem auto;
         }
 
-        .card-header {
+        .header {
+            background-color: #fff;
+            padding: 30px 30px 10px 30px;
             text-align: center;
-            margin-bottom: 30px;
         }
 
-        .card-header h2 {
-            color: var(--text-main);
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 8px;
+        .header h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 5px;
         }
 
-        .card-header p {
-            color: var(--text-muted);
-            font-size: 14px;
+        .header p {
+            color: var(--text-gray);
+            font-size: 0.9rem;
         }
 
-        /* 4. Form Elements */
+        /* --- 3. Form Styling --- */
+        .form-body {
+            padding: 30px;
+        }
+
         .form-group {
             margin-bottom: 20px;
         }
 
+        .form-row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .form-col {
+            flex: 1;
+        }
+
         label {
             display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-dark);
             margin-bottom: 8px;
-            color: var(--text-main);
-            font-weight: 500;
-            font-size: 14px;
         }
 
-        .donation-card input[type="text"],
-        .donation-card input[type="number"],
-        .donation-card input[type="email"],
-        .donation-card select {
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select {
             width: 100%;
             padding: 12px 15px;
-            font-size: 15px;
-            color: var(--text-main);
-            background-color: #fff;
+            font-size: 1rem;
             border: 1px solid var(--border-color);
             border-radius: var(--radius);
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
-            appearance: none; /* Remove default arrow for consistent styling */
+            transition: all 0.2s ease;
+            background-color: #fff;
+            color: var(--text-dark);
         }
 
-        /* Custom Arrow for Select */
-        .select-wrapper {
-            position: relative;
-        }
-        .select-wrapper::after {
-            content: '▼';
-            font-size: 10px;
-            color: var(--text-muted);
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            pointer-events: none;
-        }
-
-        /* Focus States */
-        .donation-card input:focus,
-        .donation-card select:focus {
+        input:focus, select:focus {
             outline: none;
             border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(0, 155, 114, 0.1);
+            box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.1); /* Soft focus ring */
         }
 
-        /* 5. Button Design */
-        .btn-submit {
+        /* Custom Input Icon Wrapper (for currency) */
+        .input-wrapper {
+            position: relative;
+        }
+        .currency-symbol {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-gray);
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        .input-with-icon {
+            padding-left: 50px !important;
+        }
+
+        /* --- 4. Button Styling --- */
+        .btn-donate {
             width: 100%;
             padding: 14px;
             background-color: var(--primary-color);
             color: white;
             border: none;
             border-radius: var(--radius);
-            font-size: 16px;
+            font-size: 1.1rem;
             font-weight: 600;
             cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.1s ease;
+            transition: background-color 0.2s ease, transform 0.1s ease;
             margin-top: 10px;
         }
 
-        .btn-submit:hover {
+        .btn-donate:hover {
             background-color: var(--primary-hover);
         }
 
-        .btn-submit:active {
+        .btn-donate:active {
             transform: scale(0.98);
         }
 
-        /* 6. Alerts & Utilities */
-        .alert-error {
-            background-color: var(--error-bg);
-            color: var(--error-color);
+        /* --- 5. Alerts & Helpers --- */
+        .alert {
             padding: 12px;
             border-radius: var(--radius);
-            font-size: 14px;
             margin-bottom: 20px;
-            border-left: 4px solid var(--error-color);
+            font-size: 0.9rem;
+        }
+        .alert-error {
+            background-color: var(--error-bg);
+            color: var(--error-text);
+            border: 1px solid #fecaca;
+        }
+        .alert ul {
+            list-style-position: inside;
         }
 
-        .field-error {
-            color: var(--error-color);
-            font-size: 12px;
-            margin-top: 5px;
-            display: block;
+        .secure-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: var(--text-gray);
+            gap: 8px;
         }
 
-        /* Animation for "Others" input */
-        #other_input_container {
-            animation: fadeIn 0.3s ease-in-out;
+        /* SVG Icon styling */
+        .icon-lock {
+            width: 14px;
+            height: 14px;
+            fill: var(--text-gray);
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-5px); }
-            to { opacity: 1; transform: translateY(0); }
+        /* Mobile Responsiveness */
+        @media (max-width: 500px) {
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
         }
     </style>
+  
 </head>
 
 <body>
@@ -206,89 +234,129 @@
         <div class="banner">
             <div class="container w-container">
 
-            <div class="donation-card">
-                <div class="card-header">
-                    <h2>Make a Donation</h2>
-                    <p>Your contribution makes a difference.</p>
+
+
+<div class="donation-container">
+    
+    <div class="header">
+        <h2>Make a Donation</h2>
+        <p>Your support changes lives.</p>
+    </div>
+
+    <div class="form-body">
+        
+        <!-- Error Handling -->
+        @if(session('error'))
+            <div class="alert alert-error">
+                {{ session('error') }}
+            </div>
+        @endif
+        
+        @if($errors->any())
+            <div class="alert alert-error">
+                <ul>
+                    @foreach($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
+        <form action="{{ route('donate.process') }}" method="POST">
+            @csrf
+
+            <!-- Name Row -->
+            <div class="form-row">
+                <div class="form-col form-group">
+                    <label>Name</label>
+                    
+                    @auth
+                        <!-- LOGGED IN: Show their name, make it read-only -->
+                        <!-- I added '?? Auth::user()->name' in case your DB uses 'name' instead of 'username' -->
+                        <input type="text" value="{{ Auth::user()->username ?? Auth::user()->name }}" readonly style="background-color: #e9ecef; cursor: not-allowed;">
+                    @else
+                        <!-- GUEST: Show empty box, require them to type name -->
+                        <input type="text" name="first_name" placeholder="Your Full Name" required style="background-color: #fff;">
+                    @endauth
+                    
                 </div>
-
-                {{-- Global Session Error --}}
-                @if(session('error'))
-                    <div class="alert-error">
-                        {{ session('error') }}
-                    </div>
-                @endif
-
-                <form method="POST" action="{{ route('donate.pay') }}">
-                    @csrf
-
-                    {{-- Amount --}}
-                    <div class="form-group">
-                        <label for="amount">Amount (ETB)</label>
-                        <input type="number" id="amount" name="amount" value="{{ old('amount') }}" min="1" step="0.01" placeholder="e.g. 100" required>
-                        @error('amount') <span class="field-error">{{ $message }}</span> @enderror
-                    </div>
-
-                    {{-- Email --}}
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" value="{{ old('email') }}" placeholder="you@example.com" required>
-                        @error('email') <span class="field-error">{{ $message }}</span> @enderror
-                    </div>
-
-                    {{-- Donate For Dropdown --}}
-                    <div class="form-group">
-                        <label for="donate_for_select">Donate For</label>
-                        <div class="select-wrapper">
-                            <select name="donate_for" id="donate_for_select" required onchange="toggleOtherInput()">
-                                <option value="House of Allah">House of Allah</option>
-                                <option value="Quran Competition ">Quran Competition</option>
-                                <option value="Azan Competition ">Azan Competition</option>
-                                <option value="Anwar5 Foundation (ወላጅ አልባ ህፃናት ና አረጋዊያን የመረጃ ማእከል) ">Anwar5 Foundation (ወላጅ አልባ ህፃናት ና አረጋዊያን የመረጃ ማእከል)</option>
-                                <option value="Others">Others</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    {{-- Hidden 'Others' Input --}}
-                    <div id="other_input_container" class="form-group" style="display: none;">
-                        <label for="donate_for_other">Please specify</label>
-                        <input type="text" name="donate_for_other" id="donate_for_other" placeholder="Enter purpose of donation">
-                    </div>
-
-                    {{-- Name Fields (Row) --}}
-                    <div style="display: flex; gap: 15px;">
-                        <div class="form-group" style="flex: 1;">
-                            <label for="first_name">First Name <small>(Optional)</small></label>
-                            <input type="text" id="first_name" name="first_name" value="{{ old('first_name') }}">
-                        </div>
-                        <div class="form-group" style="flex: 1;">
-                            <label for="last_name">Last Name <small>(Optional)</small></label>
-                            <input type="text" id="last_name" name="last_name" value="{{ old('last_name') }}">
-                        </div>
-                    </div>
-
-                    <button type="submit" class="btn-submit">Secure Donation</button>
-                </form>
             </div>
 
-            <script>
-                function toggleOtherInput() {
-                    var selectBox = document.getElementById('donate_for_select');
-                    var otherInputContainer = document.getElementById('other_input_container');
-                    var otherInput = document.getElementById('donate_for_other');
+            <!-- Email Row -->
+            <div class="form-group">
+                <label>Email Address</label>
 
-                    if (selectBox.value === 'Others') {
-                        otherInputContainer.style.display = 'block';
-                        otherInput.required = true; 
-                        otherInput.focus(); // UX improvement: auto-focus
-                    } else {
-                        otherInputContainer.style.display = 'none';
-                        otherInput.required = false; 
-                        otherInput.value = ''; 
-                    }
-                }
-            </script>
+                @auth
+                    <!-- LOGGED IN: Show their email, read-only -->
+                    <input type="email" value="{{ Auth::user()->email }}" readonly style="background-color: #e9ecef; cursor: not-allowed;">
+                @else
+                    <!-- GUEST: Show empty box, require email -->
+                    <input type="email" name="email" placeholder="example@gmail.com" required style="background-color: #fff;">
+                @endauth
+
+            </div>
+
+            <!-- Amount -->
+            <div class="form-group">
+                <label for="amount">Donation Amount</label>
+                <div class="input-wrapper">
+                    <span class="currency-symbol">ETB</span>
+                    <input type="number" name="amount" id="amount" class="input-with-icon" placeholder="1000" min="1" required>
+                </div>
+            </div>
+
+            <!-- Purpose -->
+            <div class="form-group">
+                <label for="donate_for">I want to support</label>
+                <select name="donate_for" id="donate_for" onchange="toggleOtherInput()">
+                    <option value="House Of Allah">House Of Allah</option>
+                    <option value="Quran Competition">Quran Competition</option>
+                    <option value="Azan Competition">Azan Competition</option>
+                    <option value="Anwar Foundation">Anwar Foundation</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+
+            <!-- Hidden Other Field -->
+            <div class="form-group" id="other_purpose_div" style="display: none;">
+                <label for="donate_for_other">Please Specify Cause</label>
+                <input type="text" name="donate_for_other" id="donate_for_other" placeholder="e.g. Emergency Relief">
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn-donate">
+                Donate Now
+            </button>
+
+            <!-- Trust Badge -->
+            <div class="secure-badge">
+                <svg class="icon-lock" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+                </svg>
+                <span>Secured by Chapa Payment</span>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<script>
+    function toggleOtherInput() {
+        var selectBox = document.getElementById("donate_for");
+        var otherDiv = document.getElementById("other_purpose_div");
+        var otherInput = document.getElementById("donate_for_other");
+        
+        if (selectBox.value === "Others") {
+            otherDiv.style.display = "block";
+            otherInput.required = true;
+            otherInput.focus();
+        } else {
+            otherDiv.style.display = "none";
+            otherInput.required = false;
+            otherInput.value = ""; // Clear input when hidden
+        }
+    }
+</script>
 
             </div>
         </div>
