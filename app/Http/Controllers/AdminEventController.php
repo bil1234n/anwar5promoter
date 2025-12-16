@@ -28,11 +28,12 @@ class AdminEventController extends Controller
         $data = $request->all();
 
         if ($request->hasFile('image')) {
-            $data['image'] = $request->file('image')->store('events');
+            $data['image'] = $request->file('image')->store('events', 'public');
         }
 
         $event = Event::create($data);
 
+        // Send Notifications
         $users = User::all();
         foreach ($users as $user) {
             Notification::create([
@@ -49,7 +50,7 @@ class AdminEventController extends Controller
     public function destroy(Event $event)
     {
         if ($event->image) {
-            \Illuminate\Support\Facades\Storage::disk('cloudinary')->delete($event->image);
+            Storage::disk('public')->delete($event->image);
         }
         $event->delete();
         return back()->with('success', 'Event deleted.');
@@ -72,9 +73,9 @@ class AdminEventController extends Controller
 
         if ($request->hasFile('image')) {
             if ($event->image) {
-                \Illuminate\Support\Facades\Storage::disk('cloudinary')->delete($event->image);
+                Storage::disk('public')->delete($event->image);
             }
-            $data['image'] = $request->file('image')->store('events');
+            $data['image'] = $request->file('image')->store('events', 'public');
         }
 
         $event->update($data);
@@ -86,33 +87,33 @@ class AdminEventController extends Controller
 
     public function showRegistrants(Event $event)
     {
-        // Load registrations with the associated user info
+        // Load registrations with user info
         $registrations = $event->registrations()->with('user')->latest()->get();
         return view('admin.events.registrants', compact('event', 'registrations'));
     }
 
-    public function editRegistration($id)
-    {
-        $registration = Registration::findOrFail($id);
-        return view('admin.registrations.edit', compact('registration'));
-    }
-
+    // This handles the Edit Modal submission
     public function updateRegistration(Request $request, $id)
     {
         $registration = Registration::findOrFail($id);
 
         $request->validate([
-            'name'  => 'required|string',
-            'email' => 'required|email',
-            'phone' => 'required|string',
-            'other_information' => 'nullable|string',
-            'status' => 'nullable|in:pending,approved,denied'
+            'name'                   => 'required|string',
+            'email'                  => 'required|email',
+            'phone'                  => 'required|string',
+            'gender'                 => 'nullable|string',
+            'age'                    => 'nullable|integer',
+            'address'                => 'nullable|string',
+            'payment_receipt_number' => 'nullable|string', // Admin can edit ref number
+            'other_information'      => 'nullable|string',
+            'status'                 => 'nullable|in:pending,approved,denied'
         ]);
 
+        // This will update all matching fields
         $registration->update($request->all());
 
         return redirect()->route('admin.events.registrants', $registration->event_id)
-            ->with('success', 'Registration updated.');
+            ->with('success', 'Registration details updated successfully.');
     }
 
     public function updateStatus(Request $request, $id)
@@ -124,8 +125,6 @@ class AdminEventController extends Controller
         ]);
 
         $registration->update(['status' => $request->status]);
-
-        // Optional: Send Notification to user here
 
         return back()->with('success', "Status updated to {$request->status}");
     }
