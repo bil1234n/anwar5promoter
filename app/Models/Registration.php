@@ -11,12 +11,17 @@ class Registration extends Model
 
     protected $fillable = [
         'event_id',
-        'user_id', // Added
+        'user_id',
         'name',
         'email',
         'phone',
+        'gender',                 
+        'age',                    
+        'address',                
+        'payment_receipt_number', 
+        'payment_receipt_path',   
         'other_information',
-        'status', // Added
+        'status',
     ];
 
     public function event()
