@@ -29,17 +29,47 @@ class PublicEventController extends Controller
     public function storeRegister(Request $request, Event $event)
     {
         $validated = $request->validate([
-            'name' => 'required|string',
-            'email' => 'required|email',
-            'phone' => 'required|string',
-            'other_information' => 'nullable|string'
+            'name'              => 'required|string',
+            'email'             => 'required|email',
+            'phone'             => 'required|string',
+            'gender'            => 'required|string|in:Male,Female',
+            'age'               => 'required|integer|min:1',
+            'address'           => 'required|string',
+            'other_information' => 'nullable|string',
+            // Validation Logic: 
+            // If payment_method_type is 'photo', receipt_photo is required.
+            // If payment_method_type is 'number', receipt_number is required.
+            'payment_method_type' => 'required|in:photo,number',
+            'receipt_photo'       => 'required_if:payment_method_type,photo|image|mimes:jpeg,png,jpg|max:2048',
+            'receipt_number'      => 'required_if:payment_method_type,number|nullable|string',
         ]);
 
-        // Automatically attach the logged-in User ID
-        $validated['user_id'] = Auth::id();
-        $validated['status'] = 'pending';
+        // Basic Data
+        $data = [
+            'user_id'           => Auth::id(),
+            'name'              => $validated['name'],
+            'email'             => $validated['email'],
+            'phone'             => $validated['phone'],
+            'gender'            => $validated['gender'],
+            'age'               => $validated['age'],
+            'address'           => $validated['address'],
+            'other_information' => $validated['other_information'],
+            'status'            => 'pending',
+        ];
 
-        $event->registrations()->create($validated);
+        // Handle Payment Logic
+        if ($request->payment_method_type === 'photo' && $request->hasFile('receipt_photo')) {
+            // Upload the file to storage/app/public/receipts
+            $path = $request->file('receipt_photo')->store('receipts', 'public');
+            $data['payment_receipt_path'] = $path;
+            $data['payment_receipt_number'] = null; // Clear number if they chose photo
+        } elseif ($request->payment_method_type === 'number') {
+            $data['payment_receipt_number'] = $validated['receipt_number'];
+            $data['payment_receipt_path'] = null; // Clear path if they chose number
+        }
+
+        // Create Registration
+        $event->registrations()->create($data);
 
         return redirect()->route('events.my_events')->with('success', 'Registration submitted! Status is currently pending.');
     }
