@@ -21,6 +21,12 @@ return new class extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('phone');
+            $table->string('gender')->nullable()->after('phone');
+            $table->integer('age')->nullable()->after('gender');
+            $table->text('address')->nullable()->after('age');
+            $table->string('payment_receipt_number')->nullable()->after('address');
+            $table->string('payment_receipt_path')->nullable()->after('payment_receipt_number');
+
             $table->text('other_information')->nullable();
             
             // Status column
