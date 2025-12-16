@@ -275,7 +275,14 @@
     -->
     <div class="gallery-grid">
         
-        {{-- 1st round --}}
+        {{-- 2nd round --}}
+        <div class="gallery-item 2nd_Quran_competition">
+            <img src="https://i.imgur.com/ttkLQ0E.jpeg" alt="2nd_Quran_competition">
+            <div class="overlay">
+                <h3>Islamic</h3>
+                <p>2nd_Quran_competition Category</p>
+            </div>
+        </div>
         <div class="gallery-item 2nd_Quran_competition">
             <img src="https://i.imgur.com/Wwv5uBa.jpeg" alt="2nd_Quran_competition">
             <div class="overlay">
