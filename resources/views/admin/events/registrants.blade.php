@@ -110,6 +110,7 @@
                         <tr>
                             <th class="ps-4">Applicant</th>
                             <th>Details (Age/Gen/Addr)</th>
+                            <!-- ADDED: Registration Time Column -->
                             <th>Payment Verification</th>
                             <th>Status</th>
                             <th class="text-end pe-4">Actions</th>
@@ -183,7 +184,10 @@
                             <div class="modal-dialog modal-dialog-centered modal-lg"> <!-- modal-lg for more space -->
                                 <div class="modal-content border-0 shadow">
                                     <div class="modal-header bg-light">
-                                        <h5 class="modal-title fw-bold">Review Registration</h5>
+                                        <div>
+                                            <h5 class="modal-title fw-bold">Review Registration</h5>
+                                            <div class="small text-muted">Registered: {{ $reg->created_at->format('M d, Y @ h:i A') }}</div>
+                                        </div>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                     </div>
                                     
@@ -270,7 +274,7 @@
 
                         @empty
                         <tr>
-                            <td colspan="5" class="text-center py-5 text-muted">
+                            <td colspan="6" class="text-center py-5 text-muted">
                                 <i class="fa-solid fa-clipboard-list fa-2x mb-3"></i>
                                 <p>No registrations found.</p>
                             </td>
