@@ -11,15 +11,15 @@
         }
     </style>
     <meta charset="utf-8">
-    <title>Event Registration</title>
+    <title>Service Single - Promote - Webflow HTML website template</title>
     <meta
         content="A brief explanation about the particular digital marketing service with the images and the growth points are listed with readable quality."
         name="description">
-    <meta content="Event Registration" property="og:title">
+    <meta content="Service Single - Promote - Webflow HTML website template" property="og:title">
     <meta
         content="A brief explanation about the particular digital marketing service with the images and the growth points are listed with readable quality."
         property="og:description">
-    <meta content="Event Registration" property="twitter:title">
+    <meta content="Service Single - Promote - Webflow HTML website template" property="twitter:title">
     <meta
         content="A brief explanation about the particular digital marketing service with the images and the growth points are listed with readable quality."
         property="twitter:description">
@@ -123,6 +123,8 @@
 
         .register-card input[type="text"],
         .register-card input[type="email"],
+        .register-card input[type="number"],
+        select,
         textarea {
             width: 100%;
             padding: 12px;
@@ -240,7 +242,7 @@
             
             <!-- Error Display -->
             @if ($errors->any())
-                <div class="alert-danger">
+                <div class="alert alert-danger">
                     <ul>
                         @foreach ($errors->all() as $error)
                             <li>{{ $error }}</li>
@@ -249,27 +251,81 @@
                 </div>
             @endif
 
-            <form action="{{ route('events.store', $event->id) }}" method="POST">
+            <!-- IMPORTANT: Added enctype for file uploads -->
+            <form action="{{ route('events.store', $event->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 
                 <!-- Full Name -->
                 <div class="form-group">
                     <label for="name">Full Name</label>
                     <input type="text" id="name" name="name" 
-                           value="{{ old('name', Auth::user()->name) }}" required>
+                        value="{{ old('name', Auth::user()->name) }}" required>
                 </div>
 
-                <!-- Two Column Row: Email & Phone -->
-                <div class="form-row">
-                    <div class="form-group">
+                <!-- Row: Gender & Age -->
+                <div class="form-row" style="display: flex; gap: 15px;">
+                    <div class="form-group" style="flex: 1;">
+                        <label for="gender">Gender</label>
+                        <select id="gender" name="gender" class="form-control" required>
+                            <option value="" disabled selected>Select Gender</option>
+                            <option value="Male" {{ old('gender') == 'Male' ? 'selected' : '' }}>Male</option>
+                            <option value="Female" {{ old('gender') == 'Female' ? 'selected' : '' }}>Female</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="flex: 1;">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age" 
+                            value="{{ old('age') }}" required min="1">
+                    </div>
+                </div>
+
+                <!-- Row: Email & Phone -->
+                <div class="form-row" style="display: flex; gap: 15px;">
+                    <div class="form-group" style="flex: 1;">
                         <label for="email">Email Address</label>
                         <input type="email" id="email" name="email" 
-                               value="{{ old('email', Auth::user()->email) }}" required>
+                            value="{{ old('email', Auth::user()->email) }}" required>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" style="flex: 1;">
                         <label for="phone">Phone Number</label>
                         <input type="text" id="phone" name="phone" 
-                               value="{{ old('phone') }}" placeholder="e.g. +251 911..." required>
+                            value="{{ old('phone') }}" placeholder="e.g. +251 911..." required>
+                    </div>
+                </div>
+
+                <!-- Address -->
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" 
+                        value="{{ old('address') }}" placeholder="City, Subcity, House No." required>
+                </div>
+
+                <!-- Payment Receipt Section -->
+                <div class="form-group" style="background: #f9f9f9; padding: 15px; border-radius: 5px; border: 1px solid #ddd;">
+                    <label style="font-weight: bold; margin-bottom: 10px; display: block;">Payment Verification</label>
+                    
+                    <!-- Toggle Radio Buttons -->
+                    <div style="margin-bottom: 15px;">
+                        <label style="margin-right: 15px;">
+                            <input type="radio" name="payment_method_type" value="photo" checked onclick="togglePayment('photo')"> 
+                            Upload Receipt Photo
+                        </label>
+                        <label>
+                            <input type="radio" name="payment_method_type" value="number" onclick="togglePayment('number')"> 
+                            Input Reference Number
+                        </label>
+                    </div>
+
+                    <!-- Input: Photo Upload -->
+                    <div id="payment-photo-input">
+                        <label for="receipt_photo">Upload Image (JPG, PNG)</label>
+                        <input type="file" id="receipt_photo" name="receipt_photo" accept="image/*">
+                    </div>
+
+                    <!-- Input: Reference Number -->
+                    <div id="payment-number-input" style="display: none;">
+                        <label for="receipt_number">Transaction Reference Number</label>
+                        <input type="text" id="receipt_number" name="receipt_number" placeholder="e.g. TXN-12345678">
                     </div>
                 </div>
 
@@ -286,6 +342,19 @@
                 </div>
             </form>
         </div>
+
+        <!-- Simple Script to toggle payment inputs -->
+        <script>
+            function togglePayment(type) {
+                if(type === 'photo') {
+                    document.getElementById('payment-photo-input').style.display = 'block';
+                    document.getElementById('payment-number-input').style.display = 'none';
+                } else {
+                    document.getElementById('payment-photo-input').style.display = 'none';
+                    document.getElementById('payment-number-input').style.display = 'block';
+                }
+            }
+        </script>
     </div>
 
             </div>
