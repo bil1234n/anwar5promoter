@@ -11,7 +11,7 @@
         }
     </style>
     <meta charset="utf-8">
-    <title>Service Single - Promote - Webflow HTML website template</title>
+    <title>Anwar5Promoter Register</title>
     <meta
         content="A brief explanation about the particular digital marketing service with the images and the growth points are listed with readable quality."
         name="description">
