@@ -443,6 +443,14 @@
                 <div class="p_logo-item">
                     <img src="https://i.imgur.com/Oe2x0n1.jpeg" alt="Techno Addis Media">
                 </div>
+                
+                <!-- Row 6 -->
+                <div class="p_logo-item">
+                    <img src="https://i.imgur.com/rwNlrWL.png" alt="Tigray Majlis">
+                </div>
+                <div class="p_logo-item">
+                    <img src="https://i.imgur.com/CrRj0IM.png" alt="TheCoffeeLink">
+                </div>
             </div>
             <div class="footer-url">
                 <a href="#">www.Anwar5Promoter.com</a>
