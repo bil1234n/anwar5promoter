@@ -446,10 +446,10 @@
                 
                 <!-- Row 6 -->
                 <div class="p_logo-item">
-                    <img src="https://i.imgur.com/rwNlrWL.png" alt="Tigray Majlis">
+                    <img src="https://i.imgur.com/CrRj0IM.png" alt="TheCoffeeLink">
                 </div>
                 <div class="p_logo-item">
-                    <img src="https://i.imgur.com/CrRj0IM.png" alt="TheCoffeeLink">
+                    <img src="https://i.imgur.com/rwNlrWL.png" alt="Tigray Majlis">
                 </div>
             </div>
             <div class="footer-url">
