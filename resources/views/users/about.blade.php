@@ -563,6 +563,36 @@
                         <div id="w-node-_57b42622-3138-4237-1dfb-76140ac1a21b-cc478d30" class="about-team-bg"
                             style="opacity: 0;"></div>
                     </div>
+        
+                    <div id="w-node-_3974115e-6369-e284-4198-44903e4e3a52-cc478d30"
+                        data-w-id="3974115e-6369-e284-4198-44903e4e3a52" style="opacity: 0;" class="team-item">
+                        <div class="about-team">
+                            <div class="team-image-wrap"><img
+                                    src="https://i.imgur.com/2Z3rA3j.jpeg"
+                                    loading="lazy" sizes="100vw"
+                                    alt="Team Member Image" class="team-image"></div>
+                            <div id="w-node-_57b42622-3138-4237-1dfb-76140ac1a21e-cc478d30" class="team-line-break">
+                            </div>
+                            <div class="team-content-wrap">
+                                <h3 class="section-content-title team">Miss Merem Ahmed</h3>
+                                <p>Accountant Officer</p>
+                            </div>
+                            <div class="team-social-wrap"><a href="https://www.facebook.com" target="_blank"
+                                    class="w-inline-block"><img
+                                        src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/6348ee0d56d14091cc002114_Facebook.svg"
+                                        loading="lazy"
+                                        alt="Social Icon For Blog Post And Author Link And Contact Us Page"></a><a
+                                    href="https://www.twitter.com" target="_blank" class="w-inline-block"><img
+                                        src="{{ asset('assets/img/ss/whatsapp.png') }}" width="35"
+                                        loading="lazy" alt="Twitter Icon"></a><a href="https://www.linkedin.com"
+                                    target="_blank" class="w-inline-block"><img
+                                        src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/6348efb387065fa8f9732aae_LinkedIn.svg"
+                                        loading="lazy"
+                                        alt="Social Icon For Blog Post And Author Link And Contact Us Page"></a></div>
+                        </div>
+                        <div id="w-node-_57b42622-3138-4237-1dfb-76140ac1a21b-cc478d30" class="about-team-bg"
+                            style="opacity: 0;"></div>
+                    </div>
                 </div>
             </div>
         </div>
