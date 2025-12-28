@@ -238,26 +238,6 @@
                                     style="display: none;">
                             </a></div>
                     </div>
-                    <div id="w-node-f1aabe1b-962f-2719-e8f1-357fd1e5f7ea-ed60830c"
-                        data-w-id="f1aabe1b-962f-2719-e8f1-357fd1e5f7ea" style="opacity: 0;" class="service-card">
-                        <div class="card-image-wrap"><img
-                                src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/63413f4a22ea7111f927914b_card-03.png"
-                                loading="lazy" width="76" alt="Home Page Card Image For Title" class="service-image">
-                        </div>
-                        <div class="service-card-content-wrap">
-                            <h3 class="section-content-title white">Legal Outreach works collaboration (ህጋዊ ጉዳዬች የማስፈፀም ሰራዎች)</h3>
-                        </div>
-                        <div><a href="{{ url('/services_7') }}" class="card-button w-inline-block"
-                                style="color: rgb(171, 171, 172); background-color: rgba(0, 0, 0, 0); border-color: rgb(83, 83, 85);">
-                                <div>View Service</div><img
-                                    src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/6341460cda79c99ce8b02382_button-01.svg"
-                                    loading="lazy" alt="Arrow Image For Button " class="arrow-dark"><img
-                                    src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/63401de9fdbdb451cfbec4db_button.svg"
-                                    loading="lazy" alt="Blur Arrow Image For Button" class="arrow-blue"
-                                    style="display: none;">
-                            </a>
-                        </div>
-                    </div>
                     <div id="w-node-_3c3e61a4-0af5-ce54-e2da-2ff242461a19-ed60830c"
                         data-w-id="3c3e61a4-0af5-ce54-e2da-2ff242461a19" style="opacity: 0;" class="service-card">
                         <div class="card-image-wrap"><img
