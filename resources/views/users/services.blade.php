@@ -215,27 +215,6 @@
                                     style="display: none;">
                             </a></div>
                     </div>
-                    <div id="w-node-a12d2fd6-7583-d887-bf84-3a054e05e5c3-68652b7b"
-                        data-w-id="a12d2fd6-7583-d887-bf84-3a054e05e5c3" style="opacity: 0;" class="service-card">
-                        <div class="card-image-wrap"><img
-                                src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/63413f4a22ea7111f927914b_card-03.png"
-                                loading="lazy" width="69" alt="Home Page Card Image For Title"></div>
-                        <div class="service-card-content-wrap">
-                            <h3 class="section-content-title white">Legal Outreach works collaboration (ህጋዊ ጉዳዬች የማስፈፀም ሰራዎች)</h3>
-                            <p class="white-content">
-                                Partnering with others to facilitate legal work and the execution of legal matters or projects.
-                            </p>
-                        </div>
-                        <div><a href="{{ url('/services_7') }}" class="card-button w-inline-block"
-                                style="color: rgb(171, 171, 172); background-color: rgba(0, 0, 0, 0); border-color: rgb(83, 83, 85);">
-                                <div>Read More</div><img
-                                    src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/6341460cda79c99ce8b02382_button-01.svg"
-                                    loading="lazy" alt="Arrow Image For Button " class="arrow-dark"><img
-                                    src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/63401de9fdbdb451cfbec4db_button.svg"
-                                    loading="lazy" alt="Blur Arrow Image For Button" class="arrow-blue"
-                                    style="display: none;">
-                            </a></div>
-                    </div>
                     <div id="w-node-a12d2fd6-7583-d887-bf84-3a054e05e5b5-68652b7b"
                         data-w-id="a12d2fd6-7583-d887-bf84-3a054e05e5b5" style="opacity: 0;" class="service-card">
                         <div class="card-image-wrap"><img
