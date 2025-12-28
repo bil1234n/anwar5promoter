@@ -65,8 +65,6 @@
                             tabindex="0">Quran & Azan competition in Tigray Ethiopia</a>
                         <a href="{{ url('/services_6') }}" class="nav-dropdown-menu-link w-dropdown-link"
                             tabindex="0">Anwar5 Foundation (ወላጅ አልባ ህፃናት ና አረጋዊያን የመረጃ ማእከል)</a>
-                        <a href="{{ url('/services_7') }}" class="nav-dropdown-menu-link w-dropdown-link"
-                            tabindex="0">Legal Outreach works collaboration (ህጋዊ ጉዳዬች የማስፈፀም ሰራዎች)</a>
                         <a href="{{ url('/services_8') }}" class="nav-dropdown-menu-link w-dropdown-link"
                             tabindex="0">Anwar 5 Tour & Galleries</a>
                     </nav>
