@@ -96,8 +96,6 @@
 
                         *Anwar5 charity Foundation (ወላጅ አልባ ህፃናት ና አረጋዊያን የመረጃ ማእከል)
 
-                        *Legal Outreach works collaboration (ህጋዊ ጉዳዬች የማስፈፀም ሰራዎች)
-
                         *Anwar 5 Tour & Galleries
 
                         For more information 
