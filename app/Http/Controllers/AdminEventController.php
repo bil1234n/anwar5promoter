@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Event;
-use App\Models\User;          
-use App\Models\Notification;   
+use App\Models\User;
+use App\Models\Notification;
 use App\Models\Registration;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
+use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary; // Import Cloudinary Facade
 
 class AdminEventController extends Controller
 {
@@ -28,7 +28,9 @@ class AdminEventController extends Controller
         $data = $request->all();
 
         if ($request->hasFile('image')) {
-            $data['image'] = $request->file('image')->store('events', 'public');
+            // UPDATED: Store on Cloudinary in the 'events' folder and get the Secure URL
+            $uploadedFile = $request->file('image')->storeOnCloudinary('events');
+            $data['image'] = $uploadedFile->getSecurePath();
         }
 
         $event = Event::create($data);
@@ -38,7 +40,7 @@ class AdminEventController extends Controller
         foreach ($users as $user) {
             Notification::create([
                 'user_id' => $user->id,
-                'type'    => 'events', 
+                'type'    => 'events',
                 'message' => "New event posted: {$event->title}",
                 'is_read' => false,
             ]);
@@ -50,7 +52,11 @@ class AdminEventController extends Controller
     public function destroy(Event $event)
     {
         if ($event->image) {
-            Storage::disk('public')->delete($event->image);
+            // UPDATED: Extract Public ID and delete from Cloudinary
+            $publicId = $this->getPublicIdFromUrl($event->image);
+            if($publicId) {
+                Cloudinary::destroy($publicId);
+            }
         }
         $event->delete();
         return back()->with('success', 'Event deleted.');
@@ -72,10 +78,16 @@ class AdminEventController extends Controller
         $data = $request->all();
 
         if ($request->hasFile('image')) {
+            // Delete old image from Cloudinary if it exists
             if ($event->image) {
-                Storage::disk('public')->delete($event->image);
+                $publicId = $this->getPublicIdFromUrl($event->image);
+                if($publicId) {
+                    Cloudinary::destroy($publicId);
+                }
             }
-            $data['image'] = $request->file('image')->store('events', 'public');
+            // Upload new image
+            $uploadedFile = $request->file('image')->storeOnCloudinary('events');
+            $data['image'] = $uploadedFile->getSecurePath();
         }
 
         $event->update($data);
@@ -83,16 +95,31 @@ class AdminEventController extends Controller
         return redirect()->route('admin.events.index')->with('success', 'Event updated successfully!');
     }
 
-    // --- REGISTRATION MANAGEMENT ---
+    /**
+     * Helper to extract Cloudinary Public ID from a URL
+     * This allows us to delete the image later.
+     */
+    private function getPublicIdFromUrl($url)
+    {
+        // Example URL: https://res.cloudinary.com/demo/image/upload/v1234567/events/my_image.jpg
+        // We need: events/my_image
+        
+        // Simple regex to grab the folder and filename (without extension)
+        // Adjusts for standard Cloudinary URL structure
+        if (preg_match('/(events\/[^\.]+)/', $url, $matches)) {
+            return $matches[1];
+        }
+        return null;
+    }
+
+    // --- REGISTRATION MANAGEMENT (Unchanged) ---
 
     public function showRegistrants(Event $event)
     {
-        // Load registrations with user info
         $registrations = $event->registrations()->with('user')->latest()->get();
         return view('admin.events.registrants', compact('event', 'registrations'));
     }
 
-    // This handles the Edit Modal submission
     public function updateRegistration(Request $request, $id)
     {
         $registration = Registration::findOrFail($id);
@@ -104,12 +131,11 @@ class AdminEventController extends Controller
             'gender'                 => 'nullable|string',
             'age'                    => 'nullable|integer',
             'address'                => 'nullable|string',
-            'payment_receipt_number' => 'nullable|string', // Admin can edit ref number
+            'payment_receipt_number' => 'nullable|string',
             'other_information'      => 'nullable|string',
             'status'                 => 'nullable|in:pending,approved,denied'
         ]);
 
-        // This will update all matching fields
         $registration->update($request->all());
 
         return redirect()->route('admin.events.registrants', $registration->event_id)
@@ -135,7 +161,6 @@ class AdminEventController extends Controller
             'status' => 'required|in:pending,approved,denied',
         ]);
 
-        // Mass update all registrations belonging to this event
         $event->registrations()->update([
             'status' => $request->status
         ]);
