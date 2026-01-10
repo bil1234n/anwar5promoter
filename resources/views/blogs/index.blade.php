@@ -11,13 +11,13 @@
         }
     </style>
     <meta charset="utf-8">
-    <title>Blog - Promote</title>
+    <title>Blog- Anwar5Promoter</title>
     <meta content="All the recent and upcoming news about digital marketing agencies is explained with a clean layout."
         name="description">
-    <meta content="Blog - Promote" property="og:title">
+    <meta content="Blog- Anwar5Promoter" property="og:title">
     <meta content="All the recent and upcoming news about digital marketing agencies is explained with a clean layout."
         property="og:description">
-    <meta content="Blog - Promote" property="twitter:title">
+    <meta content="Blog- Anwar5Promoter" property="twitter:title">
     <meta content="All the recent and upcoming news about digital marketing agencies is explained with a clean layout."
         property="twitter:description">
     <meta property="og:type" content="website">
