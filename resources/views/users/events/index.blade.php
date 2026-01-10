@@ -52,8 +52,8 @@
         /* Renamed generic .card to .event-card in CSS for clarity, though you had .event-card already */
         .event-card { background: var(--card-bg); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease; border: 1px solid #00000040; }
         .event-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
-        .card-image-wrapper { width: 100%; height: 220px; position: relative; margin: 1.5rem 0;}
-        .card-image-wrapper img { width: 100%; height: 100%; object-fit: contain; }
+        .card-image-wrapper { width: 100%; height: 220px; position: relative; margin: 1.5rem 0; display: flex;  align-items: center;}
+        .card-image-wrapper img { margin: 0 auto; border-radius: 20px 0; height: 100%; object-fit: contain; }
         .no-image { width: 100%; height: 100%; background-color: #e9ecef; color: var(--text-light); display: flex; align-items: center; justify-content: center; font-weight: 500; font-size: 0.9rem; }
         .card-body { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; border-top: 1px solid #adadad;}
         .event-date { font-size: 0.85rem; color: var(--primary-color); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
