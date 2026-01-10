@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Event;
-use App\Models\User;
-use App\Models\Notification;
+use App\Models\User;          
+use App\Models\Notification;   
 use App\Models\Registration;
 use Illuminate\Http\Request;
-use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary; // Import Cloudinary Facade
+use Illuminate\Support\Facades\Storage;
 
 class AdminEventController extends Controller
 {
@@ -28,9 +28,9 @@ class AdminEventController extends Controller
         $data = $request->all();
 
         if ($request->hasFile('image')) {
-            // UPDATED: Store on Cloudinary in the 'events' folder and get the Secure URL
-            $uploadedFile = $request->file('image')->storeOnCloudinary('events');
-            $data['image'] = $uploadedFile->getSecurePath();
+            // FIXED: Store in 'events' folder using the 'cloudinary' disk
+            // This stores the path (e.g., "events/xyz.jpg") in the DB, not the full URL.
+            $data['image'] = $request->file('image')->store('events', 'cloudinary');
         }
 
         $event = Event::create($data);
@@ -40,7 +40,7 @@ class AdminEventController extends Controller
         foreach ($users as $user) {
             Notification::create([
                 'user_id' => $user->id,
-                'type'    => 'events',
+                'type'    => 'events', 
                 'message' => "New event posted: {$event->title}",
                 'is_read' => false,
             ]);
@@ -52,11 +52,8 @@ class AdminEventController extends Controller
     public function destroy(Event $event)
     {
         if ($event->image) {
-            // UPDATED: Extract Public ID and delete from Cloudinary
-            $publicId = $this->getPublicIdFromUrl($event->image);
-            if($publicId) {
-                Cloudinary::destroy($publicId);
-            }
+            // FIXED: Delete using the cloudinary disk
+            Storage::disk('cloudinary')->delete($event->image);
         }
         $event->delete();
         return back()->with('success', 'Event deleted.');
@@ -78,16 +75,12 @@ class AdminEventController extends Controller
         $data = $request->all();
 
         if ($request->hasFile('image')) {
-            // Delete old image from Cloudinary if it exists
+            // FIXED: Delete old image from cloudinary disk
             if ($event->image) {
-                $publicId = $this->getPublicIdFromUrl($event->image);
-                if($publicId) {
-                    Cloudinary::destroy($publicId);
-                }
+                Storage::disk('cloudinary')->delete($event->image);
             }
-            // Upload new image
-            $uploadedFile = $request->file('image')->storeOnCloudinary('events');
-            $data['image'] = $uploadedFile->getSecurePath();
+            // FIXED: Store new image on cloudinary disk
+            $data['image'] = $request->file('image')->store('events', 'cloudinary');
         }
 
         $event->update($data);
@@ -95,24 +88,7 @@ class AdminEventController extends Controller
         return redirect()->route('admin.events.index')->with('success', 'Event updated successfully!');
     }
 
-    /**
-     * Helper to extract Cloudinary Public ID from a URL
-     * This allows us to delete the image later.
-     */
-    private function getPublicIdFromUrl($url)
-    {
-        // Example URL: https://res.cloudinary.com/demo/image/upload/v1234567/events/my_image.jpg
-        // We need: events/my_image
-        
-        // Simple regex to grab the folder and filename (without extension)
-        // Adjusts for standard Cloudinary URL structure
-        if (preg_match('/(events\/[^\.]+)/', $url, $matches)) {
-            return $matches[1];
-        }
-        return null;
-    }
-
-    // --- REGISTRATION MANAGEMENT (Unchanged) ---
+    // --- REGISTRATION MANAGEMENT (No Changes needed below) ---
 
     public function showRegistrants(Event $event)
     {
