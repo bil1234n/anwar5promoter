@@ -11,7 +11,7 @@
         }
     </style>
     <meta charset="utf-8">
-    <title>Service Single - Promote - Webflow HTML website template</title>
+    <title>Events</title>
     <meta content="Events page with Ramadan Countdown" name="description">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="Webflow" name="generator">
