@@ -361,8 +361,8 @@
         }
 
         // --- COUNTDOWN LOGIC ---
-        // Estimated Date for Ramadan 2026: Feb 17, 2026 (Adjust as needed)
-        const targetDate = new Date("February 17, 2026 00:00:00").getTime();
+        // Estimated Date for Ramadan 2026: Feb 20, 2026 (Adjust as needed)
+        const targetDate = new Date("February 20, 2026 00:00:00").getTime();
 
         const timer = setInterval(() => {
             const now = new Date().getTime();
