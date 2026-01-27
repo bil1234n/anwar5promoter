@@ -431,6 +431,9 @@
                 <div class="p_logo-item">
                     <img src="https://i.imgur.com/rwNlrWL.png" alt="Tigray Majlis">
                 </div>
+                <div class="p_logo-item">
+                    <img src="https://i.imgur.com/PDxqTbu.png" alt="Asortie Furniture">
+                </div>
             </div>
             <div class="footer-url">
                 <a href="#">www.Anwar5Promoter.com</a>
