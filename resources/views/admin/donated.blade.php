@@ -83,7 +83,7 @@
                     <div class="icon-box bg-green-light"><i class="fas fa-dollar-sign"></i></div>
                     <div>
                         <h6 class="text-muted mb-0 small text-uppercase fw-bold">Total Collected</h6>
-                        <h4 class="fw-bold mb-0 text-dark">{{ number_format($donations->where('status','success')->sum('amount'), 2) }} <small class="text-muted fs-6">USD</small></h4>
+                        <h4 class="fw-bold mb-0 text-dark">{{ number_format($donations->where('status','success')->sum('amount'), 2) }} <small class="text-muted fs-6">ETB</small></h4>
                     </div>
                 </div>
             </div>
