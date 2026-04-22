@@ -385,6 +385,9 @@
                     <img src="{{ asset('assets/img/compnay/Damarios.png') }}" alt="One Water">
                 </div>
                 <div class="p_logo-item">
+                    <img src="https://i.imgur.com/BG09VDT.png" alt="Crescent Logo">
+                </div>
+                <div class="p_logo-item">
                     <img src="{{ asset('assets/img/compnay/ethio_sadat.png') }}" alt="Crescent Logo">
                 </div>
                 <div class="p_logo-item">
