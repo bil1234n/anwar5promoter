@@ -179,7 +179,7 @@
                                 src="{{ asset('assets/img/masjid_2.png') }}"
                                 loading="lazy" alt="Home Page Card Image For Title" width="65"></div>
                         <div class="service-card-content-wrap">
-                            <h3 class="section-content-title white">House of Allah projects</h3>
+                            <h3 class="section-content-title white">House of Allah projects (Coming Soon)</h3>
                             <p class="white-content">
                                 Coordinating and managing projects related to the construction, renovation, or maintenance of mosques (Masjids).
                             </p>
@@ -200,7 +200,7 @@
                                 src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/63413f4ac245b8ccf6bf86e9_card-05.png"
                                 loading="lazy" alt="Home Page Card Image For Title" width="76"></div>
                         <div class="service-card-content-wrap">
-                            <h3 class="section-content-title white">Anwar5 Foundation (ወላጅ አልባ ህፃናት ና አረጋዊያን የመረጃ ማእከል)</h3>
+                            <h3 class="section-content-title white">Anwar5 Foundation (ወላጅ አልባ ህፃናት ና አረጋዊያን የመረጃ ማእከል) - (Coming Soon)</h3>
                             <p class="white-content">
                                 Operating an information center focused on supporting and providing resources for orphans and the elderly.
                             </p>
