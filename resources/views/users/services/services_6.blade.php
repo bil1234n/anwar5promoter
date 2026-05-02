@@ -58,7 +58,7 @@
         </div>
         <div class="sub-banner-content-flex service-banner" style="display: block; opacity: 1;">
             <h1 class="banner-text">Services 6</h1>
-            <h2>Anwar5 Foundation (ወላጅ አልባ ህፃናት ና አረጋዊያን የመረጃ ማእከል)</h2>
+            <h2>Anwar5 Foundation (ወላጅ አልባ ህፃናት ና አረጋዊያን የመረጃ ማእከል) - (Coming Soon)</h2>
         </div>
         <div class="banner-overlay">
             <div class="banner-center-circle"
@@ -85,7 +85,7 @@
                     <div class="section-sub-title center-align">
                         <p class="sub-title-content grey"><span class="sub-title-slash">//</span> 06 . Services</p>
                     </div>
-                    <h2 class="section-title white">Anwar5 Foundation (ወላጅ አልባ ህፃናት ና አረጋዊያን የመረጃ ማእከል)</h2>
+                    <h2 class="section-title white">Anwar5 Foundation (ወላጅ አልባ ህፃናት ና አረጋዊያን የመረጃ ማእከል) - (Coming Soon)</h2>
                 </div>
             </div>
             <div class="service-card-wrap">
