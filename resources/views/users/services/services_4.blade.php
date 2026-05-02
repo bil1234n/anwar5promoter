@@ -58,7 +58,7 @@
         </div>
         <div class="sub-banner-content-flex service-banner" style="display: block; opacity: 1;">
             <h1 class="banner-text">Services 4</h1>
-            <h2>House of Allah projects</h2>
+            <h2>House of Allah projects (Coming Soon)</h2>
         </div>
         <div class="banner-overlay">
             <div class="banner-center-circle"
@@ -85,7 +85,7 @@
                     <div class="section-sub-title center-align">
                         <p class="sub-title-content grey"><span class="sub-title-slash">//</span> 04 . Services</p>
                     </div>
-                    <h2 class="section-title white">House of Allah projects</h2>
+                    <h2 class="section-title white">House of Allah projects (Coming Soon)</h2>
                 </div>
             </div>
             <div class="service-card-wrap">
