@@ -260,6 +260,7 @@
     <!-- 1. TOP FILTER BUTTONS -->
     <div class="filter-container">
         <button class="filter-btn active" onclick="filterGallery('all')">Show All</button>
+        <button class="filter-btn" onclick="filterGallery('Partners')">Partners</button>
         <button class="filter-btn" onclick="filterGallery('Quran_competition')">Quran Competition</button>
         <!-- <button class="filter-btn" onclick="filterGallery('urban')">Urban</button>
         <button class="filter-btn" onclick="filterGallery('portrait')">Portrait</button>
@@ -273,6 +274,14 @@
        2. Ensure the class name (e.g., 'Quran_competition', 'urban') matches your categories.
     -->
     <div class="gallery-grid">
+        
+        <div class="gallery-item Partners">
+            <img src="https://i.imgur.com/vMLcaMT.jpeg" alt="Partners">
+            <div class="overlay">
+                <h3>Partners</h3>
+                <p>Asortie Luxury Furniture </p>
+            </div>
+        </div>
         
         <div class="gallery-item Quran_competition">
             <img src="https://i.imgur.com/iKhgGyx.jpeg" alt="Quran_competition">
@@ -585,6 +594,10 @@
         <div class="cat-footer-content">
             <h2>Explore by Category</h2>
             <div class="cat-links">
+                <a href="#" class="cat-link-item" onclick="filterGallery('Partners'); scrollToTop()">
+                    <span>🤝</span>
+                    Partners
+                </a>
                 <a href="#" class="cat-link-item" onclick="filterGallery('Quran_competition'); scrollToTop()">
                     <span>🕌</span>
                     Quran_competition
