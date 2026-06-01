@@ -253,68 +253,6 @@
 " class="sub-banner-decorative-two">
         </div>
     </div>
-    <div class="service-section service-page">
-        <div class="container w-container">
-            <div data-w-id="a12d2fd6-7583-d887-bf84-3a054e05e56b" style="opacity: 0;"
-                class="section-title-wrap center-align">
-                <div class="title-image-wrap"><img
-                        src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/63414432e45e01daf2dcefd1_card-sec.svg"
-                        loading="lazy" alt="Title Image"></div>
-                <div class="title-width service-page">
-                    <div class="section-sub-title center-align">
-                        <p class="sub-title-content grey"><span class="sub-title-slash">//</span> 08 . Services</p>
-                    </div>
-                    <h2 class="section-title white">Anwar 5 Tour & Galleries</h2>
-                </div>
-            </div>
-            <div class="service-card-wrap">
-                <div class="w-layout-grid service-grid">
-                    <div id="w-node-a12d2fd6-7583-d887-bf84-3a054e05e57d-68652b7b"
-                        data-w-id="a12d2fd6-7583-d887-bf84-3a054e05e57d" style="opacity: 0;" class="service-card">
-                        <div class="card-image-wrap"><img
-                                src="{{ asset('assets/img/gallery.png') }}"
-                                loading="lazy" alt="Home Page Card Image For Title" width="76"></div>
-                        <div class="service-card-content-wrap">
-                            <h3 class="section-content-title white">Guided Cultural and Historical Tours</h3>
-                            <p class="white-content">
-                                This core service involves organizing and conducting sightseeing trips for tourists, often specializing in local landmarks, historical sites, and cultural destinations in Ethiopia (like the National Museum, churches, or regional sites). The tours may be pre-packaged or customized for private groups.
-                            </p>
-                        </div>
-                        <div><a href="#~" class="card-button w-inline-block"
-                                style="color: rgb(171, 171, 172); background-color: rgba(0, 0, 0, 0); border-color: rgb(83, 83, 85);">
-                                <div>Read More</div><img
-                                    src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/6341460cda79c99ce8b02382_button-01.svg"
-                                    loading="lazy" alt="Arrow Image For Button " class="arrow-dark"><img
-                                    src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/63401de9fdbdb451cfbec4db_button.svg"
-                                    loading="lazy" alt="Blur Arrow Image For Button" class="arrow-blue"
-                                    style="display: none;">
-                            </a></div>
-                    </div>
-                    <div id="w-node-a12d2fd6-7583-d887-bf84-3a054e05e5a7-68652b7b"
-                        data-w-id="a12d2fd6-7583-d887-bf84-3a054e05e5a7" style="opacity: 0;" class="service-card">
-                        <div class="card-image-wrap"><img
-                                src="{{ asset('assets/img/gallery.png') }}"
-                                loading="lazy" alt="Home Page Card Image For Title" width="65"></div>
-                        <div class="service-card-content-wrap">
-                            <h3 class="section-content-title white">Personalized Travel Consultations</h3>
-                            <p class="white-content">
-                                This involves a one-on-one service where experienced travel specialists help clients design a unique, tailor-made travel experience. They provide expert advice on destinations, help plan intricate multi-day itineraries, handle necessary visa assistance, and offer in-trip support.
-                            </p>
-                        </div>
-                        <div><a href="#~" class="card-button w-inline-block"
-                                style="color: rgb(171, 171, 172); background-color: rgba(0, 0, 0, 0); border-color: rgb(83, 83, 85);">
-                                <div>Read More</div><img
-                                    src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/6341460cda79c99ce8b02382_button-01.svg"
-                                    loading="lazy" alt="Arrow Image For Button " class="arrow-dark"><img
-                                    src="https://cdn.prod.website-files.com/633fc9cf3a4f100f9060830b/63401de9fdbdb451cfbec4db_button.svg"
-                                    loading="lazy" alt="Blur Arrow Image For Button" class="arrow-blue"
-                                    style="display: none;">
-                            </a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- HEADER & TITLE -->
     <h1 class="h1_gal">Gallery</h1>
