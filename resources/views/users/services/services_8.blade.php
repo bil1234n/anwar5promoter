@@ -67,7 +67,7 @@
         .h1_gal {
             text-align: center;
             color: #fff;
-            margin: -100px 0 20px;
+            margin: 90px 0 20px;
             font-weight: 300;
             letter-spacing: 2px;
             text-transform: uppercase;
