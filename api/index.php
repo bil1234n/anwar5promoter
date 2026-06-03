@@ -2,9 +2,10 @@
 
 /**
  * Vercel Serverless Bootstrap File
- * This script intercepts the Laravel boot process and forces it to 
- * operate exclusively within Vercel's writable /tmp directory.
  */
+
+// Force Laravel to generate secure HTTPS links for all CSS and Images
+$_SERVER['HTTPS'] = 'on';
 
 // 1. Force all caches and compiled views into the /tmp directory
 $tmpPaths = [
@@ -44,12 +45,10 @@ require __DIR__ . '/../vendor/autoload.php';
 $app = require_once __DIR__ . '/../bootstrap/app.php';
 $app->useStoragePath('/tmp/storage');
 
-// 5. Handle the incoming Request (Compatible with Laravel 10 & 11)
+// 5. Handle the incoming Request
 if (method_exists($app, 'handleRequest')) {
-    // Laravel 11 Architecture
     $app->handleRequest(Illuminate\Http\Request::capture());
 } else {
-    // Laravel 10 Architecture
     $kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
     $response = $kernel->handle(
         $request = Illuminate\Http\Request::capture()
