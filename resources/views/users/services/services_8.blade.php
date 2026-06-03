@@ -279,7 +279,7 @@
             <img src="https://i.imgur.com/v5B5Uun.png" alt="Partners">
             <div class="overlay">
                 <h3>Partners</h3>
-                <p>Asortie Luxury Furniture </p>
+                <p>Anwar 5 Global Business Promoter</p>
             </div>
         </div>
         
