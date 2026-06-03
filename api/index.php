@@ -1,37 +1,59 @@
 <?php
-// Force Vercel to display errors
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
 
-// THE NUCLEAR OPTION: Force Vercel to delete the broken cache files!
-$cacheFiles = [
-    __DIR__ . '/../bootstrap/cache/config.php',
-    __DIR__ . '/../bootstrap/cache/events.php',
-    __DIR__ . '/../bootstrap/cache/packages.php',
-    __DIR__ . '/../bootstrap/cache/routes.php',
-    __DIR__ . '/../bootstrap/cache/services.php',
+/**
+ * Vercel Serverless Bootstrap File
+ * This script intercepts the Laravel boot process and forces it to 
+ * operate exclusively within Vercel's writable /tmp directory.
+ */
+
+// 1. Force all caches and compiled views into the /tmp directory
+$tmpPaths = [
+    'APP_CONFIG_CACHE'   => '/tmp/config.php',
+    'APP_EVENTS_CACHE'   => '/tmp/events.php',
+    'APP_PACKAGES_CACHE' => '/tmp/packages.php',
+    'APP_ROUTES_CACHE'   => '/tmp/routes.php',
+    'APP_SERVICES_CACHE' => '/tmp/services.php',
+    'VIEW_COMPILED_PATH' => '/tmp/views',
 ];
 
-foreach ($cacheFiles as $file) {
-    if (file_exists($file)) {
-        @unlink($file); // Delete the broken file before Laravel boots
+foreach ($tmpPaths as $key => $value) {
+    $_ENV[$key] = $value;
+    $_SERVER[$key] = $value;
+    putenv("{$key}={$value}");
+}
+
+// 2. Build the required internal folder structure on the fly
+$directories = [
+    '/tmp/views',
+    '/tmp/storage/framework/views',
+    '/tmp/storage/framework/cache/data',
+    '/tmp/storage/framework/sessions',
+    '/tmp/storage/logs',
+];
+
+foreach ($directories as $dir) {
+    if (!is_dir($dir)) {
+        mkdir($dir, 0777, true);
     }
 }
 
-// Now boot Laravel normally
-$publicIndex = __DIR__ . '/../public/index.php';
+// 3. Require the Composer Autoloader
+require __DIR__ . '/../vendor/autoload.php';
 
-if (!file_exists($publicIndex)) {
-    die("<h1>Fatal Error: public/index.php is missing!</h1>");
-}
+// 4. Initialize Laravel and force it to use the new /tmp storage
+$app = require_once __DIR__ . '/../bootstrap/app.php';
+$app->useStoragePath('/tmp/storage');
 
-try {
-    require $publicIndex;
-} catch (\Throwable $e) {
-    echo "<h1>Laravel crashed!</h1>";
-    echo "<b>Error Message:</b> " . $e->getMessage() . "<br><br>";
-    echo "<b>File:</b> " . $e->getFile() . " on line " . $e->getLine() . "<br><br>";
-    echo "<b>Stack Trace:</b><br>";
-    echo "<pre>" . $e->getTraceAsString() . "</pre>";
+// 5. Handle the incoming Request (Compatible with Laravel 10 & 11)
+if (method_exists($app, 'handleRequest')) {
+    // Laravel 11 Architecture
+    $app->handleRequest(Illuminate\Http\Request::capture());
+} else {
+    // Laravel 10 Architecture
+    $kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
+    $response = $kernel->handle(
+        $request = Illuminate\Http\Request::capture()
+    );
+    $response->send();
+    $kernel->terminate($request, $response);
 }
