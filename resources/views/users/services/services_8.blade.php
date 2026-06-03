@@ -276,7 +276,63 @@
     <div class="gallery-grid">
         
         <div class="gallery-item Partners">
-            <img src="https://i.imgur.com/vMLcaMT.jpeg" alt="Partners">
+            <img src="https://i.imgur.com/v5B5Uun.png" alt="Partners">
+            <div class="overlay">
+                <h3>Partners</h3>
+                <p>Asortie Luxury Furniture </p>
+            </div>
+        </div>
+        
+        <div class="gallery-item Partners">
+            <img src="https://i.imgur.com/Ak30wbu.png" alt="Partners">
+            <div class="overlay">
+                <h3>Partners</h3>
+                <p>Asortie Luxury Furniture </p>
+            </div>
+        </div>
+        
+        <div class="gallery-item Partners">
+            <img src="https://i.imgur.com/OlsW7cj.png" alt="Partners">
+            <div class="overlay">
+                <h3>Partners</h3>
+                <p>Asortie Luxury Furniture </p>
+            </div>
+        </div>
+        
+        <div class="gallery-item Partners">
+            <img src="https://i.imgur.com/u4MXCqD.png" alt="Partners">
+            <div class="overlay">
+                <h3>Partners</h3>
+                <p>Asortie Luxury Furniture </p>
+            </div>
+        </div>
+        
+        <div class="gallery-item Partners">
+            <img src="https://i.imgur.com/DnxQTGD.png" alt="Partners">
+            <div class="overlay">
+                <h3>Partners</h3>
+                <p>Asortie Luxury Furniture </p>
+            </div>
+        </div>
+        
+        <div class="gallery-item Partners">
+            <img src="https://i.imgur.com/c7Gg7xh.png" alt="Partners">
+            <div class="overlay">
+                <h3>Partners</h3>
+                <p>Asortie Luxury Furniture </p>
+            </div>
+        </div>
+        
+        <div class="gallery-item Partners">
+            <img src="https://i.imgur.com/pDArplE.png" alt="Partners">
+            <div class="overlay">
+                <h3>Partners</h3>
+                <p>Asortie Luxury Furniture </p>
+            </div>
+        </div>
+        
+        <div class="gallery-item Partners">
+            <img src="https://i.imgur.com/oEX4fnJ.png" alt="Partners">
             <div class="overlay">
                 <h3>Partners</h3>
                 <p>Asortie Luxury Furniture </p>
