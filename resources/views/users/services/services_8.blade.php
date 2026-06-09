@@ -298,6 +298,14 @@
                 <p>Asortie Luxury Furniture </p>
             </div>
         </div>
+    
+        <div class="gallery-item Partners">
+            <img src="https://i.imgur.com/DIkbHMI.png" alt="Partners">
+            <div class="overlay">
+                <h3>Partners</h3>
+                <p>Asortie Luxury Furniture </p>
+            </div>
+        </div>
         
         <div class="gallery-item Partners">
             <img src="https://i.imgur.com/u4MXCqD.png" alt="Partners">
