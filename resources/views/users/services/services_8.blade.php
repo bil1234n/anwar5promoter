@@ -276,6 +276,31 @@
     <div class="gallery-grid">
         
         <div class="gallery-item Partners">
+            <img src="https://i.imgur.com/tL5hIQQ.png" alt="Partners">
+            <div class="overlay">
+                <h3>Partners</h3>
+                <p>Anwar 5 Global Business Promoter</p>
+            </div>
+        </div>
+        
+        <div class="gallery-item Partners">
+            <img src="https://i.imgur.com/hsUgiSR.jpeg" alt="Partners">
+            <div class="overlay">
+                <h3>Partners</h3>
+                <p>Anwar 5 Global Business Promoter</p>
+            </div>
+        </div>
+        
+        <div class="gallery-item Partners">
+            <img src="https://i.imgur.com/p94Bjmp.png" alt="Partners">
+            <div class="overlay">
+                <h3>Partners</h3>
+                <p>Anwar 5 Global Business Promoter</p>
+            </div>
+        </div>
+
+        
+        <div class="gallery-item Partners">
             <img src="https://i.imgur.com/v5B5Uun.png" alt="Partners">
             <div class="overlay">
                 <h3>Partners</h3>
